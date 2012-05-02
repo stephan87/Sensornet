@@ -130,6 +130,7 @@ implementation
     		if(msgReceived->seqNum > localSeqNumber){
     			dbg("TestSerialC","Finished Node %d: received message on RadioChannel %d seqNum: %d\n",TOS_NODE_ID,idr,msgReceived->seqNum);
     			localSeqNumber = msgReceived->seqNum;
+    			call Leds.set(msgReceived->ledNum);
     		}
     		else
     			dbg("TestSerialC","Node %d:duplicate message received\n",TOS_NODE_ID);

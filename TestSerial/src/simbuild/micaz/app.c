@@ -3,10 +3,10 @@
 #define dbg(mode, format, ...) ((void)0)
 #define dbg_clear(mode, format, ...) ((void)0)
 #define dbg_active(mode) 0
-# 150 "/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h" 3
-typedef int ptrdiff_t;
+# 150 "/usr/lib/gcc/x86_64-linux-gnu/4.6.1/include/stddef.h" 3
+typedef long int ptrdiff_t;
 #line 212
-typedef unsigned int size_t;
+typedef long unsigned int size_t;
 #line 324
 typedef int wchar_t;
 # 8 "/usr/lib/ncc/deputy_nodeputy.h"
@@ -64,10 +64,10 @@ typedef signed char int8_t;
 typedef short int int16_t;
 typedef int int32_t;
 
+typedef long int int64_t;
 
 
-__extension__ 
-typedef long long int int64_t;
+
 
 
 
@@ -79,10 +79,10 @@ typedef unsigned int uint32_t;
 
 
 
+typedef unsigned long int uint64_t;
 
 
-__extension__ 
-typedef unsigned long long int uint64_t;
+
 
 
 
@@ -93,10 +93,10 @@ typedef signed char int_least8_t;
 typedef short int int_least16_t;
 typedef int int_least32_t;
 
+typedef long int int_least64_t;
 
 
-__extension__ 
-typedef long long int int_least64_t;
+
 
 
 
@@ -104,10 +104,10 @@ typedef unsigned char uint_least8_t;
 typedef unsigned short int uint_least16_t;
 typedef unsigned int uint_least32_t;
 
+typedef unsigned long int uint_least64_t;
 
 
-__extension__ 
-typedef unsigned long long int uint_least64_t;
+
 
 
 
@@ -116,52 +116,38 @@ typedef unsigned long long int uint_least64_t;
 
 typedef signed char int_fast8_t;
 
+typedef long int int_fast16_t;
+typedef long int int_fast32_t;
+typedef long int int_fast64_t;
 
 
 
 
-typedef int int_fast16_t;
-typedef int int_fast32_t;
-__extension__ 
-typedef long long int int_fast64_t;
+
 
 
 
 typedef unsigned char uint_fast8_t;
 
+typedef unsigned long int uint_fast16_t;
+typedef unsigned long int uint_fast32_t;
+typedef unsigned long int uint_fast64_t;
+#line 120
+typedef long int intptr_t;
 
 
-
-
-typedef unsigned int uint_fast16_t;
-typedef unsigned int uint_fast32_t;
-__extension__ 
-typedef unsigned long long int uint_fast64_t;
-#line 126
-typedef int intptr_t;
-
-
-typedef unsigned int uintptr_t;
-
-
-
-
-
-
-
-
-__extension__ 
-typedef long long int intmax_t;
-__extension__ 
-typedef unsigned long long int uintmax_t;
+typedef unsigned long int uintptr_t;
+#line 135
+typedef long int intmax_t;
+typedef unsigned long int uintmax_t;
 # 35 "/usr/include/inttypes.h" 3
 typedef int __gwchar_t;
-#line 292
-#line 288
+#line 283
+#line 279
 typedef struct __nesc_unnamed4242 {
 
-  long long int quot;
-  long long int rem;
+  long int quot;
+  long int rem;
 } imaxdiv_t;
 # 281 "/usr/lib/ncc/nesc_nx.h"
 static __inline uint8_t __nesc_ntoh_uint8(const void * source)  ;
@@ -243,7 +229,7 @@ __attribute((__nothrow__)) __attribute((__pure__)) __attribute((__nonnull__(1)))
 #line 399
 extern size_t strlen(const char *__s) 
 __attribute((__nothrow__)) __attribute((__pure__)) __attribute((__nonnull__(1))) ;
-# 67 "/usr/include/i386-linux-gnu/bits/waitstatus.h" 3
+# 67 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 3
 union wait {
 
   int w_status;
@@ -343,7 +329,7 @@ __extension__
 
 
 __extension__ 
-# 31 "/usr/include/i386-linux-gnu/bits/types.h" 3
+# 31 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
 typedef unsigned char __u_char;
 typedef unsigned short int __u_short;
 typedef unsigned int __u_int;
@@ -357,15 +343,8 @@ typedef unsigned short int __uint16_t;
 typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
 
-
-
-
-__extension__ 
-#line 47
-typedef signed long long int __int64_t;
-__extension__ 
-#line 48
-typedef unsigned long long int __uint64_t;
+typedef signed long int __int64_t;
+typedef unsigned long int __uint64_t;
 
 
 
@@ -373,127 +352,61 @@ typedef unsigned long long int __uint64_t;
 
 
 
-__extension__ 
-#line 56
-typedef long long int __quad_t;
-__extension__ 
-#line 57
-typedef unsigned long long int __u_quad_t;
+typedef long int __quad_t;
+typedef unsigned long int __u_quad_t;
 #line 134
-__extension__ 
-#line 134
-typedef __u_quad_t __dev_t;
-__extension__ 
-#line 135
+typedef unsigned long int __dev_t;
 typedef unsigned int __uid_t;
-__extension__ 
-#line 136
 typedef unsigned int __gid_t;
-__extension__ 
-#line 137
 typedef unsigned long int __ino_t;
-__extension__ 
-#line 138
-typedef __u_quad_t __ino64_t;
-__extension__ 
-#line 139
+typedef unsigned long int __ino64_t;
 typedef unsigned int __mode_t;
-__extension__ 
-#line 140
-typedef unsigned int __nlink_t;
-__extension__ 
-#line 141
+typedef unsigned long int __nlink_t;
 typedef long int __off_t;
-__extension__ 
-#line 142
-typedef __quad_t __off64_t;
-__extension__ 
-#line 143
+typedef long int __off64_t;
 typedef int __pid_t;
-__extension__ 
-#line 144
 typedef struct __nesc_unnamed4249 {
 #line 144
   int __val[2];
 } 
 #line 144
 __fsid_t;
-__extension__ 
-#line 145
 typedef long int __clock_t;
-__extension__ 
-#line 146
 typedef unsigned long int __rlim_t;
-__extension__ 
-#line 147
-typedef __u_quad_t __rlim64_t;
-__extension__ 
-#line 148
+typedef unsigned long int __rlim64_t;
 typedef unsigned int __id_t;
-__extension__ 
-#line 149
 typedef long int __time_t;
-__extension__ 
-#line 150
 typedef unsigned int __useconds_t;
-__extension__ 
-#line 151
 typedef long int __suseconds_t;
 
-__extension__ 
-#line 153
 typedef int __daddr_t;
-__extension__ 
-#line 154
 typedef long int __swblk_t;
-__extension__ 
-#line 155
 typedef int __key_t;
 
 
-__extension__ 
-#line 158
 typedef int __clockid_t;
 
 
-__extension__ 
-#line 161
 typedef void *__timer_t;
 
 
-__extension__ 
-#line 164
 typedef long int __blksize_t;
 
 
 
 
-__extension__ 
-#line 169
 typedef long int __blkcnt_t;
-__extension__ 
-#line 170
-typedef __quad_t __blkcnt64_t;
+typedef long int __blkcnt64_t;
 
 
-__extension__ 
-#line 173
 typedef unsigned long int __fsblkcnt_t;
-__extension__ 
-#line 174
-typedef __u_quad_t __fsblkcnt64_t;
+typedef unsigned long int __fsblkcnt64_t;
 
 
-__extension__ 
-#line 177
 typedef unsigned long int __fsfilcnt_t;
-__extension__ 
-#line 178
-typedef __u_quad_t __fsfilcnt64_t;
+typedef unsigned long int __fsfilcnt64_t;
 
-__extension__ 
-#line 180
-typedef int __ssize_t;
+typedef long int __ssize_t;
 
 
 
@@ -502,15 +415,11 @@ typedef __quad_t *__qaddr_t;
 typedef char *__caddr_t;
 
 
-__extension__ 
-#line 189
-typedef int __intptr_t;
+typedef long int __intptr_t;
 
 
-__extension__ 
-#line 192
 typedef unsigned int __socklen_t;
-# 34 "/usr/include/i386-linux-gnu/sys/types.h" 3
+# 34 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 typedef __u_char u_char;
 typedef __u_short u_short;
 typedef __u_int u_int;
@@ -589,7 +498,7 @@ typedef __time_t time_t;
 typedef __clockid_t clockid_t;
 #line 104
 typedef __timer_t timer_t;
-# 151 "/usr/include/i386-linux-gnu/sys/types.h" 3
+# 151 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 typedef unsigned long int ulong;
 typedef unsigned short int ushort;
 typedef unsigned int uint;
@@ -600,7 +509,7 @@ typedef unsigned int u_int32_t __attribute((__mode__(__SI__))) ;
 typedef unsigned int u_int64_t __attribute((__mode__(__DI__))) ;
 
 typedef int register_t __attribute((__mode__(__word__))) ;
-# 24 "/usr/include/i386-linux-gnu/bits/sigset.h" 3
+# 24 "/usr/include/x86_64-linux-gnu/bits/sigset.h" 3
 typedef int __sig_atomic_t;
 
 
@@ -614,7 +523,7 @@ typedef struct __nesc_unnamed4250 {
 
   unsigned long int __val[1024 / (8 * sizeof(unsigned long int ))];
 } __sigset_t;
-# 38 "/usr/include/i386-linux-gnu/sys/select.h" 3
+# 38 "/usr/include/x86_64-linux-gnu/sys/select.h" 3
 typedef __sigset_t sigset_t;
 # 120 "/usr/include/time.h" 3
 struct timespec {
@@ -622,13 +531,13 @@ struct timespec {
   __time_t tv_sec;
   long int tv_nsec;
 };
-# 75 "/usr/include/i386-linux-gnu/bits/time.h" 3
+# 75 "/usr/include/x86_64-linux-gnu/bits/time.h" 3
 struct timeval {
 
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
-# 49 "/usr/include/i386-linux-gnu/sys/select.h" 3
+# 49 "/usr/include/x86_64-linux-gnu/sys/select.h" 3
 typedef __suseconds_t suseconds_t;
 
 
@@ -657,7 +566,7 @@ fd_set;
 
 
 typedef __fd_mask fd_mask;
-# 30 "/usr/include/i386-linux-gnu/sys/sysmacros.h" 3
+# 30 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 3
 __extension__ 
 
 
@@ -665,7 +574,7 @@ __extension__
 
 
 __extension__ 
-# 229 "/usr/include/i386-linux-gnu/sys/types.h" 3
+# 229 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 typedef __blksize_t blksize_t;
 
 
@@ -682,7 +591,7 @@ typedef __fsblkcnt_t fsblkcnt_t;
 
 
 typedef __fsfilcnt_t fsfilcnt_t;
-# 36 "/usr/include/i386-linux-gnu/bits/pthreadtypes.h" 3
+# 50 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3
 typedef unsigned long int pthread_t;
 
 
@@ -690,10 +599,10 @@ typedef unsigned long int pthread_t;
 
 
 
-#line 39
+#line 53
 typedef union __nesc_unnamed4252 {
 
-  char __size[36];
+  char __size[56];
   long int __align;
 } pthread_attr_t;
 
@@ -701,13 +610,16 @@ typedef union __nesc_unnamed4252 {
 
 
 
-#line 46
-typedef struct __pthread_internal_slist {
 
-  struct __pthread_internal_slist *__next;
-} __pthread_slist_t;
-#line 73
-#line 54
+
+#line 61
+typedef struct __pthread_internal_list {
+
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t;
+#line 104
+#line 76
 typedef union __nesc_unnamed4253 {
 
   struct __pthread_mutex_s {
@@ -716,16 +628,25 @@ typedef union __nesc_unnamed4253 {
     unsigned int __count;
     int __owner;
 
+    unsigned int __nusers;
+
+
 
     int __kind;
-    unsigned int __nusers;
-    __extension__ union  {
 
-      int __spins;
-      __pthread_slist_t __list;
-    } ;
-  } __data;
-  char __size[24];
+    int __spins;
+    __pthread_list_t __list;
+  } 
+
+
+
+
+
+
+
+
+  __data;
+  char __size[40];
   long int __align;
 } pthread_mutex_t;
 
@@ -733,14 +654,14 @@ typedef union __nesc_unnamed4253 {
 
 
 
-#line 75
+#line 106
 typedef union __nesc_unnamed4254 {
 
   char __size[4];
-  long int __align;
+  int __align;
 } pthread_mutexattr_t;
-#line 99
-#line 84
+#line 130
+#line 115
 typedef union __nesc_unnamed4255 {
 
   struct __nesc_unnamed4256 {
@@ -762,11 +683,11 @@ typedef union __nesc_unnamed4255 {
 
 
 
-#line 101
+#line 132
 typedef union __nesc_unnamed4257 {
 
   char __size[4];
-  long int __align;
+  int __align;
 } pthread_condattr_t;
 
 
@@ -776,9 +697,10 @@ typedef unsigned int pthread_key_t;
 
 
 typedef int pthread_once_t;
-#line 139
-#line 119
+#line 189
+#line 150
 typedef union __nesc_unnamed4258 {
+
 
   struct __nesc_unnamed4259 {
 
@@ -788,15 +710,16 @@ typedef union __nesc_unnamed4258 {
     unsigned int __writer_wakeup;
     unsigned int __nr_readers_queued;
     unsigned int __nr_writers_queued;
-
-
-    unsigned char __flags;
-    unsigned char __shared;
-    unsigned char __pad1;
-    unsigned char __pad2;
     int __writer;
+    int __shared;
+    unsigned long int __pad1;
+    unsigned long int __pad2;
+
+
+    unsigned int __flags;
   } __data;
-  char __size[32];
+#line 187
+  char __size[56];
   long int __align;
 } pthread_rwlock_t;
 
@@ -804,7 +727,7 @@ typedef union __nesc_unnamed4258 {
 
 
 
-#line 141
+#line 191
 typedef union __nesc_unnamed4260 {
 
   char __size[8];
@@ -824,10 +747,10 @@ typedef volatile int pthread_spinlock_t;
 
 
 
-#line 156
+#line 206
 typedef union __nesc_unnamed4261 {
 
-  char __size[20];
+  char __size[32];
   long int __align;
 } pthread_barrier_t;
 
@@ -835,7 +758,7 @@ typedef union __nesc_unnamed4261 {
 
 
 
-#line 162
+#line 212
 typedef union __nesc_unnamed4262 {
 
   char __size[4];
@@ -866,16 +789,15 @@ extern void *malloc(size_t __size) __attribute((__nothrow__)) __attribute((__mal
 #line 488
 extern void free(void *__ptr) __attribute((__nothrow__)) ;
 #line 742
-typedef int (*__compar_fn_t)(const void *arg_0x40362438, const void *arg_0x403625d0);
+typedef int (*__compar_fn_t)(const void *arg_0x2aaca12886b0, const void *arg_0x2aaca1288988);
 #line 776
 __extension__ 
 #line 793
 __extension__ 
-# 36 "/usr/include/i386-linux-gnu/bits/mathdef.h" 3
-typedef long double float_t;
-
-typedef long double double_t;
-# 110 "/usr/include/i386-linux-gnu/bits/mathcalls.h" 3
+# 31 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3
+typedef float float_t;
+typedef double double_t;
+# 110 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3
 extern double log(double __x) __attribute((__nothrow__)) ;
 #line 154
 extern double pow(double __x, double __y) __attribute((__nothrow__)) ;
@@ -885,7 +807,7 @@ extern double sqrt(double __x) __attribute((__nothrow__)) ;
 #line 185
 extern double floor(double __x) __attribute((__nothrow__)) __attribute((const)) ;
 #line 251
-extern double erfc(double arg_0x403ac320) __attribute((__nothrow__)) ;
+extern double erfc(double arg_0x2aaca130b930) __attribute((__nothrow__)) ;
 # 202 "/usr/include/math.h" 3
 enum __nesc_unnamed4263 {
 
@@ -980,7 +902,7 @@ typedef int _G_int16_t __attribute((__mode__(__HI__))) ;
 typedef int _G_int32_t __attribute((__mode__(__SI__))) ;
 typedef unsigned int _G_uint16_t __attribute((__mode__(__HI__))) ;
 typedef unsigned int _G_uint32_t __attribute((__mode__(__SI__))) ;
-# 40 "/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h" 3
+# 40 "/usr/lib/gcc/x86_64-linux-gnu/4.6.1/include/stdarg.h" 3
 typedef __builtin_va_list __gnuc_va_list;
 # 170 "/usr/include/libio.h" 3
 struct _IO_jump_t;
@@ -1154,16 +1076,16 @@ const char *__restrict __format, ...)
 __attribute((__nothrow__)) __attribute((__format__(__printf__, 3, 4))) ;
 #line 851
 extern int fileno(FILE *__stream) __attribute((__nothrow__)) ;
-# 66 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/tos.h"
+# 74 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/tos.h"
 typedef uint8_t bool;
 
 
 enum __nesc_unnamed4270 {
-#line 69
+#line 77
   FALSE = 0, TRUE = 1
 };
 extern uint16_t TOS_NODE_ID;
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.h"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.h"
 typedef long long int sim_time_t;
 
 void sim_init();
@@ -1188,7 +1110,7 @@ void sim_add_channel(char *channel, FILE *file);
 bool sim_remove_channel(char *channel, FILE *file);
 
 bool sim_run_next_event();
-# 42 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_event_queue.h"
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_event_queue.h"
 struct sim_event;
 typedef struct sim_event sim_event_t;
 
@@ -1216,7 +1138,7 @@ void sim_queue_cleanup_none(sim_event_t *e);
 void sim_queue_cleanup_event(sim_event_t *e);
 void sim_queue_cleanup_data(sim_event_t *e);
 void sim_queue_cleanup_total(sim_event_t *e);
-# 45 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_mote.h"
+# 53 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_mote.h"
 long long int sim_mote_euid(int mote);
 void sim_mote_set_euid(int mote, long long int euid);
 
@@ -1228,7 +1150,7 @@ void sim_mote_turn_on(int mote);
 void sim_mote_turn_off(int mote);
 int sim_mote_get_variable_info(int mote, char *name, void **addr, size_t *len);
 void sim_mote_enqueue_boot_event(int mote);
-# 57 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.h"
+# 65 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.h"
 static inline void sim_log_init();
 static inline void sim_log_add_channel(char *output, FILE *file);
 static inline bool sim_log_remove_channel(char *output, FILE *file);
@@ -1237,23 +1159,23 @@ static void sim_log_commit_change();
 static void sim_log_debug(uint16_t id, char *string, const char *format, ...);
 static void sim_log_error(uint16_t id, char *string, const char *format, ...);
 static void sim_log_debug_clear(uint16_t id, char *string, const char *format, ...);
-# 90 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/tos.h"
+# 98 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/tos.h"
 struct __nesc_attr_atmostonce {
 };
-#line 91
+#line 99
 struct __nesc_attr_atleastonce {
 };
-#line 92
+#line 100
 struct __nesc_attr_exactlyonce {
 };
-# 9 "/opt/tinyos-2.1.1/tos/lib/tossim/hashtable.h"
+# 9 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/hashtable.h"
 struct hashtable;
 typedef struct hashtable hashtable_t;
 #line 78
 struct hashtable *
 create_hashtable(unsigned int minsize, 
-unsigned int (*hashfunction)(void *arg_0x404f0320), 
-int (*key_eq_fn)(void *arg_0x404f0768, void *arg_0x404f08e0));
+unsigned int (*hashfunction)(void *arg_0x2aaca1535ca8), 
+int (*key_eq_fn)(void *arg_0x2aaca15334e8, void *arg_0x2aaca1533788));
 #line 103
 #line 102
 int 
@@ -1261,7 +1183,7 @@ hashtable_insert(struct hashtable *h, void *k, void *v);
 #line 120
 void *
 hashtable_search(struct hashtable *h, void *k);
-# 39 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 47 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 enum __nesc_unnamed4271 {
   DEFAULT_CHANNEL_SIZE = 8
 };
@@ -1269,7 +1191,7 @@ enum __nesc_unnamed4271 {
 
 
 
-#line 43
+#line 51
 typedef struct sim_log_output {
   int num;
   FILE **files;
@@ -1280,7 +1202,7 @@ typedef struct sim_log_output {
 
 
 
-#line 48
+#line 56
 typedef struct sim_log_channel {
   const char *name;
   int numOutputs;
@@ -1298,23 +1220,23 @@ struct hashtable *channelTable = (void *)0;
 
 inline static unsigned int sim_log_hash(void *key);
 inline static int sim_log_eq(void *key1, void *key2);
-#line 76
+#line 84
 static void fillInOutput(int id, char *name);
-#line 151
+#line 159
 static inline void sim_log_init();
-#line 164
+#line 172
 static inline void sim_log_add_channel(char *name, FILE *file);
-#line 204
+#line 212
 static inline bool sim_log_remove_channel(char *output, FILE *file);
-#line 226
+#line 234
 static void sim_log_commit_change();
-#line 238
+#line 246
 static void sim_log_debug(uint16_t id, char *string, const char *format, ...);
-#line 253
+#line 261
 static void sim_log_error(uint16_t id, char *string, const char *format, ...);
-#line 268
+#line 276
 static void sim_log_debug_clear(uint16_t id, char *string, const char *format, ...);
-#line 298
+#line 306
 inline static unsigned int sim_log_hash(void *key);
 
 
@@ -1327,8 +1249,8 @@ inline static unsigned int sim_log_hash(void *key);
 
 
 inline static int sim_log_eq(void *key1, void *key2);
-# 54 "/opt/tinyos-2.1.1/tos/lib/tossim/heap.h"
-#line 50
+# 65 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/heap.h"
+#line 61
 typedef struct heap {
   int size;
   void *data;
@@ -1343,7 +1265,7 @@ static inline long long int heap_get_min_key(heap_t *heap);
 
 static void *heap_pop_min_data(heap_t *heap, long long int *key);
 static inline void heap_insert(heap_t *heap, void *data, long long int key);
-# 47 "/opt/tinyos-2.1.1/tos/lib/tossim/heap.c"
+# 58 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/heap.c"
 const int STARTING_SIZE = 511;
 
 
@@ -1351,7 +1273,7 @@ const int STARTING_SIZE = 511;
 
 
 
-#line 51
+#line 62
 typedef struct node {
   void *data;
   long long int key;
@@ -1387,19 +1309,19 @@ static inline int heap_is_empty(heap_t *heap);
 
 
 static inline long long int heap_get_min_key(heap_t *heap);
-#line 103
+#line 114
 static void *heap_pop_min_data(heap_t *heap, long long int *key);
-#line 119
+#line 130
 static inline void expand_heap(heap_t *heap);
-#line 133
+#line 144
 static inline void heap_insert(heap_t *heap, void *data, long long int key);
-#line 147
+#line 158
 static void swap(node_t *first, node_t *second);
-#line 160
+#line 171
 static void down_heap(heap_t *heap, int findex);
-#line 186
+#line 197
 static void up_heap(heap_t *heap, int findex);
-# 36 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_event_queue.c"
+# 44 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_event_queue.c"
 static heap_t eventHeap;
 
 void sim_queue_init()   ;
@@ -1447,7 +1369,7 @@ void sim_queue_cleanup_data(sim_event_t *event)   ;
 
 
 void sim_queue_cleanup_total(sim_event_t *event)   ;
-# 57 "/usr/include/i386-linux-gnu/sys/time.h" 3
+# 57 "/usr/include/x86_64-linux-gnu/sys/time.h" 3
 struct timezone {
 
   int tz_minuteswest;
@@ -1497,7 +1419,7 @@ struct itimerval {
 
 
 typedef int __itimer_which_t;
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.h"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.h"
 enum __nesc_unnamed4273 {
   NOISE_MIN = -115, 
   NOISE_MAX = -5, 
@@ -1518,7 +1440,7 @@ enum __nesc_unnamed4273 {
 
 
 
-#line 56
+#line 64
 typedef struct sim_noise_hash_t {
   char key[NOISE_HISTORY];
   int numElements;
@@ -1527,8 +1449,8 @@ typedef struct sim_noise_hash_t {
   char flag;
   float dist[NOISE_NUM_VALUES];
 } sim_noise_hash_t;
-#line 75
-#line 65
+#line 83
+#line 73
 typedef struct sim_noise_node_t {
   char key[NOISE_HISTORY];
   char freqKey[NOISE_HISTORY];
@@ -1546,7 +1468,7 @@ void sim_noise_init();
 char sim_noise_generate(uint16_t node_id, uint32_t cur_t);
 void sim_noise_trace_add(uint16_t node_id, char val);
 void sim_noise_create_model(uint16_t node_id);
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.c"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.c"
 static sim_time_t sim_ticks;
 static unsigned long current_node;
 static int sim_seed;
@@ -1554,7 +1476,7 @@ static int sim_seed;
 static int __nesc_nido_resolve(int mote, char *varname, uintptr_t *addr, size_t *size);
 
 void sim_init()   ;
-#line 72
+#line 80
 void sim_end()   ;
 
 
@@ -1562,7 +1484,7 @@ void sim_end()   ;
 
 
 int sim_random()   ;
-#line 94
+#line 102
 void sim_random_seed(int seed)   ;
 
 
@@ -1591,9 +1513,9 @@ void sim_set_node(unsigned long node)   ;
 
 
 bool sim_run_next_event()   ;
-#line 148
+#line 156
 int sim_print_time(char *buf, int len, sim_time_t ftime)   ;
-#line 171
+#line 179
 int sim_print_now(char *buf, int len)   ;
 
 
@@ -1609,7 +1531,7 @@ void sim_add_channel(char *channel, FILE *file)   ;
 
 
 bool sim_remove_channel(char *channel, FILE *file)   ;
-# 91 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_csma.h"
+# 99 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_csma.h"
 int sim_csma_init_high();
 int sim_csma_init_low();
 int sim_csma_high();
@@ -1635,7 +1557,7 @@ void sim_csma_set_max_iterations(int val);
 void sim_csma_set_min_free_samples(int val);
 void sim_csma_set_rxtx_delay(int val);
 void sim_csma_set_ack_time(int val);
-# 36 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_csma.c"
+# 44 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_csma.c"
 int csmaInitHigh = 640;
 int csmaInitLow = 20;
 int csmaHigh = 160;
@@ -1722,8 +1644,8 @@ void sim_csma_set_rxtx_delay(int val)   ;
 
 
 void sim_csma_set_ack_time(int val)   ;
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_gain.h"
-#line 45
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_gain.h"
+#line 53
 typedef struct gain_entry {
   int mote;
   double gain;
@@ -1744,7 +1666,7 @@ double sim_gain_sensitivity();
 
 gain_entry_t *sim_gain_first(int src);
 gain_entry_t *sim_gain_next(gain_entry_t *e);
-# 6 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_gain.c"
+# 6 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_gain.c"
 #line 3
 typedef struct sim_gain_noise {
   double mean;
@@ -1799,7 +1721,7 @@ void sim_gain_set_sensitivity(double s)   ;
 
 
 double sim_gain_sensitivity()   ;
-# 39 "/opt/tinyos-2.1.1/tos/lib/tossim/randomlib.c"
+# 39 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/randomlib.c"
 static double randU[97];
 #line 39
 static double randC;
@@ -1858,10 +1780,10 @@ struct tm;
 
 
 struct tm;
-# 46 "/opt/tinyos-2.1.1/tos/lib/tossim/randomlib.h"
-static inline void RandomInitialise(int arg_0x40628010, int arg_0x40628168);
+# 46 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/randomlib.h"
+static inline void RandomInitialise(int arg_0x2aaca17429b0, int arg_0x2aaca1742c18);
 static double RandomUniform(void );
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
 int numCase1 = 0;
 int numCase2 = 0;
 int numTotal = 0;
@@ -1879,11 +1801,11 @@ void makePmfDistr(uint16_t node_id);
 uint8_t search_bin_num(char noise);
 
 void sim_noise_init()   ;
-#line 76
+#line 84
 void sim_noise_create_model(uint16_t node_id)   ;
-#line 89
+#line 97
 void sim_noise_trace_add(uint16_t node_id, char noiseVal)   ;
-#line 105
+#line 113
 uint8_t search_bin_num(char noise)   ;
 
 
@@ -1916,9 +1838,9 @@ inline static int sim_noise_eq(void *key1, void *key2);
 
 
 void sim_noise_add(uint16_t node_id, char noise)   ;
-#line 184
+#line 192
 void sim_noise_dist(uint16_t node_id)   ;
-#line 237
+#line 245
 void arrangeKey(uint16_t node_id)   ;
 
 
@@ -1930,21 +1852,21 @@ void arrangeKey(uint16_t node_id)   ;
 
 
 void makePmfDistr(uint16_t node_id)   ;
-#line 275
+#line 283
 int dummy;
 static inline void sim_noise_alarm();
 
 
 
 char sim_noise_gen(uint16_t node_id)   ;
-#line 356
+#line 364
 char sim_noise_generate(uint16_t node_id, uint32_t cur_t)   ;
-#line 411
+#line 419
 void makeNoiseModel(uint16_t node_id)   ;
-# 51 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_packet.h"
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_packet.h"
 typedef struct sim_packet {
 } 
-#line 51
+#line 59
 sim_packet_t;
 
 void sim_packet_set_source(sim_packet_t *msg, uint16_t src);
@@ -1967,7 +1889,7 @@ uint8_t sim_packet_max_length(sim_packet_t *msg);
 
 sim_packet_t *sim_packet_allocate();
 void sim_packet_free(sim_packet_t *m);
-# 6 "/opt/tinyos-2.1.1/tos/types/AM.h"
+# 6 "/home/sensornet6/local/src/tinyos-2.x/tos/types/AM.h"
 typedef nx_uint8_t nx_am_id_t;
 typedef nx_uint8_t nx_am_group_t;
 typedef nx_uint16_t nx_am_addr_t;
@@ -1992,7 +1914,7 @@ enum __nesc_unnamed4275 {
   TOS_AM_GROUP = 0x06, 
   TOS_AM_ADDRESS = 1
 };
-# 12 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimRadioMsg.h"
+# 12 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimRadioMsg.h"
 #line 6
 typedef nx_struct tossim_header {
   nx_am_addr_t dest;
@@ -2019,7 +1941,7 @@ typedef nx_struct tossim_metadata {
   nx_uint8_t ack;
   nx_uint16_t time;
 } __attribute__((packed)) tossim_metadata_t;
-# 72 "/opt/tinyos-2.1.1/tos/lib/serial/Serial.h"
+# 83 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/serial/Serial.h"
 typedef uint8_t uart_id_t;
 
 
@@ -2045,8 +1967,8 @@ enum __nesc_unnamed4278 {
   SERIAL_PROTO_PACKET_NOACK = 69, 
   SERIAL_PROTO_PACKET_UNKNOWN = 255
 };
-#line 110
-#line 98
+#line 121
+#line 109
 typedef struct radio_stats {
   uint8_t version;
   uint8_t flags;
@@ -2067,7 +1989,7 @@ typedef struct radio_stats {
 
 
 
-#line 112
+#line 123
 typedef nx_struct serial_header {
   nx_am_addr_t dest;
   nx_am_addr_t src;
@@ -2079,7 +2001,7 @@ typedef nx_struct serial_header {
 
 
 
-#line 120
+#line 131
 typedef nx_struct serial_packet {
   serial_header_t header;
   nx_uint8_t data[];
@@ -2087,12 +2009,12 @@ typedef nx_struct serial_packet {
 
 
 
-#line 125
+#line 136
 typedef nx_struct serial_metadata {
   nx_uint8_t ack;
 } __attribute__((packed)) serial_metadata_t;
-# 44 "/opt/tinyos-2.1.1/tos/lib/tossim/platform_message.h"
-#line 41
+# 53 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/platform_message.h"
+#line 50
 typedef union message_header {
   tossim_header_t tossim;
   serial_header_t serial;
@@ -2100,18 +2022,18 @@ typedef union message_header {
 
 
 
-#line 46
+#line 55
 typedef union message_footer {
   tossim_footer_t tossim;
 } message_footer_t;
 
 
 
-#line 50
+#line 59
 typedef union message_metadata {
   tossim_metadata_t tossim;
 } message_metadata_t;
-# 19 "/opt/tinyos-2.1.1/tos/types/message.h"
+# 19 "/home/sensornet6/local/src/tinyos-2.x/tos/types/message.h"
 #line 14
 typedef nx_struct message_t {
   nx_uint8_t header[sizeof(message_header_t )];
@@ -2119,7 +2041,7 @@ typedef nx_struct message_t {
   nx_uint8_t footer[sizeof(message_footer_t )];
   nx_uint8_t metadata[sizeof(message_metadata_t )];
 } __attribute__((packed)) message_t;
-# 40 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_packet.c"
+# 48 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_packet.c"
 void active_message_deliver(int node, message_t *m, sim_time_t t);
 
 inline static tossim_header_t *getHeader(message_t *msg);
@@ -2191,10 +2113,10 @@ sim_packet_t *sim_packet_allocate()   ;
 
 
 void sim_packet_free(sim_packet_t *p)   ;
-# 55 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_packet.h"
+# 63 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_packet.h"
 typedef struct sim_serial_packet {
 } 
-#line 55
+#line 63
 sim_serial_packet_t;
 
 void sim_serial_packet_set_destination(sim_serial_packet_t *msg, uint16_t dest);
@@ -2216,7 +2138,7 @@ uint8_t sim_serial_packet_max_length(sim_serial_packet_t *msg);
 
 sim_serial_packet_t *sim_serial_packet_allocate();
 void sim_serial_packet_free(sim_serial_packet_t *m);
-# 42 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_packet.c"
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_packet.c"
 void serial_active_message_deliver(int node, message_t *m, sim_time_t t);
 
 inline static serial_header_t *getSerialHeader(message_t *msg);
@@ -2284,7 +2206,7 @@ sim_serial_packet_t *sim_serial_packet_allocate()   ;
 
 
 void sim_serial_packet_free(sim_serial_packet_t *p)   ;
-# 40 "/opt/tinyos-2.1.1/tos/types/TinyError.h"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/types/TinyError.h"
 enum __nesc_unnamed4279 {
   SUCCESS = 0, 
   FAIL = 1, 
@@ -2317,27 +2239,33 @@ enum __nesc_unnamed4280 {
   AM_TESTSERIALMSG = 6, 
   AM_SENDPERIOD = 1000
 };
-# 29 "/opt/tinyos-2.1.1/tos/lib/timer/Timer.h"
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/timer/Timer.h"
 typedef struct __nesc_unnamed4281 {
-#line 29
+#line 41
   int notUsed;
 } 
-#line 29
-TMilli;
+#line 41
+TSecond;
 typedef struct __nesc_unnamed4282 {
-#line 30
+#line 42
   int notUsed;
 } 
-#line 30
-T32khz;
+#line 42
+TMilli;
 typedef struct __nesc_unnamed4283 {
-#line 31
+#line 43
   int notUsed;
 } 
-#line 31
+#line 43
+T32khz;
+typedef struct __nesc_unnamed4284 {
+#line 44
+  int notUsed;
+} 
+#line 44
 TMicro;
-# 32 "/opt/tinyos-2.1.1/tos/types/Leds.h"
-enum __nesc_unnamed4284 {
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/types/Leds.h"
+enum __nesc_unnamed4285 {
   LEDS_LED0 = 1 << 0, 
   LEDS_LED1 = 1 << 1, 
   LEDS_LED2 = 1 << 2, 
@@ -2347,8 +2275,8 @@ enum __nesc_unnamed4284 {
   LEDS_LED6 = 1 << 6, 
   LEDS_LED7 = 1 << 7
 };
-# 25 "/opt/tinyos-2.1.1/tos/chips/atm128/sim/atm128_sim.h"
-enum __nesc_unnamed4285 {
+# 25 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/sim/atm128_sim.h"
+enum __nesc_unnamed4286 {
 
   ATM128_PINF = 0x00, 
 
@@ -2648,7 +2576,7 @@ enum __nesc_unnamed4285 {
   ATM128_UCSR1C = 0x9D
 };
 #line 673
-enum __nesc_unnamed4286 {
+enum __nesc_unnamed4287 {
 
   TWINT = 7, 
   TWEA = 6, 
@@ -3276,9 +3204,9 @@ enum __nesc_unnamed4286 {
   PING1 = 1, 
   PING0 = 0
 };
-# 45 "/opt/tinyos-2.1.1/tos/chips/atm128/sim/atm128hardware.h"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/sim/atm128hardware.h"
 uint8_t atm128RegFile[1000][0xa0];
-#line 79
+#line 85
 static __inline void __nesc_enable_interrupt();
 
 
@@ -3292,7 +3220,7 @@ typedef uint8_t __nesc_atomic_t;
 
 
 
-#line 91
+#line 97
 __inline __nesc_atomic_t 
 __nesc_atomic_start(void )  ;
 
@@ -3303,17 +3231,17 @@ __nesc_atomic_start(void )  ;
 
 
 
-#line 100
+#line 106
 __inline void 
 __nesc_atomic_end(__nesc_atomic_t original_SREG)  ;
-#line 114
+#line 120
 typedef uint8_t mcu_power_t  ;
 
 
 
 
 
-enum __nesc_unnamed4287 {
+enum __nesc_unnamed4288 {
   ATM128_POWER_IDLE = 0, 
   ATM128_POWER_ADC_NR = 1, 
   ATM128_POWER_EXT_STANDBY = 2, 
@@ -3321,8 +3249,8 @@ enum __nesc_unnamed4287 {
   ATM128_POWER_STANDBY = 4, 
   ATM128_POWER_DOWN = 5
 };
-# 34 "/opt/tinyos-2.1.1/tos/chips/atm128/adc/Atm128Adc.h"
-enum __nesc_unnamed4288 {
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/adc/Atm128Adc.h"
+enum __nesc_unnamed4289 {
   ATM128_ADC_VREF_OFF = 0, 
   ATM128_ADC_VREF_AVCC = 1, 
   ATM128_ADC_VREF_RSVD, 
@@ -3330,14 +3258,14 @@ enum __nesc_unnamed4288 {
 };
 
 
-enum __nesc_unnamed4289 {
+enum __nesc_unnamed4290 {
   ATM128_ADC_RIGHT_ADJUST = 0, 
   ATM128_ADC_LEFT_ADJUST = 1
 };
 
 
 
-enum __nesc_unnamed4290 {
+enum __nesc_unnamed4291 {
   ATM128_ADC_SNGL_ADC0 = 0, 
   ATM128_ADC_SNGL_ADC1, 
   ATM128_ADC_SNGL_ADC2, 
@@ -3378,8 +3306,8 @@ enum __nesc_unnamed4290 {
 
 
 
-#line 85
-typedef struct __nesc_unnamed4291 {
+#line 94
+typedef struct __nesc_unnamed4292 {
 
   uint8_t mux : 5;
   uint8_t adlar : 1;
@@ -3389,7 +3317,7 @@ typedef struct __nesc_unnamed4291 {
 
 
 
-enum __nesc_unnamed4292 {
+enum __nesc_unnamed4293 {
   ATM128_ADC_PRESCALE_2 = 0, 
   ATM128_ADC_PRESCALE_2b, 
   ATM128_ADC_PRESCALE_4, 
@@ -3405,31 +3333,31 @@ enum __nesc_unnamed4292 {
 };
 
 
-enum __nesc_unnamed4293 {
+enum __nesc_unnamed4294 {
   ATM128_ADC_ENABLE_OFF = 0, 
   ATM128_ADC_ENABLE_ON
 };
 
 
-enum __nesc_unnamed4294 {
+enum __nesc_unnamed4295 {
   ATM128_ADC_START_CONVERSION_OFF = 0, 
   ATM128_ADC_START_CONVERSION_ON
 };
 
 
-enum __nesc_unnamed4295 {
+enum __nesc_unnamed4296 {
   ATM128_ADC_FREE_RUNNING_OFF = 0, 
   ATM128_ADC_FREE_RUNNING_ON
 };
 
 
-enum __nesc_unnamed4296 {
+enum __nesc_unnamed4297 {
   ATM128_ADC_INT_FLAG_OFF = 0, 
   ATM128_ADC_INT_FLAG_ON
 };
 
 
-enum __nesc_unnamed4297 {
+enum __nesc_unnamed4298 {
   ATM128_ADC_INT_ENABLE_OFF = 0, 
   ATM128_ADC_INT_ENABLE_ON
 };
@@ -3443,8 +3371,8 @@ enum __nesc_unnamed4297 {
 
 
 
-#line 141
-typedef struct __nesc_unnamed4298 {
+#line 150
+typedef struct __nesc_unnamed4299 {
 
   uint8_t adps : 3;
   uint8_t adie : 1;
@@ -3456,8 +3384,8 @@ typedef struct __nesc_unnamed4298 {
 
 typedef uint8_t Atm128_ADCH_t;
 typedef uint8_t Atm128_ADCL_t;
-# 48 "/opt/tinyos-2.1.1/tos/platforms/micaz/sim/platform_hardware.h"
-enum __nesc_unnamed4299 {
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/micaz/sim/platform_hardware.h"
+enum __nesc_unnamed4300 {
   CHANNEL_RSSI = ATM128_ADC_SNGL_ADC0, 
   CHANNEL_THERMISTOR = ATM128_ADC_SNGL_ADC1, 
   CHANNEL_BATTERY = ATM128_ADC_SNGL_ADC7, 
@@ -3466,35 +3394,35 @@ enum __nesc_unnamed4299 {
 
   ATM128_TIMER0_TICKSPPS = 32768
 };
-# 33 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMainP.nc"
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMainP.nc"
 static void __nesc_nido_initialise(int node);
-# 48 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_forwarder.h"
+# 48 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_forwarder.h"
 struct sim_sf_client_list {
 
   struct sim_sf_client_list *next;
   int fd;
 };
-# 49 "/opt/tinyos-2.1.1/tos/interfaces/Boot.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Boot.nc"
 static void TestSerialC$Boot$booted(void );
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 113 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 static void TestSerialC$SerialControl$startDone(error_t error);
-#line 117
+#line 138
 static void TestSerialC$SerialControl$stopDone(error_t error);
-#line 92
+#line 113
 static void TestSerialC$RadioControl$startDone(error_t error);
-#line 117
+#line 138
 static void TestSerialC$RadioControl$stopDone(error_t error);
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 static 
-#line 63
+#line 74
 message_t * 
 
 
 
 TestSerialC$RadioReceive$receive(
 # 17 "TestSerialC.nc"
-am_id_t arg_0x4071db00, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+am_id_t arg_0x2aaca18fd510, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
 
@@ -3503,11 +3431,11 @@ void * payload,
 
 
 uint8_t len);
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void TestSerialC$SerialSend$sendDone(
 # 11 "TestSerialC.nc"
-am_id_t arg_0x4070ab78, 
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+am_id_t arg_0x2aaca18d4d68, 
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
 
@@ -3516,17 +3444,17 @@ message_t * msg,
 
 
 error_t error);
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 static 
-#line 63
+#line 74
 message_t * 
 
 
 
 TestSerialC$SerialReceive$receive(
 # 12 "TestSerialC.nc"
-am_id_t arg_0x4070d088, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+am_id_t arg_0x2aaca18cead8, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
 
@@ -3535,11 +3463,11 @@ void * payload,
 
 
 uint8_t len);
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void TestSerialC$RadioSend$sendDone(
 # 16 "TestSerialC.nc"
-am_id_t arg_0x4071d0a0, 
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+am_id_t arg_0x2aaca18e8328, 
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
 
@@ -3548,17 +3476,17 @@ message_t * msg,
 
 
 error_t error);
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 static 
-#line 63
+#line 74
 message_t * 
 
 
 
 TestSerialC$RadioSnoop$receive(
 # 18 "TestSerialC.nc"
-am_id_t arg_0x4071a1d8, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+am_id_t arg_0x2aaca18fc0c8, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
 
@@ -3567,9 +3495,9 @@ void * payload,
 
 
 uint8_t len);
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t LedsP$Init$init(void );
-# 50 "/opt/tinyos-2.1.1/tos/interfaces/Leds.nc"
+# 61 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Leds.nc"
 static void LedsP$Leds$led0Off(void );
 
 
@@ -3587,20 +3515,20 @@ static void LedsP$Leds$led1On(void );
 
 
 static void LedsP$Leds$led1Off(void );
-#line 83
+#line 94
 static void LedsP$Leds$led2Off(void );
-#line 123
+#line 134
 static void LedsP$Leds$set(uint8_t val);
-#line 45
+#line 56
 static void LedsP$Leds$led0On(void );
-#line 78
+#line 89
 static void LedsP$Leds$led2On(void );
-# 32 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 static bool /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get(void );
 
 
 static void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$makeOutput(void );
-#line 29
+#line 40
 static void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set(void );
 static void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$clr(void );
 
@@ -3608,7 +3536,7 @@ static bool /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get(vo
 
 
 static void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$makeOutput(void );
-#line 29
+#line 40
 static void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set(void );
 static void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$clr(void );
 
@@ -3616,31 +3544,31 @@ static bool /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get(vo
 
 
 static void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$makeOutput(void );
-#line 29
+#line 40
 static void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set(void );
 static void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$clr(void );
 
 
 static void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$makeInput(void );
-#line 30
+#line 41
 static void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$clr(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t PlatformP$Init$init(void );
-#line 51
+#line 62
 static error_t MotePlatformP$SubInit$default$init(void );
-#line 51
+#line 62
 static error_t MotePlatformP$PlatformInit$init(void );
-#line 51
+#line 62
 static error_t MeasureClockC$Init$init(void );
-# 56 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static error_t SimSchedulerBasicP$TaskBasic$postTask(
-# 41 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x406ef3c0);
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
+uint8_t arg_0x2aaca188bab0);
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$default$runTask(
-# 41 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x406ef3c0);
-# 46 "/opt/tinyos-2.1.1/tos/interfaces/Scheduler.nc"
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
+uint8_t arg_0x2aaca188bab0);
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Scheduler.nc"
 static void SimSchedulerBasicP$Scheduler$init(void );
 
 
@@ -3650,29 +3578,29 @@ static void SimSchedulerBasicP$Scheduler$init(void );
 
 
 static bool SimSchedulerBasicP$Scheduler$runNextTask(void );
-# 36 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMote.nc"
+# 44 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMote.nc"
 static void SimMoteP$SimMote$setEuid(long long int euid);
 
 
 static int SimMoteP$SimMote$getVariableInfo(char *name, void **ptr, size_t *len);
 
 static void SimMoteP$SimMote$turnOff(void );
-#line 40
+#line 48
 static void SimMoteP$SimMote$turnOn(void );
-#line 35
+#line 43
 static long long int SimMoteP$SimMote$getEuid(void );
 
 
 static bool SimMoteP$SimMote$isOn(void );
-#line 37
+#line 45
 static long long int SimMoteP$SimMote$getStartTime(void );
-# 69 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 80 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t TossimActiveMessageC$AMSend$send(
-# 39 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x408b3b98, 
-# 69 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 47 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
+am_id_t arg_0x2aaca1c300c8, 
+# 80 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
-#line 60
+#line 71
 message_t * msg, 
 
 
@@ -3683,29 +3611,29 @@ message_t * msg,
 
 
 uint8_t len);
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Packet.nc"
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Packet.nc"
 static uint8_t TossimActiveMessageC$Packet$payloadLength(
-#line 63
+#line 74
 message_t * msg);
-#line 115
+#line 126
 static 
-#line 112
+#line 123
 void * 
 
 
 TossimActiveMessageC$Packet$getPayload(
-#line 110
+#line 121
 message_t * msg, 
 
 
 
 
 uint8_t len);
-#line 95
+#line 106
 static uint8_t TossimActiveMessageC$Packet$maxPayloadLength(void );
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 static void TossimActiveMessageC$Model$receive(message_t *msg);
-#line 68
+#line 76
 static void TossimActiveMessageC$Model$sendDone(message_t *msg, error_t error);
 
 
@@ -3718,7 +3646,7 @@ static void TossimActiveMessageC$Model$sendDone(message_t *msg, error_t error);
 
 
 static bool TossimActiveMessageC$Model$shouldAck(message_t *msg);
-# 57 "/opt/tinyos-2.1.1/tos/interfaces/AMPacket.nc"
+# 68 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMPacket.nc"
 static am_addr_t TossimActiveMessageC$AMPacket$address(void );
 
 
@@ -3730,71 +3658,35 @@ static am_addr_t TossimActiveMessageC$AMPacket$address(void );
 
 
 static am_addr_t TossimActiveMessageC$AMPacket$destination(
-#line 63
+#line 74
+message_t * amsg);
+#line 147
+static am_id_t TossimActiveMessageC$AMPacket$type(
+#line 143
 message_t * amsg);
 #line 136
-static am_id_t TossimActiveMessageC$AMPacket$type(
-#line 132
-message_t * amsg);
-#line 125
 static bool TossimActiveMessageC$AMPacket$isForMe(
-#line 122
+#line 133
 message_t * amsg);
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-static error_t SerialActiveMessageC$SplitControl$start(void );
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Packet.nc"
-static uint8_t SerialActiveMessageC$Packet$payloadLength(
-#line 63
-message_t * msg);
-#line 115
-static 
-#line 112
-void * 
-
-
-SerialActiveMessageC$Packet$getPayload(
-#line 110
-message_t * msg, 
-
-
-
-
-uint8_t len);
-#line 95
-static uint8_t SerialActiveMessageC$Packet$maxPayloadLength(void );
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
-static void SerialActiveMessageC$startDone$runTask(void );
-#line 64
-static void SerialActiveMessageC$stopDone$runTask(void );
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
-static void SerialActiveMessageC$Model$receive(message_t *msg);
-#line 68
-static void SerialActiveMessageC$Model$sendDone(message_t *msg, error_t error);
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
-static void SerialActiveMessageC$modelSendDone$runTask(void );
-# 136 "/opt/tinyos-2.1.1/tos/interfaces/AMPacket.nc"
-static am_id_t SerialActiveMessageC$AMPacket$type(
-#line 132
-message_t * amsg);
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void TossimPacketModelC$stopDoneTask$runTask(void );
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 static error_t TossimPacketModelC$Packet$send(int node, message_t *msg, uint8_t len);
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void TossimPacketModelC$sendDoneTask$runTask(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t TossimPacketModelC$Init$init(void );
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void TossimPacketModelC$startDoneTask$runTask(void );
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 static error_t TossimPacketModelC$Control$start(void );
-# 52 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 static void TossimPacketModelC$GainRadioModel$receive(message_t *msg);
-#line 51
+#line 59
 static void TossimPacketModelC$GainRadioModel$acked(message_t *msg);
 
 static bool TossimPacketModelC$GainRadioModel$shouldAck(message_t *msg);
-#line 40
+#line 48
 static void CpmModelC$Model$putOnAirTo(int dest, 
 message_t *msg, 
 bool ack, 
@@ -3805,39 +3697,77 @@ double reverseGain);
 
 static bool CpmModelC$Model$clearChannel(void );
 static void CpmModelC$Model$setPendingTransmission(void );
-# 46 "/opt/tinyos-2.1.1/tos/lib/tossim/ActiveMessageAddressC.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc"
 static am_addr_t ActiveMessageAddressC$amAddress(void );
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-static error_t TestSerialC$SerialControl$start(void );
-# 136 "/opt/tinyos-2.1.1/tos/interfaces/AMPacket.nc"
-static am_id_t TestSerialC$RadioAMPacket$type(
-#line 132
-message_t * amsg);
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-static error_t TestSerialC$RadioControl$start(void );
-# 115 "/opt/tinyos-2.1.1/tos/interfaces/Packet.nc"
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/ActiveMessageAddress.nc"
+static am_addr_t ActiveMessageAddressC$ActiveMessageAddress$amAddress(void );
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static error_t SerialActiveMessageC$SplitControl$start(void );
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Packet.nc"
+static uint8_t SerialActiveMessageC$Packet$payloadLength(
+#line 74
+message_t * msg);
+#line 126
 static 
-#line 112
+#line 123
 void * 
 
 
-TestSerialC$RadioPacket$getPayload(
-#line 110
+SerialActiveMessageC$Packet$getPayload(
+#line 121
 message_t * msg, 
 
 
 
 
 uint8_t len);
-# 123 "/opt/tinyos-2.1.1/tos/interfaces/Leds.nc"
+#line 106
+static uint8_t SerialActiveMessageC$Packet$maxPayloadLength(void );
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SerialActiveMessageC$startDone$runTask(void );
+#line 75
+static void SerialActiveMessageC$stopDone$runTask(void );
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
+static void SerialActiveMessageC$Model$receive(message_t *msg);
+#line 76
+static void SerialActiveMessageC$Model$sendDone(message_t *msg, error_t error);
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SerialActiveMessageC$modelSendDone$runTask(void );
+# 147 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMPacket.nc"
+static am_id_t SerialActiveMessageC$AMPacket$type(
+#line 143
+message_t * amsg);
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static error_t TestSerialC$SerialControl$start(void );
+# 147 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMPacket.nc"
+static am_id_t TestSerialC$RadioAMPacket$type(
+#line 143
+message_t * amsg);
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static error_t TestSerialC$RadioControl$start(void );
+# 126 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Packet.nc"
+static 
+#line 123
+void * 
+
+
+TestSerialC$RadioPacket$getPayload(
+#line 121
+message_t * msg, 
+
+
+
+
+uint8_t len);
+# 134 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Leds.nc"
 static void TestSerialC$Leds$set(uint8_t val);
-# 69 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 80 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 static error_t TestSerialC$RadioSend$send(
 # 16 "TestSerialC.nc"
-am_id_t arg_0x4071d0a0, 
-# 69 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+am_id_t arg_0x2aaca18e8328, 
+# 80 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
-#line 60
+#line 71
 message_t * msg, 
 
 
@@ -3888,20 +3818,20 @@ static inline void TestSerialC$RadioControl$stopDone(error_t error);
 static inline message_t *TestSerialC$RadioSnoop$receive(am_id_t id, message_t *msg, void *payload, uint8_t len);
 #line 120
 static inline message_t *TestSerialC$RadioReceive$receive(am_id_t id, message_t *msg, void *payload, uint8_t len);
-#line 172
+#line 173
 static inline void TestSerialC$SerialSend$sendDone(am_id_t id, message_t *msg, error_t error);
-#line 186
+#line 187
 static inline message_t *TestSerialC$SerialReceive$receive(am_id_t id, message_t *msg, void *payload, uint8_t len);
-#line 236
+#line 237
 static inline void TestSerialC$radioSendTask(TestSerialMsg *receivedMsgToSend);
-#line 266
+#line 267
 static inline void TestSerialC$RadioSend$sendDone(am_id_t id, message_t *msg, error_t error);
-# 32 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 static bool LedsP$Led0$get(void );
 
 
 static void LedsP$Led0$makeOutput(void );
-#line 29
+#line 40
 static void LedsP$Led0$set(void );
 static void LedsP$Led0$clr(void );
 
@@ -3909,7 +3839,7 @@ static bool LedsP$Led1$get(void );
 
 
 static void LedsP$Led1$makeOutput(void );
-#line 29
+#line 40
 static void LedsP$Led1$set(void );
 static void LedsP$Led1$clr(void );
 
@@ -3917,12 +3847,12 @@ static bool LedsP$Led2$get(void );
 
 
 static void LedsP$Led2$makeOutput(void );
-#line 29
+#line 40
 static void LedsP$Led2$set(void );
 static void LedsP$Led2$clr(void );
-# 45 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
+# 56 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
 static inline error_t LedsP$Init$init(void );
-#line 63
+#line 74
 static inline void LedsP$Leds$led0On(void );
 
 
@@ -3959,9 +3889,9 @@ static inline void LedsP$Leds$led2On(void );
 
 
 static inline void LedsP$Leds$led2Off(void );
-#line 125
+#line 136
 static void LedsP$Leds$set(uint8_t val);
-# 45 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline bool /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get(void );
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set(void );
 
@@ -3972,7 +3902,7 @@ static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$
 
 
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$makeOutput(void );
-#line 45
+#line 54
 static __inline bool /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get(void );
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set(void );
 
@@ -3983,7 +3913,7 @@ static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$
 
 
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$makeOutput(void );
-#line 45
+#line 54
 static __inline bool /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get(void );
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set(void );
 
@@ -3994,43 +3924,36 @@ static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$
 
 
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$makeOutput(void );
-#line 50
+#line 59
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$clr(void );
 
 
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$makeInput(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t PlatformP$MoteInit$init(void );
-#line 51
+#line 62
 static error_t PlatformP$MeasureClock$init(void );
-# 42 "/opt/tinyos-2.1.1/tos/platforms/mica/PlatformP.nc"
-static inline void PlatformP$power_init(void );
-
-
-
-
-
-
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/mica/PlatformP.nc"
 static inline error_t PlatformP$Init$init(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t MotePlatformP$SubInit$init(void );
-# 33 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 44 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 static void MotePlatformP$SerialIdPin$makeInput(void );
-#line 30
+#line 41
 static void MotePlatformP$SerialIdPin$clr(void );
-# 26 "/opt/tinyos-2.1.1/tos/platforms/micaz/MotePlatformP.nc"
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/micaz/MotePlatformP.nc"
 static inline error_t MotePlatformP$PlatformInit$init(void );
-#line 38
+#line 61
 static inline error_t MotePlatformP$SubInit$default$init(void );
-# 21 "/opt/tinyos-2.1.1/tos/platforms/mica/sim/MeasureClockC.nc"
+# 21 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/mica/sim/MeasureClockC.nc"
 static inline error_t MeasureClockC$Init$init(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t SimMainP$SoftwareInit$init(void );
-# 49 "/opt/tinyos-2.1.1/tos/interfaces/Boot.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Boot.nc"
 static void SimMainP$Boot$booted(void );
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 static error_t SimMainP$PlatformInit$init(void );
-# 46 "/opt/tinyos-2.1.1/tos/interfaces/Scheduler.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Scheduler.nc"
 static void SimMainP$Scheduler$init(void );
 
 
@@ -4040,16 +3963,16 @@ static void SimMainP$Scheduler$init(void );
 
 
 static bool SimMainP$Scheduler$runNextTask(void );
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMainP.nc"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMainP.nc"
 int sim_main_start_mote(void )   ;
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$runTask(
-# 41 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x406ef3c0);
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
+uint8_t arg_0x2aaca188bab0);
 
 
 
-enum SimSchedulerBasicP$__nesc_unnamed4300 {
+enum SimSchedulerBasicP$__nesc_unnamed4301 {
 
   SimSchedulerBasicP$NUM_TASKS = 6U, 
   SimSchedulerBasicP$NO_TASK = 255
@@ -4082,26 +4005,26 @@ static void SimSchedulerBasicP$sim_scheduler_submit_event(void );
 
 
 static inline void SimSchedulerBasicP$sim_scheduler_event_handle(sim_event_t *e);
-#line 95
+#line 103
 static inline void SimSchedulerBasicP$sim_scheduler_event_init(sim_event_t *e);
-#line 112
+#line 120
 static inline uint8_t SimSchedulerBasicP$popTask(void );
-#line 131
+#line 139
 static inline bool SimSchedulerBasicP$isWaiting(uint8_t id);
 
 
 
 
 static inline bool SimSchedulerBasicP$pushTask(uint8_t id);
-#line 158
+#line 166
 static inline void SimSchedulerBasicP$Scheduler$init(void );
-#line 172
+#line 180
 static bool SimSchedulerBasicP$Scheduler$runNextTask(void );
-#line 197
+#line 205
 static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id);
-#line 213
+#line 221
 static inline void SimSchedulerBasicP$TaskBasic$default$runTask(uint8_t id);
-# 42 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMoteP.nc"
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMoteP.nc"
 long long int SimMoteP$euid[1000];
 long long int SimMoteP$startTime[1000];
 bool SimMoteP$isOn[1000];
@@ -4125,7 +4048,7 @@ static inline int SimMoteP$SimMote$getVariableInfo(char *name, void **addr, size
 
 
 static void SimMoteP$SimMote$turnOn(void );
-#line 77
+#line 85
 static inline void SimMoteP$SimMote$turnOff(void );
 
 
@@ -4208,13 +4131,13 @@ static inline void SimMoteP$sim_mote_boot_handle(sim_event_t *e);
 
 
 void sim_mote_enqueue_boot_event(int mote)   ;
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static am_addr_t TossimActiveMessageC$amAddress(void );
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 static void TossimActiveMessageC$AMSend$sendDone(
-# 39 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x408b3b98, 
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
+# 47 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
+am_id_t arg_0x2aaca1c300c8, 
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
 
@@ -4223,17 +4146,17 @@ message_t * msg,
 
 
 error_t error);
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 static 
-#line 63
+#line 74
 message_t * 
 
 
 
 TossimActiveMessageC$Snoop$receive(
-# 41 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x408ffcc0, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
+am_id_t arg_0x2aaca1c2fd68, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
 
@@ -4242,17 +4165,17 @@ void * payload,
 
 
 uint8_t len);
-#line 67
+#line 78
 static 
-#line 63
+#line 74
 message_t * 
 
 
 
 TossimActiveMessageC$Receive$receive(
-# 40 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x408ff628, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
+# 48 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
+am_id_t arg_0x2aaca1c2f220, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
 
@@ -4261,9 +4184,9 @@ void * payload,
 
 
 uint8_t len);
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 static error_t TossimActiveMessageC$Model$send(int node, message_t *msg, uint8_t len);
-# 54 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 message_t TossimActiveMessageC$buffer[1000];
 message_t *TossimActiveMessageC$bufferPointer[1000];
 
@@ -4278,7 +4201,7 @@ static inline tossim_header_t *TossimActiveMessageC$getHeader(message_t *amsg);
 static error_t TossimActiveMessageC$AMSend$send(am_id_t id, am_addr_t addr, 
 message_t *amsg, 
 uint8_t len);
-#line 95
+#line 103
 static inline void TossimActiveMessageC$Model$sendDone(message_t *msg, error_t result);
 
 
@@ -4286,7 +4209,7 @@ static inline void TossimActiveMessageC$Model$sendDone(message_t *msg, error_t r
 
 
 static void TossimActiveMessageC$Model$receive(message_t *msg);
-#line 119
+#line 127
 static inline bool TossimActiveMessageC$Model$shouldAck(message_t *msg);
 
 
@@ -4301,14 +4224,14 @@ static inline am_addr_t TossimActiveMessageC$AMPacket$address(void );
 
 
 static am_addr_t TossimActiveMessageC$AMPacket$destination(message_t *amsg);
-#line 152
+#line 160
 static inline bool TossimActiveMessageC$AMPacket$isForMe(message_t *amsg);
 
 
 
 
 static am_id_t TossimActiveMessageC$AMPacket$type(message_t *amsg);
-#line 169
+#line 177
 static inline uint8_t TossimActiveMessageC$Packet$payloadLength(message_t *msg);
 
 
@@ -4322,7 +4245,7 @@ static inline uint8_t TossimActiveMessageC$Packet$maxPayloadLength(void );
 
 
 static inline void *TossimActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len);
-#line 228
+#line 236
 static inline void TossimActiveMessageC$active_message_deliver_handle(sim_event_t *evt);
 
 
@@ -4330,110 +4253,11 @@ static inline void TossimActiveMessageC$active_message_deliver_handle(sim_event_
 
 
 static inline sim_event_t *TossimActiveMessageC$allocate_deliver_event(int node, message_t *msg, sim_time_t t);
-#line 246
+#line 254
 void active_message_deliver(int node, message_t *msg, sim_time_t t)   ;
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-static void SerialActiveMessageC$SplitControl$startDone(error_t error);
-#line 117
-static void SerialActiveMessageC$SplitControl$stopDone(error_t error);
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
-static void SerialActiveMessageC$AMSend$sendDone(
-# 50 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
-am_id_t arg_0x409616f0, 
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
-message_t * msg, 
-
-
-
-
-
-
-error_t error);
-# 56 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
-static error_t SerialActiveMessageC$startDone$postTask(void );
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
-static 
-#line 63
-message_t * 
-
-
-
-SerialActiveMessageC$Receive$receive(
-# 51 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
-am_id_t arg_0x40960108, 
-# 60 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
-message_t * msg, 
-void * payload, 
-
-
-
-
-
-uint8_t len);
-# 74 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
-enum SerialActiveMessageC$__nesc_unnamed4301 {
-#line 74
-  SerialActiveMessageC$startDone = 0U
-};
-#line 74
-typedef int SerialActiveMessageC$__nesc_sillytask_startDone[SerialActiveMessageC$startDone];
-enum SerialActiveMessageC$__nesc_unnamed4302 {
-#line 75
-  SerialActiveMessageC$stopDone = 1U
-};
-#line 75
-typedef int SerialActiveMessageC$__nesc_sillytask_stopDone[SerialActiveMessageC$stopDone];
-#line 119
-enum SerialActiveMessageC$__nesc_unnamed4303 {
-#line 119
-  SerialActiveMessageC$modelSendDone = 2U
-};
-#line 119
-typedef int SerialActiveMessageC$__nesc_sillytask_modelSendDone[SerialActiveMessageC$modelSendDone];
-#line 65
-message_t SerialActiveMessageC$buffer[1000];
-message_t *SerialActiveMessageC$bufferPointer[1000];
-
-message_t *SerialActiveMessageC$sendMsgPtr[1000];
-
-static inline serial_header_t *SerialActiveMessageC$getHeader(message_t *amsg);
-
-
-
-static inline void SerialActiveMessageC$startDone$runTask(void );
-static inline void SerialActiveMessageC$stopDone$runTask(void );
-
-static inline error_t SerialActiveMessageC$SplitControl$start(void );
-#line 115
-static inline void SerialActiveMessageC$Model$sendDone(message_t *msg, error_t result);
-
-
-
-static inline void SerialActiveMessageC$modelSendDone$runTask(void );
-#line 139
-static inline void SerialActiveMessageC$Model$receive(message_t *msg);
-#line 192
-static am_id_t SerialActiveMessageC$AMPacket$type(message_t *amsg);
-#line 217
-static inline void *SerialActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len);
-#line 229
-static inline uint8_t SerialActiveMessageC$Packet$maxPayloadLength(void );
-
-
-
-static inline uint8_t SerialActiveMessageC$Packet$payloadLength(message_t *msg);
-#line 268
-static inline void SerialActiveMessageC$serial_active_message_deliver_handle(sim_event_t *evt);
-
-
-
-
-static inline sim_event_t *SerialActiveMessageC$allocate_serial_deliver_event(int node, message_t *msg, sim_time_t t);
-#line 285
-void serial_active_message_deliver(int node, message_t *msg, sim_time_t t)   ;
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 static void TossimPacketModelC$Packet$receive(message_t *msg);
-#line 68
+#line 76
 static void TossimPacketModelC$Packet$sendDone(message_t *msg, error_t error);
 
 
@@ -4446,13 +4270,13 @@ static void TossimPacketModelC$Packet$sendDone(message_t *msg, error_t error);
 
 
 static bool TossimPacketModelC$Packet$shouldAck(message_t *msg);
-# 56 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 static error_t TossimPacketModelC$startDoneTask$postTask(void );
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 113 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 static void TossimPacketModelC$Control$startDone(error_t error);
-#line 117
+#line 138
 static void TossimPacketModelC$Control$stopDone(error_t error);
-# 40 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 48 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 static void TossimPacketModelC$GainRadioModel$putOnAirTo(int dest, 
 message_t *msg, 
 bool ack, 
@@ -4463,31 +4287,31 @@ double reverseGain);
 
 static bool TossimPacketModelC$GainRadioModel$clearChannel(void );
 static void TossimPacketModelC$GainRadioModel$setPendingTransmission(void );
-# 88 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
-enum TossimPacketModelC$__nesc_unnamed4304 {
-#line 88
-  TossimPacketModelC$startDoneTask = 3U
+# 96 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
+enum TossimPacketModelC$__nesc_unnamed4302 {
+#line 96
+  TossimPacketModelC$startDoneTask = 0U
 };
-#line 88
+#line 96
 typedef int TossimPacketModelC$__nesc_sillytask_startDoneTask[TossimPacketModelC$startDoneTask];
 
 
 
 
-enum TossimPacketModelC$__nesc_unnamed4305 {
-#line 93
-  TossimPacketModelC$stopDoneTask = 4U
+enum TossimPacketModelC$__nesc_unnamed4303 {
+#line 101
+  TossimPacketModelC$stopDoneTask = 1U
 };
-#line 93
+#line 101
 typedef int TossimPacketModelC$__nesc_sillytask_stopDoneTask[TossimPacketModelC$stopDoneTask];
-#line 137
-enum TossimPacketModelC$__nesc_unnamed4306 {
-#line 137
-  TossimPacketModelC$sendDoneTask = 5U
+#line 145
+enum TossimPacketModelC$__nesc_unnamed4304 {
+#line 145
+  TossimPacketModelC$sendDoneTask = 2U
 };
-#line 137
+#line 145
 typedef int TossimPacketModelC$__nesc_sillytask_sendDoneTask[TossimPacketModelC$sendDoneTask];
-#line 62
+#line 70
 bool TossimPacketModelC$initialized[1000];
 bool TossimPacketModelC$running[1000];
 uint8_t TossimPacketModelC$backoffCount[1000];
@@ -4525,27 +4349,23 @@ static inline void TossimPacketModelC$stopDoneTask$runTask(void );
 
 
 static inline error_t TossimPacketModelC$Control$start(void );
-#line 137
+#line 145
 static inline void TossimPacketModelC$sendDoneTask$runTask(void );
-#line 151
+#line 159
 static inline void TossimPacketModelC$start_csma(void );
 
 static inline error_t TossimPacketModelC$Packet$send(int dest, message_t *msg, uint8_t len);
-#line 175
+#line 183
 static inline void TossimPacketModelC$send_backoff(sim_event_t *evt);
 static inline void TossimPacketModelC$send_transmit(sim_event_t *evt);
 static inline void TossimPacketModelC$send_transmit_done(sim_event_t *evt);
 
 static inline void TossimPacketModelC$start_csma(void );
-#line 203
+#line 211
 static inline void TossimPacketModelC$send_backoff(sim_event_t *evt);
-#line 241
-static inline int TossimPacketModelC$sim_packet_header_length(void );
-
-
-
+#line 253
 static inline void TossimPacketModelC$send_transmit(sim_event_t *evt);
-#line 272
+#line 280
 static inline void TossimPacketModelC$send_transmit_done(sim_event_t *evt);
 
 
@@ -4574,13 +4394,13 @@ static inline void TossimPacketModelC$GainRadioModel$acked(message_t *msg);
 
 
 static bool TossimPacketModelC$GainRadioModel$shouldAck(message_t *msg);
-# 52 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 static void CpmModelC$Model$receive(message_t *msg);
-#line 51
+#line 59
 static void CpmModelC$Model$acked(message_t *msg);
 
 static bool CpmModelC$Model$shouldAck(message_t *msg);
-# 50 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+# 58 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 message_t *CpmModelC$outgoing[1000];
 bool CpmModelC$requestAck[1000];
 bool CpmModelC$receiving[1000];
@@ -4614,15 +4434,15 @@ static double CpmModelC$packetNoise(CpmModelC$receive_message_t *msg);
 
 
 static inline double CpmModelC$timeInMs(void );
-#line 118
+#line 126
 static double CpmModelC$noise_hash_generation(void );
-#line 143
+#line 151
 static inline double CpmModelC$arr_estimate_from_snr(double SNR);
-#line 158
+#line 166
 static inline int CpmModelC$shouldAckReceive(double snr);
-#line 170
+#line 178
 static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt);
-#line 192
+#line 200
 double CpmModelC$clearThreshold[1000];
 
 
@@ -4640,19 +4460,19 @@ static inline bool CpmModelC$Model$clearChannel(void );
 
 
 static void CpmModelC$sim_gain_schedule_ack(int source, sim_time_t t, CpmModelC$receive_message_t *r);
-#line 222
+#line 230
 static inline double CpmModelC$prr_estimate_from_snr(double SNR);
-#line 240
+#line 248
 static bool CpmModelC$shouldReceive(double SNR);
-#line 252
+#line 260
 static inline bool CpmModelC$checkReceive(CpmModelC$receive_message_t *msg);
-#line 266
+#line 274
 static double CpmModelC$packetNoise(CpmModelC$receive_message_t *msg);
-#line 288
+#line 296
 static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt);
-#line 361
+#line 369
 static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTime, message_t *msg, bool receive, double power, double reversePower);
-#line 420
+#line 428
 static inline void CpmModelC$sim_gain_put(int dest, message_t *msg, sim_time_t endTime, bool receive, double power, double reversePower);
 
 
@@ -4662,7 +4482,7 @@ static inline void CpmModelC$sim_gain_put(int dest, message_t *msg, sim_time_t e
 
 
 static inline void CpmModelC$Model$putOnAirTo(int dest, message_t *msg, bool ack, sim_time_t endTime, double power, double reversePower);
-#line 451
+#line 459
 static inline void CpmModelC$Model$setPendingTransmission(void );
 
 
@@ -4672,29 +4492,138 @@ static inline void CpmModelC$Model$setPendingTransmission(void );
 
 
 static inline sim_event_t *CpmModelC$allocate_receive_event(sim_time_t endTime, CpmModelC$receive_message_t *msg);
-#line 471
+#line 479
 static inline CpmModelC$receive_message_t *CpmModelC$allocate_receive_message(void );
 
 
 
 static inline void CpmModelC$free_receive_message(CpmModelC$receive_message_t *msg);
-# 50 "/opt/tinyos-2.1.1/tos/lib/tossim/ActiveMessageAddressC.nc"
+# 65 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc"
 bool ActiveMessageAddressC$set[1000];
 am_addr_t ActiveMessageAddressC$addr[1000];
 
-static am_addr_t ActiveMessageAddressC$amAddress(void );
-# 67 "/opt/tinyos-2.1.1/tos/lib/tossim/heap.c"
+
+
+
+
+
+
+
+
+static am_addr_t ActiveMessageAddressC$ActiveMessageAddress$amAddress(void );
+#line 88
+static inline am_addr_t ActiveMessageAddressC$amAddress(void );
+# 113 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static void SerialActiveMessageC$SplitControl$startDone(error_t error);
+#line 138
+static void SerialActiveMessageC$SplitControl$stopDone(error_t error);
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
+static void SerialActiveMessageC$AMSend$sendDone(
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+am_id_t arg_0x2aaca1e152f0, 
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
+message_t * msg, 
+
+
+
+
+
+
+error_t error);
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static error_t SerialActiveMessageC$startDone$postTask(void );
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
+static 
+#line 74
+message_t * 
+
+
+
+SerialActiveMessageC$Receive$receive(
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+am_id_t arg_0x2aaca1e13408, 
+# 71 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
+message_t * msg, 
+void * payload, 
+
+
+
+
+
+uint8_t len);
+# 74 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+enum SerialActiveMessageC$__nesc_unnamed4305 {
+#line 74
+  SerialActiveMessageC$startDone = 3U
+};
+#line 74
+typedef int SerialActiveMessageC$__nesc_sillytask_startDone[SerialActiveMessageC$startDone];
+enum SerialActiveMessageC$__nesc_unnamed4306 {
+#line 75
+  SerialActiveMessageC$stopDone = 4U
+};
+#line 75
+typedef int SerialActiveMessageC$__nesc_sillytask_stopDone[SerialActiveMessageC$stopDone];
+#line 119
+enum SerialActiveMessageC$__nesc_unnamed4307 {
+#line 119
+  SerialActiveMessageC$modelSendDone = 5U
+};
+#line 119
+typedef int SerialActiveMessageC$__nesc_sillytask_modelSendDone[SerialActiveMessageC$modelSendDone];
+#line 65
+message_t SerialActiveMessageC$buffer[1000];
+message_t *SerialActiveMessageC$bufferPointer[1000];
+
+message_t *SerialActiveMessageC$sendMsgPtr[1000];
+
+static inline serial_header_t *SerialActiveMessageC$getHeader(message_t *amsg);
+
+
+
+static inline void SerialActiveMessageC$startDone$runTask(void );
+static inline void SerialActiveMessageC$stopDone$runTask(void );
+
+static inline error_t SerialActiveMessageC$SplitControl$start(void );
+#line 115
+static inline void SerialActiveMessageC$Model$sendDone(message_t *msg, error_t result);
+
+
+
+static inline void SerialActiveMessageC$modelSendDone$runTask(void );
+#line 139
+static inline void SerialActiveMessageC$Model$receive(message_t *msg);
+#line 196
+static am_id_t SerialActiveMessageC$AMPacket$type(message_t *amsg);
+#line 221
+static inline void *SerialActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len);
+#line 233
+static inline uint8_t SerialActiveMessageC$Packet$maxPayloadLength(void );
+
+
+
+static inline uint8_t SerialActiveMessageC$Packet$payloadLength(message_t *msg);
+#line 272
+static inline void SerialActiveMessageC$serial_active_message_deliver_handle(sim_event_t *evt);
+
+
+
+
+static inline sim_event_t *SerialActiveMessageC$allocate_serial_deliver_event(int node, message_t *msg, sim_time_t t);
+#line 293
+void serial_active_message_deliver(int node, message_t *msg, sim_time_t t)   ;
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/heap.c"
 static inline void init_heap(heap_t *heap)
-#line 67
+#line 78
 {
   heap->size = 0;
   heap->private_size = STARTING_SIZE;
   heap->data = malloc(sizeof(node_t ) * heap->private_size);
 }
 
-#line 119
+#line 130
 static inline void expand_heap(heap_t *heap)
-#line 119
+#line 130
 {
   int new_size = heap->private_size * 2 + 1;
   void *new_data = malloc(sizeof(node_t ) * new_size);
@@ -4710,11 +4639,11 @@ static inline void expand_heap(heap_t *heap)
 
 
 static inline void heap_insert(heap_t *heap, void *data, long long int key)
-#line 133
+#line 144
 {
   int findex = heap->size;
 
-#line 135
+#line 146
   if (findex == heap->private_size) {
       expand_heap(heap);
     }
@@ -4727,21 +4656,21 @@ static inline void heap_insert(heap_t *heap, void *data, long long int key)
   heap->size++;
 }
 
-#line 77
+#line 88
 static inline int is_empty(heap_t *heap)
-#line 77
+#line 88
 {
   return heap->size == 0;
 }
 
 static inline int heap_is_empty(heap_t *heap)
-#line 81
+#line 92
 {
   return is_empty(heap);
 }
 
 static inline long long int heap_get_min_key(heap_t *heap)
-#line 85
+#line 96
 {
   if (is_empty(heap)) {
       return -1;
@@ -4751,16 +4680,16 @@ static inline long long int heap_get_min_key(heap_t *heap)
     }
 }
 
-# 309 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 317 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 inline static int sim_log_eq(void *key1, void *key2)
-#line 309
+#line 317
 {
   return strcmp((char *)key1, (char *)key2) == 0;
 }
 
-#line 298
+#line 306
 inline static unsigned int sim_log_hash(void *key)
-#line 298
+#line 306
 {
   char *str = (char *)key;
   unsigned int hashVal = 0;
@@ -4772,9 +4701,9 @@ inline static unsigned int sim_log_hash(void *key)
   return hashVal;
 }
 
-#line 151
+#line 159
 static inline void sim_log_init()
-#line 151
+#line 159
 {
   int i;
 
@@ -4787,15 +4716,15 @@ static inline void sim_log_init()
     }
 }
 
-# 122 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 130 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
 inline static unsigned int sim_noise_hash(void *key)
-#line 122
+#line 130
 {
   char *pt = (char *)key;
   unsigned int hashVal = 0;
   int i;
 
-#line 126
+#line 134
   for (i = 0; i < NOISE_HISTORY; i++) {
       hashVal = pt[i] + (hashVal << 6) + (hashVal << 16) - hashVal;
     }
@@ -4803,25 +4732,25 @@ inline static unsigned int sim_noise_hash(void *key)
 }
 
 inline static int sim_noise_eq(void *key1, void *key2)
-#line 132
+#line 140
 {
   return memcmp((void *)key1, (void *)key2, NOISE_HISTORY) == 0;
 }
 
-# 56 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMoteP.nc"
+# 64 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMoteP.nc"
 static inline bool SimMoteP$SimMote$isOn(void )
-#line 56
+#line 64
 {
   return SimMoteP$isOn[sim_node()];
 }
 
-# 164 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 172 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 static inline void sim_log_add_channel(char *name, FILE *file)
-#line 164
+#line 172
 {
   sim_log_channel_t *channel;
 
-#line 166
+#line 174
   channel = (sim_log_channel_t *)hashtable_search(channelTable, name);
 
 
@@ -4829,7 +4758,7 @@ static inline void sim_log_add_channel(char *name, FILE *file)
   if (channel == (void *)0) {
       char *newName = (char *)malloc(strlen(name) + 1);
 
-#line 172
+#line 180
       strcpy(newName, name);
       newName[strlen(name)] = 0;
 
@@ -4863,12 +4792,12 @@ static inline void sim_log_add_channel(char *name, FILE *file)
 }
 
 static inline bool sim_log_remove_channel(char *output, FILE *file)
-#line 204
+#line 212
 {
   sim_log_channel_t *channel;
   int i;
 
-#line 207
+#line 215
   channel = (sim_log_channel_t *)hashtable_search(channelTable, output);
 
   if (channel == (void *)0) {
@@ -4879,7 +4808,7 @@ static inline bool sim_log_remove_channel(char *output, FILE *file)
   for (i = 0; i < channel->numOutputs; i++) {
       FILE *f = channel->outputs[i];
 
-#line 216
+#line 224
       if (file == f) {
           memcpy(&channel->outputs[i], &channel->outputs[i + 1], channel->numOutputs - (i + 1));
           channel->outputs[channel->numOutputs - 1] = (void *)0;
@@ -4890,7 +4819,7 @@ static inline bool sim_log_remove_channel(char *output, FILE *file)
   return TRUE;
 }
 
-# 161 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_gain.c"
+# 161 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_gain.c"
 static inline gain_entry_t *sim_gain_allocate_link(int mote)
 #line 161
 {
@@ -4903,7 +4832,7 @@ static inline gain_entry_t *sim_gain_allocate_link(int mote)
   return newLink;
 }
 
-# 55 "/opt/tinyos-2.1.1/tos/lib/tossim/randomlib.c"
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/randomlib.c"
 static inline void RandomInitialise(int ij, int kl)
 {
   double s;
@@ -4964,37 +4893,37 @@ static inline void RandomInitialise(int ij, int kl)
   test = TRUE;
 }
 
-# 276 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 284 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
 static inline void sim_noise_alarm()
-#line 276
+#line 284
 {
   dummy = 5;
 }
 
-# 42 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_packet.c"
+# 50 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_packet.c"
 inline static tossim_header_t *getHeader(message_t *msg)
-#line 42
+#line 50
 {
   return (tossim_header_t *)(msg->data - sizeof(tossim_header_t ));
 }
 
-# 228 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 236 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline void TossimActiveMessageC$active_message_deliver_handle(sim_event_t *evt)
-#line 228
+#line 236
 {
   message_t *m = (message_t *)evt->data;
 
-#line 230
+#line 238
   sim_log_debug(128U, "Packet", "Delivering packet to %i at %s\n", (int )sim_node(), sim_time_string());
   TossimActiveMessageC$Model$receive(m);
 }
 
 static inline sim_event_t *TossimActiveMessageC$allocate_deliver_event(int node, message_t *msg, sim_time_t t)
-#line 234
+#line 242
 {
   sim_event_t *evt = (sim_event_t *)malloc(sizeof(sim_event_t ));
 
-#line 236
+#line 244
   evt->mote = node;
   evt->time = t;
   evt->handle = TossimActiveMessageC$active_message_deliver_handle;
@@ -5015,16 +4944,16 @@ static __inline  uint8_t __nesc_ntoh_uint8(const void * source)
   return base[0];
 }
 
-# 57 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 65 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline tossim_header_t *TossimActiveMessageC$getHeader(message_t *amsg)
-#line 57
+#line 65
 {
   return (tossim_header_t *)(amsg->data - sizeof(tossim_header_t ));
 }
 
-#line 169
+#line 177
 static inline uint8_t TossimActiveMessageC$Packet$payloadLength(message_t *msg)
-#line 169
+#line 177
 {
   return __nesc_ntoh_uint8(TossimActiveMessageC$getHeader(msg)->length.nxdata);
 }
@@ -5034,36 +4963,43 @@ static inline uint8_t TossimActiveMessageC$Packet$payloadLength(message_t *msg)
 
 
 static inline uint8_t TossimActiveMessageC$Packet$maxPayloadLength(void )
-#line 177
+#line 185
 {
   return 28;
 }
 
-#line 49
-inline static am_addr_t TossimActiveMessageC$amAddress(void ){
-#line 49
-  unsigned short __nesc_result;
-#line 49
-
-#line 49
-  __nesc_result = ActiveMessageAddressC$amAddress();
-#line 49
-
-#line 49
-  return __nesc_result;
-#line 49
+# 88 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc"
+static inline am_addr_t ActiveMessageAddressC$amAddress(void )
+#line 88
+{
+  return ActiveMessageAddressC$ActiveMessageAddress$amAddress();
 }
-#line 49
-#line 128
+
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
+inline static am_addr_t TossimActiveMessageC$amAddress(void ){
+#line 57
+  unsigned short __nesc_result;
+#line 57
+
+#line 57
+  __nesc_result = ActiveMessageAddressC$amAddress();
+#line 57
+
+#line 57
+  return __nesc_result;
+#line 57
+}
+#line 57
+#line 136
 static inline am_addr_t TossimActiveMessageC$AMPacket$address(void )
-#line 128
+#line 136
 {
   return TossimActiveMessageC$amAddress();
 }
 
-#line 152
+#line 160
 static inline bool TossimActiveMessageC$AMPacket$isForMe(message_t *amsg)
-#line 152
+#line 160
 {
   return TossimActiveMessageC$AMPacket$destination(amsg) == TossimActiveMessageC$AMPacket$address() || 
   TossimActiveMessageC$AMPacket$destination(amsg) == AM_BROADCAST_ADDR;
@@ -5079,21 +5015,28 @@ static __inline  uint16_t __nesc_ntoh_uint16(const void * source)
   return ((uint16_t )base[0] << 8) | base[1];
 }
 
-# 136 "/opt/tinyos-2.1.1/tos/interfaces/AMPacket.nc"
-inline static am_id_t TestSerialC$RadioAMPacket$type(message_t * amsg){
-#line 136
-  unsigned char __nesc_result;
-#line 136
-
-#line 136
-  __nesc_result = TossimActiveMessageC$AMPacket$type(amsg);
-#line 136
-
-#line 136
-  return __nesc_result;
-#line 136
+# 134 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Leds.nc"
+inline static void TestSerialC$Leds$set(uint8_t val){
+#line 134
+  LedsP$Leds$set(val);
+#line 134
 }
-#line 136
+#line 134
+# 147 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMPacket.nc"
+inline static am_id_t TestSerialC$RadioAMPacket$type(message_t * amsg){
+#line 147
+  unsigned char __nesc_result;
+#line 147
+
+#line 147
+  __nesc_result = TossimActiveMessageC$AMPacket$type(amsg);
+#line 147
+
+#line 147
+  return __nesc_result;
+#line 147
+}
+#line 147
 # 120 "TestSerialC.nc"
 static inline message_t *TestSerialC$RadioReceive$receive(am_id_t id, message_t *msg, void *payload, uint8_t len)
 {
@@ -5110,6 +5053,7 @@ static inline message_t *TestSerialC$RadioReceive$receive(am_id_t id, message_t 
       if (__nesc_ntoh_uint16(msgReceived->seqNum.nxdata) > TestSerialC$localSeqNumber[sim_node()]) {
           sim_log_debug(47U, "TestSerialC", "Finished Node %d: received message on RadioChannel %d seqNum: %d\n", TOS_NODE_ID, idr, __nesc_ntoh_uint16(msgReceived->seqNum.nxdata));
           TestSerialC$localSeqNumber[sim_node()] = __nesc_ntoh_uint16(msgReceived->seqNum.nxdata);
+          TestSerialC$Leds$set(__nesc_ntoh_uint16(msgReceived->ledNum.nxdata));
         }
       else {
         sim_log_debug(48U, "TestSerialC", "Node %d:duplicate message received\n", TOS_NODE_ID);
@@ -5118,21 +5062,240 @@ static inline message_t *TestSerialC$RadioReceive$receive(am_id_t id, message_t 
   return msg;
 }
 
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0x408ff628, message_t * msg, void * payload, uint8_t len){
-#line 67
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
+inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0x2aaca1c2f220, message_t * msg, void * payload, uint8_t len){
+#line 78
   nx_struct message_t *__nesc_result;
-#line 67
+#line 78
 
-#line 67
-  __nesc_result = TestSerialC$RadioReceive$receive(arg_0x408ff628, msg, payload, len);
-#line 67
+#line 78
+  __nesc_result = TestSerialC$RadioReceive$receive(arg_0x2aaca1c2f220, msg, payload, len);
+#line 78
 
-#line 67
+#line 78
   return __nesc_result;
-#line 67
+#line 78
 }
-#line 67
+#line 78
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline bool /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get(void )
+#line 54
+{
+#line 54
+  return (atm128RegFile[sim_node()][27U] & (1 << 2)) != 0;
+}
+
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static bool LedsP$Led0$get(void ){
+#line 43
+  unsigned char __nesc_result;
+#line 43
+
+#line 43
+  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get();
+#line 43
+
+#line 43
+  return __nesc_result;
+#line 43
+}
+#line 43
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$clr(void )
+#line 59
+{
+#line 59
+  atm128RegFile[sim_node()][27U] &= ~(1 << 2);
+}
+
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led0$clr(void ){
+#line 41
+  /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$clr();
+#line 41
+}
+#line 41
+# 74 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led0On(void )
+#line 74
+{
+  LedsP$Led0$clr();
+  sim_log_debug(57U, "LedsC", "LEDS: Led""0"" %s.\n", LedsP$Led0$get() ? "off" : "on");
+#line 76
+  ;
+}
+
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set(void )
+#line 55
+{
+  sim_log_debug(68U, "Pins", "Setting bit %i of port %i.\n", (int )2, (int )27U);
+  atm128RegFile[sim_node()][27U] |= 1 << 2;
+}
+
+# 40 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led0$set(void ){
+#line 40
+  /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set();
+#line 40
+}
+#line 40
+# 79 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led0Off(void )
+#line 79
+{
+  LedsP$Led0$set();
+  sim_log_debug(58U, "LedsC", "LEDS: Led""0"" %s.\n", LedsP$Led0$get() ? "off" : "on");
+#line 81
+  ;
+}
+
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline bool /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get(void )
+#line 54
+{
+#line 54
+  return (atm128RegFile[sim_node()][27U] & (1 << 1)) != 0;
+}
+
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static bool LedsP$Led1$get(void ){
+#line 43
+  unsigned char __nesc_result;
+#line 43
+
+#line 43
+  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get();
+#line 43
+
+#line 43
+  return __nesc_result;
+#line 43
+}
+#line 43
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$clr(void )
+#line 59
+{
+#line 59
+  atm128RegFile[sim_node()][27U] &= ~(1 << 1);
+}
+
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led1$clr(void ){
+#line 41
+  /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$clr();
+#line 41
+}
+#line 41
+# 89 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led1On(void )
+#line 89
+{
+  LedsP$Led1$clr();
+  sim_log_debug(60U, "LedsC", "LEDS: Led""1"" %s.\n", LedsP$Led1$get() ? "off" : "on");
+#line 91
+  ;
+}
+
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set(void )
+#line 55
+{
+  sim_log_debug(67U, "Pins", "Setting bit %i of port %i.\n", (int )1, (int )27U);
+  atm128RegFile[sim_node()][27U] |= 1 << 1;
+}
+
+# 40 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led1$set(void ){
+#line 40
+  /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set();
+#line 40
+}
+#line 40
+# 94 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led1Off(void )
+#line 94
+{
+  LedsP$Led1$set();
+  sim_log_debug(61U, "LedsC", "LEDS: Led""1"" %s.\n", LedsP$Led1$get() ? "off" : "on");
+#line 96
+  ;
+}
+
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline bool /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get(void )
+#line 54
+{
+#line 54
+  return (atm128RegFile[sim_node()][27U] & (1 << 0)) != 0;
+}
+
+# 43 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static bool LedsP$Led2$get(void ){
+#line 43
+  unsigned char __nesc_result;
+#line 43
+
+#line 43
+  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get();
+#line 43
+
+#line 43
+  return __nesc_result;
+#line 43
+}
+#line 43
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$clr(void )
+#line 59
+{
+#line 59
+  atm128RegFile[sim_node()][27U] &= ~(1 << 0);
+}
+
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led2$clr(void ){
+#line 41
+  /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$clr();
+#line 41
+}
+#line 41
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led2On(void )
+#line 104
+{
+  LedsP$Led2$clr();
+  sim_log_debug(63U, "LedsC", "LEDS: Led""2"" %s.\n", LedsP$Led2$get() ? "off" : "on");
+#line 106
+  ;
+}
+
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set(void )
+#line 55
+{
+  sim_log_debug(66U, "Pins", "Setting bit %i of port %i.\n", (int )0, (int )27U);
+  atm128RegFile[sim_node()][27U] |= 1 << 0;
+}
+
+# 40 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+inline static void LedsP$Led2$set(void ){
+#line 40
+  /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set();
+#line 40
+}
+#line 40
+# 109 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
+static inline void LedsP$Leds$led2Off(void )
+#line 109
+{
+  LedsP$Led2$set();
+  sim_log_debug(64U, "LedsC", "LEDS: Led""2"" %s.\n", LedsP$Led2$get() ? "off" : "on");
+#line 111
+  ;
+}
+
 # 315 "/usr/lib/ncc/nesc_nx.h"
 static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
 #line 315
@@ -5145,24 +5308,24 @@ static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
   return value;
 }
 
-# 69 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
-inline static error_t TestSerialC$RadioSend$send(am_id_t arg_0x4071d0a0, am_addr_t addr, message_t * msg, uint8_t len){
-#line 69
+# 80 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
+inline static error_t TestSerialC$RadioSend$send(am_id_t arg_0x2aaca18e8328, am_addr_t addr, message_t * msg, uint8_t len){
+#line 80
   unsigned char __nesc_result;
-#line 69
+#line 80
 
-#line 69
-  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0x4071d0a0, addr, msg, len);
-#line 69
+#line 80
+  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0x2aaca18e8328, addr, msg, len);
+#line 80
 
-#line 69
+#line 80
   return __nesc_result;
-#line 69
+#line 80
 }
-#line 69
-# 181 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+#line 80
+# 189 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline void *TossimActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len)
-#line 181
+#line 189
 {
   if (len <= 28) {
       return msg->data;
@@ -5172,29 +5335,22 @@ static inline void *TossimActiveMessageC$Packet$getPayload(message_t *msg, uint8
     }
 }
 
-# 115 "/opt/tinyos-2.1.1/tos/interfaces/Packet.nc"
+# 126 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Packet.nc"
 inline static void * TestSerialC$RadioPacket$getPayload(message_t * msg, uint8_t len){
-#line 115
+#line 126
   void *__nesc_result;
-#line 115
+#line 126
 
-#line 115
+#line 126
   __nesc_result = TossimActiveMessageC$Packet$getPayload(msg, len);
-#line 115
+#line 126
 
-#line 115
+#line 126
   return __nesc_result;
-#line 115
+#line 126
 }
-#line 115
-# 123 "/opt/tinyos-2.1.1/tos/interfaces/Leds.nc"
-inline static void TestSerialC$Leds$set(uint8_t val){
-#line 123
-  LedsP$Leds$set(val);
-#line 123
-}
-#line 123
-# 236 "TestSerialC.nc"
+#line 126
+# 237 "TestSerialC.nc"
 static inline void TestSerialC$radioSendTask(TestSerialMsg *receivedMsgToSend)
 {
 
@@ -5210,7 +5366,7 @@ static inline void TestSerialC$radioSendTask(TestSerialMsg *receivedMsgToSend)
 
           TestSerialMsg *msgToSend = (TestSerialMsg *)TestSerialC$RadioPacket$getPayload(&TestSerialC$sndRadio[sim_node()], sizeof(TestSerialMsg ));
 
-#line 250
+#line 251
           __nesc_hton_uint16(msgToSend->sender.nxdata, __nesc_ntoh_uint16(receivedMsgToSend->sender.nxdata));
           __nesc_hton_uint16(msgToSend->seqNum.nxdata, __nesc_ntoh_uint16(receivedMsgToSend->seqNum.nxdata));
           __nesc_hton_uint16(msgToSend->ledNum.nxdata, __nesc_ntoh_uint16(receivedMsgToSend->ledNum.nxdata));
@@ -5224,7 +5380,7 @@ static inline void TestSerialC$radioSendTask(TestSerialMsg *receivedMsgToSend)
         }
     }
   else 
-#line 261
+#line 262
     {
       sim_log_debug(54U, "BlinkToRadio", "Node %d Received duplicate Message from %d with seqNum: %d ledNum: %d\n", TOS_NODE_ID, __nesc_ntoh_uint16(receivedMsgToSend->sender.nxdata), __nesc_ntoh_uint16(receivedMsgToSend->seqNum.nxdata), __nesc_ntoh_uint16(receivedMsgToSend->ledNum.nxdata));
     }
@@ -5246,241 +5402,22 @@ static inline message_t *TestSerialC$RadioSnoop$receive(am_id_t id, message_t *m
   return msg;
 }
 
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0x408ffcc0, message_t * msg, void * payload, uint8_t len){
-#line 67
-  nx_struct message_t *__nesc_result;
-#line 67
-
-#line 67
-  __nesc_result = TestSerialC$RadioSnoop$receive(arg_0x408ffcc0, msg, payload, len);
-#line 67
-
-#line 67
-  return __nesc_result;
-#line 67
-}
-#line 67
-# 45 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline bool /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get(void )
-#line 45
-{
-#line 45
-  return (atm128RegFile[sim_node()][27U] & (1 << 2)) != 0;
-}
-
-# 32 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static bool LedsP$Led0$get(void ){
-#line 32
-  unsigned char __nesc_result;
-#line 32
-
-#line 32
-  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$get();
-#line 32
-
-#line 32
-  return __nesc_result;
-#line 32
-}
-#line 32
-# 50 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$clr(void )
-#line 50
-{
-#line 50
-  atm128RegFile[sim_node()][27U] &= ~(1 << 2);
-}
-
-# 30 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led0$clr(void ){
-#line 30
-  /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$clr();
-#line 30
-}
-#line 30
-# 63 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led0On(void )
-#line 63
-{
-  LedsP$Led0$clr();
-  sim_log_debug(57U, "LedsC", "LEDS: Led""0"" %s.\n", LedsP$Led0$get() ? "off" : "on");
-#line 65
-  ;
-}
-
-# 46 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set(void )
-#line 46
-{
-  sim_log_debug(68U, "Pins", "Setting bit %i of port %i.\n", (int )2, (int )27U);
-  atm128RegFile[sim_node()][27U] |= 1 << 2;
-}
-
-# 29 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led0$set(void ){
-#line 29
-  /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$set();
-#line 29
-}
-#line 29
-# 68 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led0Off(void )
-#line 68
-{
-  LedsP$Led0$set();
-  sim_log_debug(58U, "LedsC", "LEDS: Led""0"" %s.\n", LedsP$Led0$get() ? "off" : "on");
-#line 70
-  ;
-}
-
-# 45 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline bool /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get(void )
-#line 45
-{
-#line 45
-  return (atm128RegFile[sim_node()][27U] & (1 << 1)) != 0;
-}
-
-# 32 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static bool LedsP$Led1$get(void ){
-#line 32
-  unsigned char __nesc_result;
-#line 32
-
-#line 32
-  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$get();
-#line 32
-
-#line 32
-  return __nesc_result;
-#line 32
-}
-#line 32
-# 50 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$clr(void )
-#line 50
-{
-#line 50
-  atm128RegFile[sim_node()][27U] &= ~(1 << 1);
-}
-
-# 30 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led1$clr(void ){
-#line 30
-  /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$clr();
-#line 30
-}
-#line 30
-# 78 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led1On(void )
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
+inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0x2aaca1c2fd68, message_t * msg, void * payload, uint8_t len){
 #line 78
-{
-  LedsP$Led1$clr();
-  sim_log_debug(60U, "LedsC", "LEDS: Led""1"" %s.\n", LedsP$Led1$get() ? "off" : "on");
-#line 80
-  ;
-}
+  nx_struct message_t *__nesc_result;
+#line 78
 
-# 46 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set(void )
-#line 46
-{
-  sim_log_debug(67U, "Pins", "Setting bit %i of port %i.\n", (int )1, (int )27U);
-  atm128RegFile[sim_node()][27U] |= 1 << 1;
-}
+#line 78
+  __nesc_result = TestSerialC$RadioSnoop$receive(arg_0x2aaca1c2fd68, msg, payload, len);
+#line 78
 
-# 29 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led1$set(void ){
-#line 29
-  /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$set();
-#line 29
-}
-#line 29
-# 83 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led1Off(void )
-#line 83
-{
-  LedsP$Led1$set();
-  sim_log_debug(61U, "LedsC", "LEDS: Led""1"" %s.\n", LedsP$Led1$get() ? "off" : "on");
-#line 85
-  ;
-}
-
-# 45 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline bool /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get(void )
-#line 45
-{
-#line 45
-  return (atm128RegFile[sim_node()][27U] & (1 << 0)) != 0;
-}
-
-# 32 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static bool LedsP$Led2$get(void ){
-#line 32
-  unsigned char __nesc_result;
-#line 32
-
-#line 32
-  __nesc_result = /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get();
-#line 32
-
-#line 32
+#line 78
   return __nesc_result;
-#line 32
+#line 78
 }
-#line 32
-# 50 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$clr(void )
-#line 50
-{
-#line 50
-  atm128RegFile[sim_node()][27U] &= ~(1 << 0);
-}
-
-# 30 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led2$clr(void ){
-#line 30
-  /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$clr();
-#line 30
-}
-#line 30
-# 93 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led2On(void )
-#line 93
-{
-  LedsP$Led2$clr();
-  sim_log_debug(63U, "LedsC", "LEDS: Led""2"" %s.\n", LedsP$Led2$get() ? "off" : "on");
-#line 95
-  ;
-}
-
-# 46 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
-static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set(void )
-#line 46
-{
-  sim_log_debug(66U, "Pins", "Setting bit %i of port %i.\n", (int )0, (int )27U);
-  atm128RegFile[sim_node()][27U] |= 1 << 0;
-}
-
-# 29 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
-inline static void LedsP$Led2$set(void ){
-#line 29
-  /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$set();
-#line 29
-}
-#line 29
-# 98 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
-static inline void LedsP$Leds$led2Off(void )
-#line 98
-{
-  LedsP$Led2$set();
-  sim_log_debug(64U, "LedsC", "LEDS: Led""2"" %s.\n", LedsP$Led2$get() ? "off" : "on");
-#line 100
-  ;
-}
-
-# 266 "TestSerialC.nc"
+#line 78
+# 267 "TestSerialC.nc"
 static inline void TestSerialC$RadioSend$sendDone(am_id_t id, message_t *msg, error_t error)
 {
   if (error != SUCCESS) 
@@ -5493,27 +5430,27 @@ static inline void TestSerialC$RadioSend$sendDone(am_id_t id, message_t *msg, er
     }
 }
 
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
-inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0x408b3b98, message_t * msg, error_t error){
-#line 99
-  TestSerialC$RadioSend$sendDone(arg_0x408b3b98, msg, error);
-#line 99
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
+inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0x2aaca1c300c8, message_t * msg, error_t error){
+#line 110
+  TestSerialC$RadioSend$sendDone(arg_0x2aaca1c300c8, msg, error);
+#line 110
 }
-#line 99
-# 95 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+#line 110
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline void TossimActiveMessageC$Model$sendDone(message_t *msg, error_t result)
-#line 95
+#line 103
 {
   TossimActiveMessageC$AMSend$sendDone(TossimActiveMessageC$AMPacket$type(msg), msg, result);
 }
 
-# 68 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 76 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 inline static void TossimPacketModelC$Packet$sendDone(message_t *msg, error_t error){
-#line 68
+#line 76
   TossimActiveMessageC$Model$sendDone(msg, error);
-#line 68
+#line 76
 }
-#line 68
+#line 76
 # 286 "/usr/lib/ncc/nesc_nx.h"
 static __inline  uint8_t __nesc_hton_uint8(void * target, uint8_t value)
 #line 286
@@ -5535,59 +5472,59 @@ static __inline  int8_t __nesc_hton_int8(void * target, int8_t value)
   return value;
 }
 
-# 475 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+# 483 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline void CpmModelC$free_receive_message(CpmModelC$receive_message_t *msg)
-#line 475
+#line 483
 {
   free(msg);
 }
 
-# 53 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 61 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static bool CpmModelC$Model$shouldAck(message_t *msg){
-#line 53
+#line 61
   unsigned char __nesc_result;
-#line 53
+#line 61
 
-#line 53
+#line 61
   __nesc_result = TossimPacketModelC$GainRadioModel$shouldAck(msg);
-#line 53
+#line 61
 
-#line 53
+#line 61
   return __nesc_result;
-#line 53
+#line 61
 }
-#line 53
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+#line 61
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 inline static void TossimPacketModelC$Packet$receive(message_t *msg){
-#line 77
+#line 85
   TossimActiveMessageC$Model$receive(msg);
-#line 77
+#line 85
 }
-#line 77
-# 280 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 85
+# 288 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline void TossimPacketModelC$GainRadioModel$receive(message_t *msg)
-#line 280
+#line 288
 {
   if (TossimPacketModelC$running[sim_node()] && !TossimPacketModelC$transmitting[sim_node()]) {
       TossimPacketModelC$Packet$receive(msg);
     }
 }
 
-# 52 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static void CpmModelC$Model$receive(message_t *msg){
-#line 52
+#line 60
   TossimPacketModelC$GainRadioModel$receive(msg);
-#line 52
+#line 60
 }
-#line 52
-# 252 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+#line 60
+# 260 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline bool CpmModelC$checkReceive(CpmModelC$receive_message_t *msg)
-#line 252
+#line 260
 {
   double noise = CpmModelC$noise_hash_generation();
   CpmModelC$receive_message_t *list = CpmModelC$outstandingReceptionHead[sim_node()];
 
-#line 255
+#line 263
   noise = pow(10.0, noise / 10.0);
   while (list != (void *)0) {
       if (list != msg) {
@@ -5599,15 +5536,15 @@ static inline bool CpmModelC$checkReceive(CpmModelC$receive_message_t *msg)
   return CpmModelC$shouldReceive(msg->power - noise);
 }
 
-#line 288
+#line 296
 static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
-#line 288
+#line 296
 {
   CpmModelC$receive_message_t *mine = (CpmModelC$receive_message_t *)evt->data;
   CpmModelC$receive_message_t *predecessor = (void *)0;
   CpmModelC$receive_message_t *list = CpmModelC$outstandingReceptionHead[sim_node()];
 
-  sim_log_debug(152U, "CpmModelC", "Handling reception event @ %s.\n", sim_time_string());
+  sim_log_debug(148U, "CpmModelC", "Handling reception event @ %s.\n", sim_time_string());
   while (list != (void *)0) {
       if (list->next == mine) {
           predecessor = list;
@@ -5618,18 +5555,18 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
       predecessor->next = mine->next;
     }
   else {
-#line 303
+#line 311
     if (mine == CpmModelC$outstandingReceptionHead[sim_node()]) {
         CpmModelC$outstandingReceptionHead[sim_node()] = mine->next;
       }
     else {
-        sim_log_error(153U, "CpmModelC", "Incoming packet list structure is corrupted: entry is not the head and no entry points to it.\n");
+        sim_log_error(149U, "CpmModelC", "Incoming packet list structure is corrupted: entry is not the head and no entry points to it.\n");
       }
     }
-#line 309
-  sim_log_debug(154U, "CpmModelC,SNRLoss", "Packet from %i to %i\n", (int )mine->source, (int )sim_node());
+#line 317
+  sim_log_debug(150U, "CpmModelC,SNRLoss", "Packet from %i to %i\n", (int )mine->source, (int )sim_node());
   if (!CpmModelC$checkReceive(mine)) {
-      sim_log_debug(155U, "CpmModelC,SNRLoss", " - lost packet from %i as SNR was too low.\n", (int )mine->source);
+      sim_log_debug(151U, "CpmModelC,SNRLoss", " - lost packet from %i as SNR was too low.\n", (int )mine->source);
       mine->lost = 1;
     }
   if (! mine->lost) {
@@ -5638,20 +5575,20 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
 
       tossim_metadata_t *meta = (tossim_metadata_t *)& mine->msg->metadata;
 
-#line 319
+#line 327
       __nesc_hton_int8(meta->strength.nxdata, mine->strength);
 
-      sim_log_debug_clear(156U, "CpmModelC,SNRLoss", "  -signaling reception\n");
+      sim_log_debug_clear(152U, "CpmModelC,SNRLoss", "  -signaling reception\n");
       CpmModelC$Model$receive(mine->msg);
       if (mine->ack) {
-          sim_log_debug_clear(157U, "CpmModelC", " acknowledgment requested, ");
+          sim_log_debug_clear(153U, "CpmModelC", " acknowledgment requested, ");
         }
       else {
-          sim_log_debug_clear(158U, "CpmModelC", " no acknowledgment requested.\n");
+          sim_log_debug_clear(154U, "CpmModelC", " no acknowledgment requested.\n");
         }
 
       if (mine->ack && CpmModelC$Model$shouldAck(mine->msg)) {
-          sim_log_debug_clear(159U, "CpmModelC", " scheduling ack.\n");
+          sim_log_debug_clear(155U, "CpmModelC", " scheduling ack.\n");
           CpmModelC$sim_gain_schedule_ack(mine->source, sim_time() + 1, mine);
         }
       else {
@@ -5662,9 +5599,9 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
     }
   else {
       if (RandomUniform() < 0.001) {
-          sim_log_debug(160U, "CpmModelC,SNRLoss", "Packet was technically lost, but TOSSIM introduces an ack false positive rate.\n");
+          sim_log_debug(156U, "CpmModelC,SNRLoss", "Packet was technically lost, but TOSSIM introduces an ack false positive rate.\n");
           if (mine->ack && CpmModelC$Model$shouldAck(mine->msg)) {
-              sim_log_debug_clear(161U, "CpmModelC", " scheduling ack.\n");
+              sim_log_debug_clear(157U, "CpmModelC", " scheduling ack.\n");
               CpmModelC$sim_gain_schedule_ack(mine->source, sim_time() + 1, mine);
             }
           else {
@@ -5675,17 +5612,17 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
           CpmModelC$free_receive_message(mine);
         }
       CpmModelC$receiving[sim_node()] = 0;
-      sim_log_debug_clear(162U, "CpmModelC,SNRLoss", "  -packet was lost.\n");
+      sim_log_debug_clear(158U, "CpmModelC,SNRLoss", "  -packet was lost.\n");
     }
 }
 
-#line 459
+#line 467
 static inline sim_event_t *CpmModelC$allocate_receive_event(sim_time_t endTime, CpmModelC$receive_message_t *msg)
-#line 459
+#line 467
 {
   sim_event_t *evt = (sim_event_t *)malloc(sizeof(sim_event_t ));
 
-#line 461
+#line 469
   evt->mote = sim_node();
   evt->time = endTime;
   evt->handle = CpmModelC$sim_gain_receive_handle;
@@ -5697,21 +5634,21 @@ static inline sim_event_t *CpmModelC$allocate_receive_event(sim_time_t endTime, 
 }
 
 static inline CpmModelC$receive_message_t *CpmModelC$allocate_receive_message(void )
-#line 471
+#line 479
 {
   return (CpmModelC$receive_message_t *)malloc(sizeof(CpmModelC$receive_message_t ));
 }
 
-#line 361
+#line 369
 static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTime, message_t *msg, bool receive, double power, double reversePower)
-#line 361
+#line 369
 {
   sim_event_t *evt;
   CpmModelC$receive_message_t *list;
   CpmModelC$receive_message_t *rcv = CpmModelC$allocate_receive_message();
   double noiseStr = CpmModelC$packetNoise(rcv);
 
-#line 366
+#line 374
   rcv->source = source;
   rcv->start = sim_time();
   rcv->end = endTime;
@@ -5731,25 +5668,25 @@ static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTim
 
 
   if (!sim_mote_is_on(sim_node())) {
-      sim_log_debug(163U, "CpmModelC", "Lost packet from %i due to %i being off\n", source, sim_node());
+      sim_log_debug(159U, "CpmModelC", "Lost packet from %i due to %i being off\n", source, sim_node());
       rcv->lost = 1;
     }
   else {
-#line 388
+#line 396
     if (!CpmModelC$shouldReceive(power - noiseStr)) {
-        sim_log_debug(164U, "CpmModelC,SNRLoss", "Lost packet from %i to %i due to SNR being too low (%i)\n", source, sim_node(), (int )(power - noiseStr));
+        sim_log_debug(160U, "CpmModelC,SNRLoss", "Lost packet from %i to %i due to SNR being too low (%i)\n", source, sim_node(), (int )(power - noiseStr));
         rcv->lost = 1;
       }
     else {
-#line 392
+#line 400
       if (CpmModelC$receiving[sim_node()]) {
-          sim_log_debug(165U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-reception\n", source, sim_node());
+          sim_log_debug(161U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-reception\n", source, sim_node());
           rcv->lost = 1;
         }
       else {
-#line 396
+#line 404
         if (CpmModelC$transmitting[sim_node()] && rcv->start < CpmModelC$transmissionEndTime[sim_node()] && CpmModelC$transmissionEndTime[sim_node()] <= rcv->end) {
-            sim_log_debug(166U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-transmission, transmissionEndTime %llu\n", source, sim_node(), CpmModelC$transmissionEndTime[sim_node()]);
+            sim_log_debug(162U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-transmission, transmissionEndTime %llu\n", source, sim_node(), CpmModelC$transmissionEndTime[sim_node()]);
             rcv->lost = 1;
           }
         else {
@@ -5758,11 +5695,11 @@ static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTim
         }
       }
     }
-#line 404
+#line 412
   list = CpmModelC$outstandingReceptionHead[sim_node()];
   while (list != (void *)0) {
       if (!CpmModelC$shouldReceive(list->power - rcv->power)) {
-          sim_log_debug(167U, "Gain,SNRLoss", "Going to lose packet from %i with signal %lf as am receiving a packet from %i with signal %lf\n", list->source, list->power, source, rcv->power);
+          sim_log_debug(163U, "Gain,SNRLoss", "Going to lose packet from %i with signal %lf as am receiving a packet from %i with signal %lf\n", list->source, list->power, source, rcv->power);
           list->lost = 1;
         }
       list = list->next;
@@ -5776,33 +5713,33 @@ static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTim
 
 
 static inline void CpmModelC$sim_gain_put(int dest, message_t *msg, sim_time_t endTime, bool receive, double power, double reversePower)
-#line 420
+#line 428
 {
   int prevNode = sim_node();
 
-#line 422
-  sim_log_debug(168U, "CpmModelC", "Enqueing reception event for %i at %llu with power %lf.\n", dest, endTime, power);
+#line 430
+  sim_log_debug(164U, "CpmModelC", "Enqueing reception event for %i at %llu with power %lf.\n", dest, endTime, power);
   sim_set_node(dest);
   CpmModelC$enqueue_receive_event(prevNode, endTime, msg, receive, power, reversePower);
   sim_set_node(prevNode);
 }
 
 static inline void CpmModelC$Model$putOnAirTo(int dest, message_t *msg, bool ack, sim_time_t endTime, double power, double reversePower)
-#line 428
+#line 436
 {
   CpmModelC$receive_message_t *list;
   gain_entry_t *neighborEntry = sim_gain_first(sim_node());
 
-#line 431
+#line 439
   CpmModelC$requestAck[sim_node()] = ack;
   CpmModelC$outgoing[sim_node()] = msg;
   CpmModelC$transmissionEndTime[sim_node()] = endTime;
-  sim_log_debug(169U, "CpmModelC", "Node %i transmitting to %i, finishes at %llu.\n", sim_node(), dest, endTime);
+  sim_log_debug(165U, "CpmModelC", "Node %i transmitting to %i, finishes at %llu.\n", sim_node(), dest, endTime);
 
   while (neighborEntry != (void *)0) {
       int other = neighborEntry->mote;
 
-#line 438
+#line 446
       CpmModelC$sim_gain_put(other, msg, endTime, ack, power + sim_gain_value(sim_node(), other), reversePower + sim_gain_value(other, sim_node()));
       neighborEntry = sim_gain_next(neighborEntry);
     }
@@ -5810,53 +5747,46 @@ static inline void CpmModelC$Model$putOnAirTo(int dest, message_t *msg, bool ack
   list = CpmModelC$outstandingReceptionHead[sim_node()];
   while (list != (void *)0) {
       list->lost = 1;
-      sim_log_debug(170U, "CpmModelC,SNRLoss", "Lost packet from %i because %i has outstanding reception, startTime %llu endTime %llu\n", list->source, sim_node(), list->start, list->end);
+      sim_log_debug(166U, "CpmModelC,SNRLoss", "Lost packet from %i because %i has outstanding reception, startTime %llu endTime %llu\n", list->source, sim_node(), list->start, list->end);
       list = list->next;
     }
 }
 
-# 40 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 48 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static void TossimPacketModelC$GainRadioModel$putOnAirTo(int dest, message_t *msg, bool ack, sim_time_t endTime, double gain, double reverseGain){
-#line 40
+#line 48
   CpmModelC$Model$putOnAirTo(dest, msg, ack, endTime, gain, reverseGain);
-#line 40
+#line 48
 }
-#line 40
-# 272 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 48
+# 280 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline void TossimPacketModelC$send_transmit_done(sim_event_t *evt)
-#line 272
+#line 280
 {
   message_t *rval = TossimPacketModelC$sending[sim_node()];
 
-#line 274
+#line 282
   TossimPacketModelC$sending[sim_node()] = (void *)0;
   TossimPacketModelC$transmitting[sim_node()] = FALSE;
-  sim_log_debug(144U, "TossimPacketModelC", "PACKET: Signaling send done at %llu.\n", sim_time());
+  sim_log_debug(140U, "TossimPacketModelC", "PACKET: Signaling send done at %llu.\n", sim_time());
   TossimPacketModelC$Packet$sendDone(rval, TossimPacketModelC$running[sim_node()] ? SUCCESS : EOFF);
 }
 
-#line 241
-static inline int TossimPacketModelC$sim_packet_header_length(void )
-#line 241
-{
-  return sizeof(tossim_header_t );
-}
-
-#line 74
+#line 82
 static inline tossim_metadata_t *TossimPacketModelC$getMetadata(message_t *msg)
-#line 74
+#line 82
 {
   return (tossim_metadata_t *)& msg->metadata;
 }
 
-#line 245
+#line 253
 static inline void TossimPacketModelC$send_transmit(sim_event_t *evt)
-#line 245
+#line 253
 {
   sim_time_t duration;
   tossim_metadata_t *metadata = TossimPacketModelC$getMetadata(TossimPacketModelC$sending[sim_node()]);
 
-  duration = 8 * (TossimPacketModelC$sendingLength[sim_node()] + TossimPacketModelC$sim_packet_header_length());
+  duration = 8 * TossimPacketModelC$sendingLength[sim_node()];
   duration /= sim_csma_bits_per_symbol();
   duration += sim_csma_preamble_length();
 
@@ -5868,58 +5798,58 @@ static inline void TossimPacketModelC$send_transmit(sim_event_t *evt)
   evt->time += duration;
   evt->handle = TossimPacketModelC$send_transmit_done;
 
-  sim_log_debug(142U, "TossimPacketModelC", "PACKET: Broadcasting packet to everyone.\n");
+  sim_log_debug(138U, "TossimPacketModelC", "PACKET: Broadcasting packet to everyone.\n");
   TossimPacketModelC$GainRadioModel$putOnAirTo(TossimPacketModelC$destNode[sim_node()], TossimPacketModelC$sending[sim_node()], __nesc_ntoh_uint8(metadata->ack.nxdata), evt->time, 0.0, 0.0);
   __nesc_hton_uint8(metadata->ack.nxdata, 0);
 
   evt->time += sim_csma_rxtx_delay() * (sim_ticks_per_sec() / sim_csma_symbols_per_sec());
 
-  sim_log_debug(143U, "TossimPacketModelC", "PACKET: Send done at %llu.\n", evt->time);
+  sim_log_debug(139U, "TossimPacketModelC", "PACKET: Send done at %llu.\n", evt->time);
 
   sim_queue_insert(evt);
 }
 
-# 451 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+# 459 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline void CpmModelC$Model$setPendingTransmission(void )
-#line 451
+#line 459
 {
   CpmModelC$transmitting[sim_node()] = TRUE;
-  sim_log_debug(171U, "CpmModelC", "setPendingTransmission: transmitting %i @ %s\n", CpmModelC$transmitting[sim_node()], sim_time_string());
+  sim_log_debug(167U, "CpmModelC", "setPendingTransmission: transmitting %i @ %s\n", CpmModelC$transmitting[sim_node()], sim_time_string());
 }
 
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static void TossimPacketModelC$GainRadioModel$setPendingTransmission(void ){
-#line 49
+#line 57
   CpmModelC$Model$setPendingTransmission();
-#line 49
+#line 57
 }
-#line 49
-# 203 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+#line 57
+# 211 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline bool CpmModelC$Model$clearChannel(void )
-#line 203
+#line 211
 {
-  sim_log_debug(150U, "CpmModelC", "Checking clear channel @ %s: %f <= %f \n", sim_time_string(), (double )CpmModelC$packetNoise((void *)0), CpmModelC$clearThreshold[sim_node()]);
+  sim_log_debug(146U, "CpmModelC", "Checking clear channel @ %s: %f <= %f \n", sim_time_string(), (double )CpmModelC$packetNoise((void *)0), CpmModelC$clearThreshold[sim_node()]);
   return CpmModelC$packetNoise((void *)0) < CpmModelC$clearThreshold[sim_node()];
 }
 
-# 48 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 56 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static bool TossimPacketModelC$GainRadioModel$clearChannel(void ){
-#line 48
+#line 56
   unsigned char __nesc_result;
-#line 48
+#line 56
 
-#line 48
+#line 56
   __nesc_result = CpmModelC$Model$clearChannel();
-#line 48
+#line 56
 
-#line 48
+#line 56
   return __nesc_result;
-#line 48
+#line 56
 }
-#line 48
-# 203 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 56
+# 211 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline void TossimPacketModelC$send_backoff(sim_event_t *evt)
-#line 203
+#line 211
 {
   TossimPacketModelC$backoffCount[sim_node()]++;
   if (TossimPacketModelC$GainRadioModel$clearChannel()) {
@@ -5931,7 +5861,7 @@ static inline void TossimPacketModelC$send_backoff(sim_event_t *evt)
   if (TossimPacketModelC$neededFreeSamples[sim_node()] == 0) {
       sim_time_t delay;
 
-#line 213
+#line 221
       delay = sim_csma_rxtx_delay();
       delay *= sim_ticks_per_sec() / sim_csma_symbols_per_sec();
       evt->time += delay;
@@ -5941,13 +5871,13 @@ static inline void TossimPacketModelC$send_backoff(sim_event_t *evt)
       sim_queue_insert(evt);
     }
   else {
-#line 221
+#line 229
     if (sim_csma_max_iterations() == 0 || 
     TossimPacketModelC$backoffCount[sim_node()] <= sim_csma_max_iterations()) {
         sim_time_t backoff = sim_random();
         sim_time_t modulo = sim_csma_high() - sim_csma_low();
 
-#line 225
+#line 233
         modulo *= pow(sim_csma_exponent_base(), TossimPacketModelC$backoffCount[sim_node()]);
         backoff %= modulo;
 
@@ -5959,17 +5889,17 @@ static inline void TossimPacketModelC$send_backoff(sim_event_t *evt)
     else {
         message_t *rval = TossimPacketModelC$sending[sim_node()];
 
-#line 235
+#line 243
         TossimPacketModelC$sending[sim_node()] = (void *)0;
-        sim_log_debug(141U, "TossimPacketModelC", "PACKET: Failed to send packet due to busy channel.\n");
+        sim_log_debug(137U, "TossimPacketModelC", "PACKET: Failed to send packet due to busy channel.\n");
         TossimPacketModelC$Packet$sendDone(rval, EBUSY);
       }
     }
 }
 
-#line 179
+#line 187
 static inline void TossimPacketModelC$start_csma(void )
-#line 179
+#line 187
 {
   sim_time_t first_sample;
 
@@ -5978,11 +5908,11 @@ static inline void TossimPacketModelC$start_csma(void )
 
   sim_time_t backoff = sim_random();
 
-#line 186
+#line 194
   backoff %= sim_csma_init_high() - sim_csma_init_low();
   backoff += sim_csma_init_low();
   backoff *= sim_ticks_per_sec() / sim_csma_symbols_per_sec();
-  sim_log_debug(140U, "TossimPacketModelC", "Starting CMSA with %lli.\n", backoff);
+  sim_log_debug(136U, "TossimPacketModelC", "Starting CMSA with %lli.\n", backoff);
   first_sample = sim_time() + backoff;
 
   TossimPacketModelC$sendEvent[sim_node()].mote = sim_node();
@@ -5995,16 +5925,16 @@ static inline void TossimPacketModelC$start_csma(void )
   sim_queue_insert(&TossimPacketModelC$sendEvent[sim_node()]);
 }
 
-#line 153
+#line 161
 static inline error_t TossimPacketModelC$Packet$send(int dest, message_t *msg, uint8_t len)
-#line 153
+#line 161
 {
   if (!TossimPacketModelC$initialized[sim_node()]) {
-      sim_log_error(138U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not initialized!\n");
+      sim_log_error(134U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not initialized!\n");
       return EOFF;
     }
   if (!TossimPacketModelC$running[sim_node()]) {
-      sim_log_error(139U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not running!\n");
+      sim_log_error(135U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not running!\n");
       return EOFF;
     }
 
@@ -6020,30 +5950,30 @@ static inline error_t TossimPacketModelC$Packet$send(int dest, message_t *msg, u
   return SUCCESS;
 }
 
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 inline static error_t TossimActiveMessageC$Model$send(int node, message_t *msg, uint8_t len){
-#line 49
+#line 57
   unsigned char __nesc_result;
-#line 49
+#line 57
 
-#line 49
+#line 57
   __nesc_result = TossimPacketModelC$Packet$send(node, msg, len);
-#line 49
+#line 57
 
-#line 49
+#line 57
   return __nesc_result;
-#line 49
+#line 57
 }
-#line 49
-# 82 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+#line 57
+# 90 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline double CpmModelC$timeInMs(void )
-#line 82
+#line 90
 {
   sim_time_t ftime = sim_time();
   int hours;
-#line 84
+#line 92
   int minutes;
-#line 84
+#line 92
   int seconds;
   sim_time_t secondBillionths;
   int temp_time;
@@ -6077,9 +6007,9 @@ static inline double CpmModelC$timeInMs(void )
   return ms_time;
 }
 
-#line 222
+#line 230
 static inline double CpmModelC$prr_estimate_from_snr(double SNR)
-#line 222
+#line 230
 {
 
 
@@ -6090,28 +6020,28 @@ static inline double CpmModelC$prr_estimate_from_snr(double SNR)
   double PSE = 0.5 * erfc(beta1 * X / sqrt(2));
   double prr_hat = pow(1 - PSE, 23 * 2);
 
-#line 231
-  sim_log_debug(151U, "CpmModelC,SNR", "SNR is %lf, PRR is %lf\n", SNR, prr_hat);
+#line 239
+  sim_log_debug(147U, "CpmModelC,SNR", "SNR is %lf, PRR is %lf\n", SNR, prr_hat);
   if (prr_hat > 1) {
     prr_hat = 1.1;
     }
   else {
-#line 234
+#line 242
     if (prr_hat < 0) {
       prr_hat = -0.1;
       }
     }
-#line 237
+#line 245
   return prr_hat;
 }
 
-# 119 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 127 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline bool TossimActiveMessageC$Model$shouldAck(message_t *msg)
-#line 119
+#line 127
 {
   tossim_header_t *header = TossimActiveMessageC$getHeader(msg);
 
-#line 121
+#line 129
   if (__nesc_ntoh_uint16(header->dest.nxdata) == TossimActiveMessageC$amAddress()) {
       sim_log_debug(127U, "Acks", "Received packet addressed to me so ack it\n");
       return TRUE;
@@ -6119,47 +6049,47 @@ static inline bool TossimActiveMessageC$Model$shouldAck(message_t *msg)
   return FALSE;
 }
 
-# 79 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModel.nc"
+# 87 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModel.nc"
 inline static bool TossimPacketModelC$Packet$shouldAck(message_t *msg){
-#line 79
+#line 87
   unsigned char __nesc_result;
-#line 79
+#line 87
 
-#line 79
+#line 87
   __nesc_result = TossimActiveMessageC$Model$shouldAck(msg);
-#line 79
+#line 87
 
-#line 79
+#line 87
   return __nesc_result;
-#line 79
+#line 87
 }
-#line 79
-# 288 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 87
+# 296 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline void TossimPacketModelC$GainRadioModel$acked(message_t *msg)
-#line 288
+#line 296
 {
   if (TossimPacketModelC$running[sim_node()]) {
       tossim_metadata_t *metadata = TossimPacketModelC$getMetadata(TossimPacketModelC$sending[sim_node()]);
 
-#line 291
+#line 299
       __nesc_hton_uint8(metadata->ack.nxdata, 1);
       if (msg != TossimPacketModelC$sending[sim_node()]) {
           TossimPacketModelC$error[sim_node()] = 1;
-          sim_log_debug(145U, "TossimPacketModelC", "Requested ack for 0x%x, but outgoing packet is 0x%x.\n", msg, TossimPacketModelC$sending[sim_node()]);
+          sim_log_debug(141U, "TossimPacketModelC", "Requested ack for 0x%x, but outgoing packet is 0x%x.\n", msg, TossimPacketModelC$sending[sim_node()]);
         }
     }
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/lib/tossim/GainRadioModel.nc"
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/GainRadioModel.nc"
 inline static void CpmModelC$Model$acked(message_t *msg){
-#line 51
+#line 59
   TossimPacketModelC$GainRadioModel$acked(msg);
-#line 51
+#line 59
 }
-#line 51
-# 143 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+#line 59
+# 151 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static inline double CpmModelC$arr_estimate_from_snr(double SNR)
-#line 143
+#line 151
 {
   double beta1 = 0.9794;
   double beta2 = 2.3851;
@@ -6167,43 +6097,43 @@ static inline double CpmModelC$arr_estimate_from_snr(double SNR)
   double PSE = 0.5 * erfc(beta1 * X / sqrt(2));
   double prr_hat = pow(1 - PSE, 23 * 2);
 
-#line 149
-  sim_log_debug(148U, "CpmModelC,SNRLoss", "SNR is %lf, ARR is %lf\n", SNR, prr_hat);
+#line 157
+  sim_log_debug(144U, "CpmModelC,SNRLoss", "SNR is %lf, ARR is %lf\n", SNR, prr_hat);
   if (prr_hat > 1) {
     prr_hat = 1.1;
     }
   else {
-#line 152
+#line 160
     if (prr_hat < 0) {
       prr_hat = -0.1;
       }
     }
-#line 155
+#line 163
   return prr_hat;
 }
 
 static inline int CpmModelC$shouldAckReceive(double snr)
-#line 158
+#line 166
 {
   double prr = CpmModelC$arr_estimate_from_snr(snr);
   double coin = RandomUniform();
 
-#line 161
+#line 169
   if (prr >= 0 && prr <= 1) {
       if (coin < prr) {
         prr = 1.0;
         }
       else {
-#line 165
+#line 173
         prr = 0.0;
         }
     }
-#line 167
+#line 175
   return (int )prr;
 }
 
 static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt)
-#line 170
+#line 178
 {
 
 
@@ -6212,7 +6142,7 @@ static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt)
 
 
   if (
-#line 176
+#line 184
   CpmModelC$requestAck[sim_node()] && 
   CpmModelC$outgoing[sim_node()] != (void *)0 && 
   sim_mote_is_on(sim_node())) {
@@ -6221,7 +6151,7 @@ static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt)
       double noise = CpmModelC$packetNoise(rcv);
       double snr = power - noise;
 
-#line 183
+#line 191
       if (CpmModelC$shouldAckReceive(snr)) {
           CpmModelC$Model$acked(CpmModelC$outgoing[sim_node()]);
         }
@@ -6229,21 +6159,21 @@ static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt)
   CpmModelC$free_receive_message((CpmModelC$receive_message_t *)evt->data);
 }
 
-# 44 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_packet.c"
+# 52 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_packet.c"
 inline static serial_header_t *getSerialHeader(message_t *msg)
-#line 44
+#line 52
 {
   return (serial_header_t *)(msg->data - sizeof(serial_header_t ));
 }
 
-# 186 "TestSerialC.nc"
+# 187 "TestSerialC.nc"
 static inline message_t *TestSerialC$SerialReceive$receive(am_id_t id, message_t *msg, void *payload, uint8_t len)
 {
 
   if (len == sizeof(TestSerialMsg )) {
       TestSerialMsg *msgReceived;
 
-#line 191
+#line 192
       memcpy(&TestSerialC$rcvSerial[sim_node()], payload, len);
       msgReceived = (TestSerialMsg *)&TestSerialC$rcvSerial[sim_node()];
 
@@ -6258,7 +6188,7 @@ static inline message_t *TestSerialC$SerialReceive$receive(am_id_t id, message_t
 
               TestSerialMsg *msgToSend = (TestSerialMsg *)TestSerialC$RadioPacket$getPayload(&TestSerialC$sndRadio[sim_node()], sizeof(TestSerialMsg ));
 
-#line 204
+#line 205
               __nesc_hton_uint16(msgToSend->sender.nxdata, __nesc_ntoh_uint16(msgReceived->sender.nxdata));
               __nesc_hton_uint16(msgToSend->seqNum.nxdata, __nesc_ntoh_uint16(msgReceived->seqNum.nxdata));
               __nesc_hton_uint16(msgToSend->ledNum.nxdata, __nesc_ntoh_uint16(msgReceived->ledNum.nxdata));
@@ -6272,7 +6202,7 @@ static inline message_t *TestSerialC$SerialReceive$receive(am_id_t id, message_t
             }
         }
       else 
-#line 215
+#line 216
         {
           sim_log_debug(52U, "BlinkToRadio", "Node %d Received duplicate Message from %d with seqNum: %d ledNum: %d\n", TOS_NODE_ID, __nesc_ntoh_uint16(msgReceived->sender.nxdata), __nesc_ntoh_uint16(msgReceived->seqNum.nxdata), __nesc_ntoh_uint16(msgReceived->ledNum.nxdata));
         }
@@ -6280,51 +6210,51 @@ static inline message_t *TestSerialC$SerialReceive$receive(am_id_t id, message_t
   return msg;
 }
 
-# 67 "/opt/tinyos-2.1.1/tos/interfaces/Receive.nc"
-inline static message_t * SerialActiveMessageC$Receive$receive(am_id_t arg_0x40960108, message_t * msg, void * payload, uint8_t len){
-#line 67
+# 78 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Receive.nc"
+inline static message_t * SerialActiveMessageC$Receive$receive(am_id_t arg_0x2aaca1e13408, message_t * msg, void * payload, uint8_t len){
+#line 78
   nx_struct message_t *__nesc_result;
-#line 67
+#line 78
 
-#line 67
-  __nesc_result = TestSerialC$SerialReceive$receive(arg_0x40960108, msg, payload, len);
-#line 67
+#line 78
+  __nesc_result = TestSerialC$SerialReceive$receive(arg_0x2aaca1e13408, msg, payload, len);
+#line 78
 
-#line 67
+#line 78
   return __nesc_result;
-#line 67
+#line 78
 }
-#line 67
-# 70 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+#line 78
+# 70 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
 static inline serial_header_t *SerialActiveMessageC$getHeader(message_t *amsg)
 #line 70
 {
   return (serial_header_t *)(amsg->data - sizeof(serial_header_t ));
 }
 
-#line 233
+#line 237
 static inline uint8_t SerialActiveMessageC$Packet$payloadLength(message_t *msg)
-#line 233
+#line 237
 {
   return __nesc_ntoh_uint8(SerialActiveMessageC$getHeader(msg)->length.nxdata);
 }
 
-#line 229
+#line 233
 static inline uint8_t SerialActiveMessageC$Packet$maxPayloadLength(void )
-#line 229
+#line 233
 {
   return 28;
 }
 
-#line 217
+#line 221
 static inline void *SerialActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len)
-#line 217
+#line 221
 {
   if (len <= 28) {
       return msg->data;
     }
   else 
-#line 220
+#line 224
     {
       return (void *)0;
     }
@@ -6339,44 +6269,52 @@ static inline void SerialActiveMessageC$Model$receive(message_t *msg)
 
   memcpy(SerialActiveMessageC$bufferPointer[sim_node()], msg, sizeof(message_t ));
 
+  if (msg != (void *)0) {
+      free(msg);
+    }
+
   payload = SerialActiveMessageC$Packet$getPayload(SerialActiveMessageC$bufferPointer[sim_node()], SerialActiveMessageC$Packet$maxPayloadLength());
   len = SerialActiveMessageC$Packet$payloadLength(SerialActiveMessageC$bufferPointer[sim_node()]);
 
-  sim_log_debug(131U, "Serial", "Received serial message (%p) of type %hhu and length %hhu @ %s.\n", SerialActiveMessageC$bufferPointer[sim_node()], SerialActiveMessageC$AMPacket$type(SerialActiveMessageC$bufferPointer[sim_node()]), len, sim_time_string());
+  sim_log_debug(170U, "Serial", "Received serial message (%p) of type %hhu and length %hhu @ %s.\n", SerialActiveMessageC$bufferPointer[sim_node()], SerialActiveMessageC$AMPacket$type(SerialActiveMessageC$bufferPointer[sim_node()]), len, sim_time_string());
 
   SerialActiveMessageC$bufferPointer[sim_node()] = SerialActiveMessageC$Receive$receive(SerialActiveMessageC$AMPacket$type(SerialActiveMessageC$bufferPointer[sim_node()]), 
   SerialActiveMessageC$bufferPointer[sim_node()], payload, len);
 }
 
-#line 268
+#line 272
 static inline void SerialActiveMessageC$serial_active_message_deliver_handle(sim_event_t *evt)
-#line 268
+#line 272
 {
   message_t *m = (message_t *)evt->data;
 
-#line 270
+#line 274
   SerialActiveMessageC$Model$receive(m);
 }
 
 static inline sim_event_t *SerialActiveMessageC$allocate_serial_deliver_event(int node, message_t *msg, sim_time_t t)
-#line 273
+#line 277
 {
   sim_event_t *evt = (sim_event_t *)malloc(sizeof(sim_event_t ));
+  message_t *newMsg = (message_t *)malloc(sizeof(message_t ));
+  uint8_t payloadLength = __nesc_ntoh_uint8(((serial_header_t *)msg->header)->length.nxdata);
 
-#line 275
+#line 281
+  memcpy(SerialActiveMessageC$getHeader(newMsg), msg, sizeof(serial_header_t ) + payloadLength);
+
   evt->mote = node;
   evt->time = t;
   evt->handle = SerialActiveMessageC$serial_active_message_deliver_handle;
   evt->cleanup = sim_queue_cleanup_event;
   evt->cancelled = 0;
   evt->force = 0;
-  evt->data = msg;
+  evt->data = newMsg;
   return evt;
 }
 
-# 83 "/opt/tinyos-2.1.1/tos/chips/atm128/sim/atm128hardware.h"
+# 89 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/sim/atm128hardware.h"
 static __inline void __nesc_disable_interrupt()
-#line 83
+#line 89
 {
   atm128RegFile[sim_node()][* (volatile uint8_t *)&atm128RegFile[sim_node()][0x3F]] &= ~(1 << 7);
 }
@@ -6386,29 +6324,29 @@ static __inline void __nesc_disable_interrupt()
 
 
 
-#line 91
+#line 97
 __inline  __nesc_atomic_t 
 __nesc_atomic_start(void )
 {
   __nesc_atomic_t result = * (volatile uint8_t *)&atm128RegFile[sim_node()][0x3F];
 
-#line 95
+#line 101
   __nesc_disable_interrupt();
   return result;
 }
 
 
 
-#line 100
+#line 106
 __inline  void 
 __nesc_atomic_end(__nesc_atomic_t original_SREG)
 {
   * (volatile uint8_t *)&atm128RegFile[sim_node()][0x3F] = original_SREG;
 }
 
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static inline void SimSchedulerBasicP$sim_scheduler_event_handle(sim_event_t *e)
-#line 77
+#line 85
 {
   SimSchedulerBasicP$sim_scheduler_event_pending[sim_node()] = FALSE;
 
@@ -6428,7 +6366,7 @@ static inline void SimSchedulerBasicP$sim_scheduler_event_handle(sim_event_t *e)
 
 
 static inline void SimSchedulerBasicP$sim_scheduler_event_init(sim_event_t *e)
-#line 95
+#line 103
 {
   e->mote = sim_node();
   e->force = 0;
@@ -6437,7 +6375,7 @@ static inline void SimSchedulerBasicP$sim_scheduler_event_init(sim_event_t *e)
   e->cleanup = sim_queue_cleanup_none;
 }
 
-#line 158
+#line 166
 static inline void SimSchedulerBasicP$Scheduler$init(void )
 {
   sim_log_debug(115U, "Scheduler", "Initializing scheduler.\n");
@@ -6452,21 +6390,21 @@ static inline void SimSchedulerBasicP$Scheduler$init(void )
   }
 }
 
-# 46 "/opt/tinyos-2.1.1/tos/interfaces/Scheduler.nc"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Scheduler.nc"
 inline static void SimMainP$Scheduler$init(void ){
-#line 46
+#line 57
   SimSchedulerBasicP$Scheduler$init();
-#line 46
+#line 57
 }
-#line 46
-# 112 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+#line 57
+# 120 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static inline uint8_t SimSchedulerBasicP$popTask(void )
 {
   if (SimSchedulerBasicP$m_head[sim_node()] != SimSchedulerBasicP$NO_TASK) 
     {
       uint8_t id = SimSchedulerBasicP$m_head[sim_node()];
 
-#line 117
+#line 125
       SimSchedulerBasicP$m_head[sim_node()] = SimSchedulerBasicP$m_next[sim_node()][SimSchedulerBasicP$m_head[sim_node()]];
       if (SimSchedulerBasicP$m_head[sim_node()] == SimSchedulerBasicP$NO_TASK) 
         {
@@ -6481,6 +6419,65 @@ static inline uint8_t SimSchedulerBasicP$popTask(void )
     }
 }
 
+# 45 "TestSerialC.nc"
+static inline void TestSerialC$RadioControl$startDone(error_t error)
+#line 45
+{
+  if (error == SUCCESS) {
+    }
+}
+
+# 113 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+inline static void TossimPacketModelC$Control$startDone(error_t error){
+#line 113
+  TestSerialC$RadioControl$startDone(error);
+#line 113
+}
+#line 113
+# 96 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
+static inline void TossimPacketModelC$startDoneTask$runTask(void )
+#line 96
+{
+  TossimPacketModelC$running[sim_node()] = TRUE;
+  TossimPacketModelC$Control$startDone(SUCCESS);
+}
+
+# 58 "TestSerialC.nc"
+static inline void TestSerialC$RadioControl$stopDone(error_t error)
+#line 58
+{
+}
+
+# 138 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
+inline static void TossimPacketModelC$Control$stopDone(error_t error){
+#line 138
+  TestSerialC$RadioControl$stopDone(error);
+#line 138
+}
+#line 138
+# 101 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
+static inline void TossimPacketModelC$stopDoneTask$runTask(void )
+#line 101
+{
+  TossimPacketModelC$running[sim_node()] = FALSE;
+  TossimPacketModelC$Control$stopDone(SUCCESS);
+}
+
+#line 145
+static inline void TossimPacketModelC$sendDoneTask$runTask(void )
+#line 145
+{
+  message_t *msg = TossimPacketModelC$sending[sim_node()];
+  tossim_metadata_t *meta = TossimPacketModelC$getMetadata(msg);
+
+#line 148
+  __nesc_hton_uint8(meta->ack.nxdata, 0);
+  __nesc_hton_int8(meta->strength.nxdata, 0);
+  __nesc_hton_uint16(meta->time.nxdata, 0);
+  TossimPacketModelC$sending[sim_node()] = FALSE;
+  TossimPacketModelC$Packet$sendDone(msg, TossimPacketModelC$running[sim_node()] ? SUCCESS : EOFF);
+}
+
 # 51 "TestSerialC.nc"
 static inline void TestSerialC$SerialControl$startDone(error_t error)
 #line 51
@@ -6489,14 +6486,14 @@ static inline void TestSerialC$SerialControl$startDone(error_t error)
     }
 }
 
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 113 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 inline static void SerialActiveMessageC$SplitControl$startDone(error_t error){
-#line 92
+#line 113
   TestSerialC$SerialControl$startDone(error);
-#line 92
+#line 113
 }
-#line 92
-# 74 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+#line 113
+# 74 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
 static inline void SerialActiveMessageC$startDone$runTask(void )
 #line 74
 {
@@ -6510,14 +6507,14 @@ static inline void TestSerialC$SerialControl$stopDone(error_t error)
 {
 }
 
-# 117 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 138 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 inline static void SerialActiveMessageC$SplitControl$stopDone(error_t error){
-#line 117
+#line 138
   TestSerialC$SerialControl$stopDone(error);
-#line 117
+#line 138
 }
-#line 117
-# 75 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+#line 138
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
 static inline void SerialActiveMessageC$stopDone$runTask(void )
 #line 75
 {
@@ -6525,7 +6522,7 @@ static inline void SerialActiveMessageC$stopDone$runTask(void )
   SerialActiveMessageC$SplitControl$stopDone(SUCCESS);
 }
 
-# 172 "TestSerialC.nc"
+# 173 "TestSerialC.nc"
 static inline void TestSerialC$SerialSend$sendDone(am_id_t id, message_t *msg, error_t error)
 {
   if (error != SUCCESS) 
@@ -6540,14 +6537,14 @@ static inline void TestSerialC$SerialSend$sendDone(am_id_t id, message_t *msg, e
   sim_log_debug(50U, "TestSerialC", "error on message pointer\n");
 }
 
-# 99 "/opt/tinyos-2.1.1/tos/interfaces/AMSend.nc"
-inline static void SerialActiveMessageC$AMSend$sendDone(am_id_t arg_0x409616f0, message_t * msg, error_t error){
-#line 99
-  TestSerialC$SerialSend$sendDone(arg_0x409616f0, msg, error);
-#line 99
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/AMSend.nc"
+inline static void SerialActiveMessageC$AMSend$sendDone(am_id_t arg_0x2aaca1e152f0, message_t * msg, error_t error){
+#line 110
+  TestSerialC$SerialSend$sendDone(arg_0x2aaca1e152f0, msg, error);
+#line 110
 }
-#line 99
-# 115 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+#line 110
+# 115 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
 static inline void SerialActiveMessageC$Model$sendDone(message_t *msg, error_t result)
 #line 115
 {
@@ -6559,141 +6556,71 @@ static inline void SerialActiveMessageC$modelSendDone$runTask(void )
   SerialActiveMessageC$Model$sendDone(SerialActiveMessageC$sendMsgPtr[sim_node()], SUCCESS);
 }
 
-# 45 "TestSerialC.nc"
-static inline void TestSerialC$RadioControl$startDone(error_t error)
-#line 45
-{
-  if (error == SUCCESS) {
-    }
-}
-
-# 92 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-inline static void TossimPacketModelC$Control$startDone(error_t error){
-#line 92
-  TestSerialC$RadioControl$startDone(error);
-#line 92
-}
-#line 92
-# 88 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
-static inline void TossimPacketModelC$startDoneTask$runTask(void )
-#line 88
-{
-  TossimPacketModelC$running[sim_node()] = TRUE;
-  TossimPacketModelC$Control$startDone(SUCCESS);
-}
-
-# 58 "TestSerialC.nc"
-static inline void TestSerialC$RadioControl$stopDone(error_t error)
-#line 58
-{
-}
-
-# 117 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
-inline static void TossimPacketModelC$Control$stopDone(error_t error){
-#line 117
-  TestSerialC$RadioControl$stopDone(error);
-#line 117
-}
-#line 117
-# 93 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
-static inline void TossimPacketModelC$stopDoneTask$runTask(void )
-#line 93
-{
-  TossimPacketModelC$running[sim_node()] = FALSE;
-  TossimPacketModelC$Control$stopDone(SUCCESS);
-}
-
-#line 137
-static inline void TossimPacketModelC$sendDoneTask$runTask(void )
-#line 137
-{
-  message_t *msg = TossimPacketModelC$sending[sim_node()];
-  tossim_metadata_t *meta = TossimPacketModelC$getMetadata(msg);
-
-#line 140
-  __nesc_hton_uint8(meta->ack.nxdata, 0);
-  __nesc_hton_int8(meta->strength.nxdata, 0);
-  __nesc_hton_uint16(meta->time.nxdata, 0);
-  TossimPacketModelC$sending[sim_node()] = FALSE;
-  TossimPacketModelC$Packet$sendDone(msg, TossimPacketModelC$running[sim_node()] ? SUCCESS : EOFF);
-}
-
-# 213 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+# 221 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static inline void SimSchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
 {
 }
 
-# 64 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
-inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x406ef3c0){
-#line 64
-  switch (arg_0x406ef3c0) {
-#line 64
-    case SerialActiveMessageC$startDone:
-#line 64
-      SerialActiveMessageC$startDone$runTask();
-#line 64
-      break;
-#line 64
-    case SerialActiveMessageC$stopDone:
-#line 64
-      SerialActiveMessageC$stopDone$runTask();
-#line 64
-      break;
-#line 64
-    case SerialActiveMessageC$modelSendDone:
-#line 64
-      SerialActiveMessageC$modelSendDone$runTask();
-#line 64
-      break;
-#line 64
+# 75 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x2aaca188bab0){
+#line 75
+  switch (arg_0x2aaca188bab0) {
+#line 75
     case TossimPacketModelC$startDoneTask:
-#line 64
+#line 75
       TossimPacketModelC$startDoneTask$runTask();
-#line 64
+#line 75
       break;
-#line 64
+#line 75
     case TossimPacketModelC$stopDoneTask:
-#line 64
+#line 75
       TossimPacketModelC$stopDoneTask$runTask();
-#line 64
+#line 75
       break;
-#line 64
+#line 75
     case TossimPacketModelC$sendDoneTask:
-#line 64
+#line 75
       TossimPacketModelC$sendDoneTask$runTask();
-#line 64
+#line 75
       break;
-#line 64
+#line 75
+    case SerialActiveMessageC$startDone:
+#line 75
+      SerialActiveMessageC$startDone$runTask();
+#line 75
+      break;
+#line 75
+    case SerialActiveMessageC$stopDone:
+#line 75
+      SerialActiveMessageC$stopDone$runTask();
+#line 75
+      break;
+#line 75
+    case SerialActiveMessageC$modelSendDone:
+#line 75
+      SerialActiveMessageC$modelSendDone$runTask();
+#line 75
+      break;
+#line 75
     default:
-#line 64
-      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0x406ef3c0);
-#line 64
+#line 75
+      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0x2aaca188bab0);
+#line 75
       break;
-#line 64
+#line 75
     }
-#line 64
+#line 75
 }
-#line 64
-# 61 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+#line 75
+# 69 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static inline int SimSchedulerBasicP$sim_config_task_latency(void )
-#line 61
+#line 69
 {
-#line 61
+#line 69
   return 100;
 }
 
-# 42 "/opt/tinyos-2.1.1/tos/platforms/mica/PlatformP.nc"
-static inline void PlatformP$power_init(void )
-#line 42
-{
-  /* atomic removed: atomic calls only */
-#line 43
-  {
-    * (volatile uint8_t *)&atm128RegFile[sim_node()][0x35] = 1 << SE;
-  }
-}
-
-# 58 "/opt/tinyos-2.1.1/tos/types/TinyError.h"
+# 69 "/home/sensornet6/local/src/tinyos-2.x/tos/types/TinyError.h"
 static inline  error_t ecombine(error_t r1, error_t r2)
 
 
@@ -6703,57 +6630,57 @@ static inline  error_t ecombine(error_t r1, error_t r2)
   return r1 == r2 ? r1 : FAIL;
 }
 
-# 54 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+# 63 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$makeOutput(void )
-#line 54
+#line 63
 {
-#line 54
+#line 63
   atm128RegFile[sim_node()][26U] |= 1 << 0;
 }
 
-# 35 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 46 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 inline static void LedsP$Led2$makeOutput(void ){
-#line 35
+#line 46
   /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$makeOutput();
-#line 35
+#line 46
 }
-#line 35
-# 54 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+#line 46
+# 63 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$makeOutput(void )
-#line 54
+#line 63
 {
-#line 54
+#line 63
   atm128RegFile[sim_node()][26U] |= 1 << 1;
 }
 
-# 35 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 46 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 inline static void LedsP$Led1$makeOutput(void ){
-#line 35
+#line 46
   /*HplAtm128GeneralIOC.PortA.Bit1*/HplAtm128GeneralIOPinP$1$IO$makeOutput();
-#line 35
+#line 46
 }
-#line 35
-# 54 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+#line 46
+# 63 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$makeOutput(void )
-#line 54
+#line 63
 {
-#line 54
+#line 63
   atm128RegFile[sim_node()][26U] |= 1 << 2;
 }
 
-# 35 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 46 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 inline static void LedsP$Led0$makeOutput(void ){
-#line 35
+#line 46
   /*HplAtm128GeneralIOC.PortA.Bit2*/HplAtm128GeneralIOPinP$2$IO$makeOutput();
-#line 35
+#line 46
 }
-#line 35
-# 45 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
+#line 46
+# 56 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
 static inline error_t LedsP$Init$init(void )
-#line 45
+#line 56
 {
   /* atomic removed: atomic calls only */
-#line 46
+#line 57
   {
     sim_log_debug(56U, "Init", "LEDS: initialized.\n");
     LedsP$Led0$makeOutput();
@@ -6766,61 +6693,61 @@ static inline error_t LedsP$Init$init(void )
   return SUCCESS;
 }
 
-# 38 "/opt/tinyos-2.1.1/tos/platforms/micaz/MotePlatformP.nc"
+# 61 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/micaz/MotePlatformP.nc"
 static inline error_t MotePlatformP$SubInit$default$init(void )
-#line 38
+#line 61
 {
   return SUCCESS;
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 inline static error_t MotePlatformP$SubInit$init(void ){
-#line 51
+#line 62
   unsigned char __nesc_result;
-#line 51
+#line 62
 
-#line 51
+#line 62
   __nesc_result = MotePlatformP$SubInit$default$init();
-#line 51
+#line 62
 
-#line 51
+#line 62
   return __nesc_result;
-#line 51
+#line 62
 }
-#line 51
-# 50 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+#line 62
+# 59 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$clr(void )
-#line 50
+#line 59
 {
-#line 50
+#line 59
   atm128RegFile[sim_node()][27U] &= ~(1 << 4);
 }
 
-# 30 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 41 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 inline static void MotePlatformP$SerialIdPin$clr(void ){
-#line 30
+#line 41
   /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$clr();
-#line 30
+#line 41
 }
-#line 30
-# 53 "/opt/tinyos-2.1.1/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
+#line 41
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline void /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$makeInput(void )
-#line 53
+#line 62
 {
-#line 53
+#line 62
   atm128RegFile[sim_node()][26U] &= ~(1 << 4);
 }
 
-# 33 "/opt/tinyos-2.1.1/tos/interfaces/GeneralIO.nc"
+# 44 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/GeneralIO.nc"
 inline static void MotePlatformP$SerialIdPin$makeInput(void ){
-#line 33
+#line 44
   /*HplAtm128GeneralIOC.PortA.Bit4*/HplAtm128GeneralIOPinP$4$IO$makeInput();
-#line 33
+#line 44
 }
-#line 33
-# 26 "/opt/tinyos-2.1.1/tos/platforms/micaz/MotePlatformP.nc"
+#line 44
+# 49 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/micaz/MotePlatformP.nc"
 static inline error_t MotePlatformP$PlatformInit$init(void )
-#line 26
+#line 49
 {
 
   * (volatile uint8_t *)&atm128RegFile[sim_node()][0x15] = 0;
@@ -6833,46 +6760,46 @@ static inline error_t MotePlatformP$PlatformInit$init(void )
   return MotePlatformP$SubInit$init();
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 inline static error_t PlatformP$MoteInit$init(void ){
-#line 51
+#line 62
   unsigned char __nesc_result;
-#line 51
+#line 62
 
-#line 51
+#line 62
   __nesc_result = MotePlatformP$PlatformInit$init();
-#line 51
+#line 62
   __nesc_result = ecombine(__nesc_result, LedsP$Init$init());
-#line 51
+#line 62
 
-#line 51
+#line 62
   return __nesc_result;
-#line 51
+#line 62
 }
-#line 51
-# 21 "/opt/tinyos-2.1.1/tos/platforms/mica/sim/MeasureClockC.nc"
+#line 62
+# 21 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/mica/sim/MeasureClockC.nc"
 static inline error_t MeasureClockC$Init$init(void )
 #line 21
 {
   return SUCCESS;
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 inline static error_t PlatformP$MeasureClock$init(void ){
-#line 51
+#line 62
   unsigned char __nesc_result;
-#line 51
+#line 62
 
-#line 51
+#line 62
   __nesc_result = MeasureClockC$Init$init();
-#line 51
+#line 62
 
-#line 51
+#line 62
   return __nesc_result;
-#line 51
+#line 62
 }
-#line 51
-# 49 "/opt/tinyos-2.1.1/tos/platforms/mica/PlatformP.nc"
+#line 62
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/platforms/mica/PlatformP.nc"
 static inline error_t PlatformP$Init$init(void )
 {
   error_t ok;
@@ -6881,49 +6808,44 @@ static inline error_t PlatformP$Init$init(void )
   ok = PlatformP$MeasureClock$init();
   ok = ecombine(ok, PlatformP$MoteInit$init());
 
-  if (ok != SUCCESS) {
-    return ok;
-    }
-  PlatformP$power_init();
-
-  return SUCCESS;
+  return ok;
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 inline static error_t SimMainP$PlatformInit$init(void ){
-#line 51
+#line 62
   unsigned char __nesc_result;
-#line 51
+#line 62
 
-#line 51
+#line 62
   __nesc_result = PlatformP$Init$init();
-#line 51
+#line 62
 
-#line 51
+#line 62
   return __nesc_result;
-#line 51
+#line 62
 }
-#line 51
-# 54 "/opt/tinyos-2.1.1/tos/interfaces/Scheduler.nc"
+#line 62
+# 65 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Scheduler.nc"
 inline static bool SimMainP$Scheduler$runNextTask(void ){
-#line 54
+#line 65
   unsigned char __nesc_result;
-#line 54
+#line 65
 
-#line 54
+#line 65
   __nesc_result = SimSchedulerBasicP$Scheduler$runNextTask();
-#line 54
+#line 65
 
-#line 54
+#line 65
   return __nesc_result;
-#line 54
+#line 65
 }
-#line 54
-# 78 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 65
+# 86 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline error_t TossimPacketModelC$Init$init(void )
-#line 78
+#line 86
 {
-  sim_log_debug(133U, "TossimPacketModelC", "TossimPacketModelC: Init.init() called\n");
+  sim_log_debug(129U, "TossimPacketModelC", "TossimPacketModelC: Init.init() called\n");
   TossimPacketModelC$initialized[sim_node()] = TRUE;
 
 
@@ -6932,44 +6854,44 @@ static inline error_t TossimPacketModelC$Init$init(void )
   return SUCCESS;
 }
 
-# 51 "/opt/tinyos-2.1.1/tos/interfaces/Init.nc"
+# 62 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Init.nc"
 inline static error_t SimMainP$SoftwareInit$init(void ){
-#line 51
+#line 62
   unsigned char __nesc_result;
-#line 51
+#line 62
 
-#line 51
+#line 62
   __nesc_result = TossimPacketModelC$Init$init();
-#line 51
+#line 62
 
-#line 51
+#line 62
   return __nesc_result;
-#line 51
+#line 62
 }
-#line 51
-# 79 "/opt/tinyos-2.1.1/tos/chips/atm128/sim/atm128hardware.h"
+#line 62
+# 85 "/home/sensornet6/local/src/tinyos-2.x/tos/chips/atm128/sim/atm128hardware.h"
 static __inline void __nesc_enable_interrupt()
-#line 79
+#line 85
 {
   atm128RegFile[sim_node()][* (volatile uint8_t *)&atm128RegFile[sim_node()][0x3F]] |= 1 << 7;
 }
 
-# 56 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 inline static error_t SerialActiveMessageC$startDone$postTask(void ){
-#line 56
+#line 67
   unsigned char __nesc_result;
-#line 56
+#line 67
 
-#line 56
+#line 67
   __nesc_result = SimSchedulerBasicP$TaskBasic$postTask(SerialActiveMessageC$startDone);
-#line 56
+#line 67
 
-#line 56
+#line 67
   return __nesc_result;
-#line 56
+#line 67
 }
-#line 56
-# 77 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+#line 67
+# 77 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
 static inline error_t SerialActiveMessageC$SplitControl$start(void )
 #line 77
 {
@@ -6977,64 +6899,64 @@ static inline error_t SerialActiveMessageC$SplitControl$start(void )
   return SUCCESS;
 }
 
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 inline static error_t TestSerialC$SerialControl$start(void ){
-#line 83
+#line 104
   unsigned char __nesc_result;
-#line 83
+#line 104
 
-#line 83
+#line 104
   __nesc_result = SerialActiveMessageC$SplitControl$start();
-#line 83
+#line 104
 
-#line 83
+#line 104
   return __nesc_result;
-#line 83
+#line 104
 }
-#line 83
-# 56 "/opt/tinyos-2.1.1/tos/interfaces/TaskBasic.nc"
+#line 104
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/TaskBasic.nc"
 inline static error_t TossimPacketModelC$startDoneTask$postTask(void ){
-#line 56
+#line 67
   unsigned char __nesc_result;
-#line 56
+#line 67
 
-#line 56
+#line 67
   __nesc_result = SimSchedulerBasicP$TaskBasic$postTask(TossimPacketModelC$startDoneTask);
-#line 56
+#line 67
 
-#line 56
+#line 67
   return __nesc_result;
-#line 56
+#line 67
 }
-#line 56
-# 98 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+#line 67
+# 106 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static inline error_t TossimPacketModelC$Control$start(void )
-#line 98
+#line 106
 {
   if (!TossimPacketModelC$initialized[sim_node()]) {
-      sim_log_error(134U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called before initialization!\n");
+      sim_log_error(130U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called before initialization!\n");
       return FAIL;
     }
-  sim_log_debug(135U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called.\n");
+  sim_log_debug(131U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called.\n");
   TossimPacketModelC$startDoneTask$postTask();
   return SUCCESS;
 }
 
-# 83 "/opt/tinyos-2.1.1/tos/interfaces/SplitControl.nc"
+# 104 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/SplitControl.nc"
 inline static error_t TestSerialC$RadioControl$start(void ){
-#line 83
+#line 104
   unsigned char __nesc_result;
-#line 83
+#line 104
 
-#line 83
+#line 104
   __nesc_result = TossimPacketModelC$Control$start();
-#line 83
+#line 104
 
-#line 83
+#line 104
   return __nesc_result;
-#line 83
+#line 104
 }
-#line 83
+#line 104
 # 38 "TestSerialC.nc"
 static inline void TestSerialC$Boot$booted(void )
 #line 38
@@ -7045,14 +6967,14 @@ static inline void TestSerialC$Boot$booted(void )
     }
 }
 
-# 49 "/opt/tinyos-2.1.1/tos/interfaces/Boot.nc"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/interfaces/Boot.nc"
 inline static void SimMainP$Boot$booted(void ){
-#line 49
+#line 60
   TestSerialC$Boot$booted();
-#line 49
+#line 60
 }
-#line 49
-# 131 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+#line 60
+# 139 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static inline bool SimSchedulerBasicP$isWaiting(uint8_t id)
 {
   return SimSchedulerBasicP$m_next[sim_node()][id] != SimSchedulerBasicP$NO_TASK || SimSchedulerBasicP$m_tail[sim_node()] == id;
@@ -7080,23 +7002,23 @@ static inline bool SimSchedulerBasicP$pushTask(uint8_t id)
     }
 }
 
-# 47 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMoteP.nc"
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMoteP.nc"
 static inline long long int SimMoteP$SimMote$getEuid(void )
-#line 47
+#line 55
 {
   return SimMoteP$euid[sim_node()];
 }
 
-#line 50
+#line 58
 static inline void SimMoteP$SimMote$setEuid(long long int e)
-#line 50
+#line 58
 {
   SimMoteP$euid[sim_node()] = e;
 }
 
-#line 53
+#line 61
 static inline long long int SimMoteP$SimMote$getStartTime(void )
-#line 53
+#line 61
 {
   return SimMoteP$startTime[sim_node()];
 }
@@ -7105,25 +7027,25 @@ static inline long long int SimMoteP$SimMote$getStartTime(void )
 
 
 static inline int SimMoteP$SimMote$getVariableInfo(char *name, void **addr, size_t *size)
-#line 60
+#line 68
 {
   return __nesc_nido_resolve(sim_node(), name, (uintptr_t *)addr, (size_t *)size);
 }
 
-#line 77
+#line 85
 static inline void SimMoteP$SimMote$turnOff(void )
-#line 77
+#line 85
 {
   SimMoteP$isOn[sim_node()] = FALSE;
 }
 
-#line 149
+#line 157
 static inline void SimMoteP$sim_mote_boot_handle(sim_event_t *e)
-#line 149
+#line 157
 {
   char buf[128];
 
-#line 151
+#line 159
   sim_print_now(buf, 128);
 
   SimMoteP$bootEvent[sim_node()] = (sim_event_t *)(void *)0;
@@ -7131,35 +7053,35 @@ static inline void SimMoteP$sim_mote_boot_handle(sim_event_t *e)
   SimMoteP$SimMote$turnOn();
 }
 
-# 38 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_event_queue.c"
+# 46 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_event_queue.c"
   void sim_queue_init()
-#line 38
+#line 46
 {
   init_heap(&eventHeap);
 }
 
   void sim_queue_insert(sim_event_t *event)
-#line 42
+#line 50
 {
   sim_log_debug(0U, "Queue", "Inserting 0x%p\n", event);
   heap_insert(&eventHeap, event, event->time);
 }
 
-# 238 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 246 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 static void sim_log_debug(uint16_t id, char *string, const char *format, ...)
-#line 238
+#line 246
 {
   va_list args;
   int i;
 
-#line 241
+#line 249
   if (outputs[id].files == (void *)0) {
       fillInOutput(id, string);
     }
   for (i = 0; i < outputs[id].num; i++) {
       FILE *file = outputs[id].files[i];
 
-#line 246
+#line 254
       __builtin_va_start(args, format);
       fprintf(file, "DEBUG (%i): ", (int )sim_node());
       vfprintf(file, format, args);
@@ -7167,16 +7089,16 @@ static void sim_log_debug(uint16_t id, char *string, const char *format, ...)
     }
 }
 
-#line 76
+#line 84
 static void fillInOutput(int id, char *name)
-#line 76
+#line 84
 {
   char *termination = name;
   char *namePos = name;
   int count = 0;
   char *newName = (char *)malloc(strlen(name) + 1);
 
-#line 81
+#line 89
   memset(newName, 0, strlen(name) + 1);
 
   while (termination != (void *)0) {
@@ -7193,7 +7115,7 @@ static void fillInOutput(int id, char *name)
           newName[termination - namePos] = 0;
         }
 
-      channel = hashtable_search(channelTable, namePos);
+      channel = hashtable_search(channelTable, newName);
       if (channel != (void *)0) {
           count += channel->numOutputs;
         }
@@ -7223,13 +7145,13 @@ static void fillInOutput(int id, char *name)
           newName[termination - namePos] = 0;
         }
 
-      channel = hashtable_search(channelTable, namePos);
+      channel = hashtable_search(channelTable, newName);
       if (channel != (void *)0) {
           int i;
-#line 129
+#line 137
           int j;
 
-#line 130
+#line 138
           for (i = 0; i < channel->numOutputs; i++) {
               int duplicate = 0;
               int outputCount = outputs[id].num;
@@ -7251,20 +7173,20 @@ static void fillInOutput(int id, char *name)
     }
 }
 
-# 113 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.c"
+# 121 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.c"
   unsigned long sim_node()
-#line 113
+#line 121
 {
   return current_node;
 }
 
-# 186 "/opt/tinyos-2.1.1/tos/lib/tossim/heap.c"
+# 197 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/heap.c"
 static void up_heap(heap_t *heap, int findex)
-#line 186
+#line 197
 {
   int parent_index;
 
-#line 188
+#line 199
   if (findex == 0) {
       return;
     }
@@ -7277,9 +7199,9 @@ static void up_heap(heap_t *heap, int findex)
     }
 }
 
-#line 147
+#line 158
 static void swap(node_t *first, node_t *second)
-#line 147
+#line 158
 {
   long long int key;
   void *data;
@@ -7293,24 +7215,24 @@ static void swap(node_t *first, node_t *second)
   second->data = data;
 }
 
-# 47 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_event_queue.c"
+# 55 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_event_queue.c"
   sim_event_t *sim_queue_pop()
-#line 47
+#line 55
 {
   long long int key;
 
-#line 49
+#line 57
   return (sim_event_t *)heap_pop_min_data(&eventHeap, &key);
 }
 
-# 103 "/opt/tinyos-2.1.1/tos/lib/tossim/heap.c"
+# 114 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/heap.c"
 static void *heap_pop_min_data(heap_t *heap, long long int *key)
-#line 103
+#line 114
 {
   int last_index = heap->size - 1;
   void *data = ((node_t *)heap->data)[0].data;
 
-#line 106
+#line 117
   if (key != (void *)0) {
       *key = ((node_t *)heap->data)[0].key;
     }
@@ -7324,9 +7246,9 @@ static void *heap_pop_min_data(heap_t *heap, long long int *key)
   return data;
 }
 
-#line 160
+#line 171
 static void down_heap(heap_t *heap, int findex)
-#line 160
+#line 171
 {
   int right_index = (findex + 1) * 2;
   int left_index = findex * 2 + 1;
@@ -7342,14 +7264,14 @@ static void down_heap(heap_t *heap, int findex)
         }
     }
   else {
-#line 174
+#line 185
     if (left_index >= heap->size) {
         return;
       }
     else {
         long long int left_key = ((node_t *)heap->data)[left_index].key;
 
-#line 179
+#line 190
         if (left_key < ((node_t *)heap->data)[findex].key) {
             swap(&((node_t *)heap->data)[findex], &((node_t *)heap->data)[left_index]);
             return;
@@ -7358,15 +7280,15 @@ static void down_heap(heap_t *heap, int findex)
     }
 }
 
-# 52 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_event_queue.c"
+# 60 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_event_queue.c"
   bool sim_queue_is_empty()
-#line 52
+#line 60
 {
   return heap_is_empty(&eventHeap);
 }
 
   long long int sim_queue_peek_time()
-#line 56
+#line 64
 {
   if (heap_is_empty(&eventHeap)) {
       return -1;
@@ -7378,21 +7300,21 @@ static void down_heap(heap_t *heap, int findex)
 
 
   void sim_queue_cleanup_none(sim_event_t *event)
-#line 66
+#line 74
 {
   sim_log_debug(1U, "Queue", "cleanup_none: 0x%p\n", event);
 }
 
 
   void sim_queue_cleanup_event(sim_event_t *event)
-#line 71
+#line 79
 {
   sim_log_debug(2U, "Queue", "cleanup_event: 0x%p\n", event);
   free(event);
 }
 
   void sim_queue_cleanup_data(sim_event_t *event)
-#line 76
+#line 84
 {
   sim_log_debug(3U, "Queue", "cleanup_data: 0x%p\n", event);
   free(event->data);
@@ -7400,7 +7322,7 @@ static void down_heap(heap_t *heap, int findex)
 }
 
   void sim_queue_cleanup_total(sim_event_t *event)
-#line 82
+#line 90
 {
   sim_log_debug(4U, "Queue", "cleanup_total: 0x%p\n", event);
   free(event->data);
@@ -7408,9 +7330,9 @@ static void down_heap(heap_t *heap, int findex)
   free(event);
 }
 
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.c"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.c"
   void sim_init()
-#line 49
+#line 57
 {
   sim_queue_init();
   sim_log_init();
@@ -7420,7 +7342,7 @@ static void down_heap(heap_t *heap, int findex)
   {
     struct timeval tv;
 
-#line 57
+#line 65
     gettimeofday(&tv, (void *)0);
 
 
@@ -7436,13 +7358,13 @@ static void down_heap(heap_t *heap, int findex)
   }
 }
 
-# 226 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 234 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 static void sim_log_commit_change()
-#line 226
+#line 234
 {
   int i;
 
-#line 228
+#line 236
   for (i = 0; i < SIM_LOG_OUTPUT_COUNT; i++) {
       if (outputs[i].files != (void *)0) {
           outputs[i].num = 0;
@@ -7452,7 +7374,7 @@ static void sim_log_commit_change()
     }
 }
 
-# 59 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 67 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
   void sim_noise_init()
 {
   int j;
@@ -7468,9 +7390,9 @@ static void sim_log_commit_change()
     }
 }
 
-# 94 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.c"
+# 102 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.c"
   void sim_random_seed(int seed)
-#line 94
+#line 102
 {
 
   if (seed == 0) {
@@ -7479,9 +7401,9 @@ static void sim_log_commit_change()
   sim_seed = seed;
 }
 
-#line 72
+#line 80
   void sim_end()
-#line 72
+#line 80
 {
   sim_queue_init();
 }
@@ -7489,16 +7411,16 @@ static void sim_log_commit_change()
 
 
   int sim_random()
-#line 78
+#line 86
 {
   uint32_t mlcg;
-#line 79
+#line 87
   uint32_t p;
-#line 79
+#line 87
   uint32_t q;
   uint64_t tmpseed;
 
-#line 81
+#line 89
   tmpseed = (uint64_t )33614U * (uint64_t )sim_seed;
   q = tmpseed;
   q = q >> 1;
@@ -7521,20 +7443,20 @@ static void sim_log_commit_change()
 
 
   sim_time_t sim_time()
-#line 102
+#line 110
 {
   return sim_ticks;
 }
 
-#line 105
+#line 113
   void sim_set_time(sim_time_t t)
-#line 105
+#line 113
 {
   sim_ticks = t;
 }
 
   sim_time_t sim_ticks_per_sec()
-#line 109
+#line 117
 {
   return 10000000000ULL;
 }
@@ -7543,22 +7465,22 @@ static void sim_log_commit_change()
 
 
   void sim_set_node(unsigned long node)
-#line 116
+#line 124
 {
   current_node = node;
   TOS_NODE_ID = node;
 }
 
   bool sim_run_next_event()
-#line 121
+#line 129
 {
   bool result = FALSE;
 
-#line 123
+#line 131
   if (!sim_queue_is_empty()) {
       sim_event_t *event = sim_queue_pop();
 
-#line 125
+#line 133
       sim_set_time(event->time);
       sim_set_node(event->mote);
 
@@ -7582,44 +7504,44 @@ static void sim_log_commit_change()
   return result;
 }
 
-# 126 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMoteP.nc"
+# 134 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMoteP.nc"
   bool sim_mote_is_on(int mote)
-#line 126
+#line 134
 {
   bool result;
   int tmp = sim_node();
 
-#line 129
+#line 137
   sim_set_node(mote);
   result = SimMoteP$SimMote$isOn();
   sim_set_node(tmp);
   return result;
 }
 
-# 268 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 276 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 static void sim_log_debug_clear(uint16_t id, char *string, const char *format, ...)
-#line 268
+#line 276
 {
   va_list args;
   int i;
 
-#line 271
+#line 279
   if (outputs[id].files == (void *)0) {
       fillInOutput(id, string);
     }
   for (i = 0; i < outputs[id].num; i++) {
       FILE *file = outputs[id].files[i];
 
-#line 276
+#line 284
       __builtin_va_start(args, format);
       vfprintf(file, format, args);
       fflush(file);
     }
 }
 
-# 148 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_tossim.c"
+# 156 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_tossim.c"
   int sim_print_time(char *buf, int len, sim_time_t ftime)
-#line 148
+#line 156
 {
   int hours;
   int minutes;
@@ -7644,113 +7566,113 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
 }
 
   int sim_print_now(char *buf, int len)
-#line 171
+#line 179
 {
   return sim_print_time(buf, len, sim_time());
 }
 
 
   char *sim_time_string()
-#line 176
+#line 184
 {
   sim_print_now(simTimeBuf, 128);
   return simTimeBuf;
 }
 
   void sim_add_channel(char *channel, FILE *file)
-#line 181
+#line 189
 {
   sim_log_add_channel(channel, file);
 }
 
   bool sim_remove_channel(char *channel, FILE *file)
-#line 185
+#line 193
 {
   return sim_log_remove_channel(channel, file);
 }
 
-# 49 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_csma.c"
+# 57 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_csma.c"
   int sim_csma_init_high()
-#line 49
+#line 57
 {
   return csmaInitHigh;
 }
 
-#line 52
+#line 60
   int sim_csma_init_low()
-#line 52
+#line 60
 {
   return csmaInitLow;
 }
 
-#line 55
+#line 63
   int sim_csma_high()
-#line 55
+#line 63
 {
   return csmaHigh;
 }
 
-#line 58
+#line 66
   int sim_csma_low()
-#line 58
+#line 66
 {
   return csmaLow;
 }
 
-#line 61
+#line 69
   int sim_csma_symbols_per_sec()
-#line 61
+#line 69
 {
   return csmaSymbolsPerSec;
 }
 
-#line 64
+#line 72
   int sim_csma_bits_per_symbol()
-#line 64
+#line 72
 {
   return csmaBitsPerSymbol;
 }
 
-#line 67
+#line 75
   int sim_csma_preamble_length()
-#line 67
+#line 75
 {
   return csmaPreambleLength;
 }
 
-#line 70
+#line 78
   int sim_csma_exponent_base()
-#line 70
+#line 78
 {
   return csmaExponentBase;
-#line 71
+#line 79
   ;
 }
 
-#line 73
+#line 81
   int sim_csma_max_iterations()
-#line 73
+#line 81
 {
   return csmaMaxIterations;
 }
 
-#line 76
+#line 84
   int sim_csma_min_free_samples()
-#line 76
+#line 84
 {
   return csmaMinFreeSamples;
 }
 
-#line 79
+#line 87
   int sim_csma_rxtx_delay()
-#line 79
+#line 87
 {
   return csmaRxTxDelay;
 }
 
-#line 82
+#line 90
   int sim_csma_ack_time()
-#line 82
+#line 90
 {
   return csmaAckTime;
 }
@@ -7758,89 +7680,89 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
 
 
   void sim_csma_set_init_high(int val)
-#line 88
+#line 96
 {
   csmaInitHigh = val;
 }
 
-#line 91
+#line 99
   void sim_csma_set_init_low(int val)
-#line 91
+#line 99
 {
   csmaInitLow = val;
 }
 
-#line 94
+#line 102
   void sim_csma_set_high(int val)
-#line 94
+#line 102
 {
   csmaHigh = val;
 }
 
-#line 97
+#line 105
   void sim_csma_set_low(int val)
-#line 97
+#line 105
 {
   csmaLow = val;
 }
 
-#line 100
+#line 108
   void sim_csma_set_symbols_per_sec(int val)
-#line 100
+#line 108
 {
   csmaSymbolsPerSec = val;
 }
 
-#line 103
+#line 111
   void sim_csma_set_bits_per_symbol(int val)
-#line 103
+#line 111
 {
   csmaBitsPerSymbol = val;
 }
 
-#line 106
+#line 114
   void sim_csma_set_preamble_length(int val)
-#line 106
+#line 114
 {
   csmaPreambleLength = val;
 }
 
-#line 109
+#line 117
   void sim_csma_set_exponent_base(int val)
-#line 109
+#line 117
 {
   csmaExponentBase = val;
 }
 
-#line 112
+#line 120
   void sim_csma_set_max_iterations(int val)
-#line 112
+#line 120
 {
   csmaMaxIterations = val;
 }
 
-#line 115
+#line 123
   void sim_csma_set_min_free_samples(int val)
-#line 115
+#line 123
 {
   csmaMinFreeSamples = val;
 }
 
-#line 118
+#line 126
   void sim_csma_set_rxtx_delay(int val)
-#line 118
+#line 126
 {
   csmaRxTxDelay = val;
 }
 
-#line 121
+#line 129
   void sim_csma_set_ack_time(int val)
-#line 121
+#line 129
 {
   csmaAckTime = val;
 }
 
-# 16 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_gain.c"
+# 16 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_gain.c"
   gain_entry_t *sim_gain_first(int src)
 #line 16
 {
@@ -8020,21 +7942,21 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   return sensitivity;
 }
 
-# 76 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 84 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
   void sim_noise_create_model(uint16_t node_id)
-#line 76
+#line 84
 {
   makeNoiseModel(node_id);
   makePmfDistr(node_id);
 }
 
-#line 411
+#line 419
   void makeNoiseModel(uint16_t node_id)
-#line 411
+#line 419
 {
   int i;
 
-#line 413
+#line 421
   for (i = 0; i < NOISE_HISTORY; i++) {
       noiseData[node_id].key[i] = search_bin_num(noiseData[node_id].noiseTrace[i]);
       sim_log_debug(44U, "Insert", "Setting history %i to be %i\n", (int )i, (int )noiseData[node_id].key[i]);
@@ -8051,12 +7973,12 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   noiseData[node_id].generated = 1;
 }
 
-#line 105
+#line 113
   uint8_t search_bin_num(char noise)
 {
   uint8_t bin;
 
-#line 108
+#line 116
   if (noise > NOISE_MAX || noise < NOISE_MIN) {
       noise = NOISE_MIN;
     }
@@ -8064,7 +7986,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   return bin;
 }
 
-#line 136
+#line 144
   void sim_noise_add(uint16_t node_id, char noise)
 {
   int i;
@@ -8072,7 +7994,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   char *key = noiseData[node_id].key;
   sim_noise_hash_t *noise_hash;
 
-#line 142
+#line 150
   noise_hash = (sim_noise_hash_t *)hashtable_search(pnoiseTable, key);
   sim_log_debug(13U, "Insert", "Adding noise value %hhi\n", noise);
   if (noise_hash == (void *)0) {
@@ -8093,7 +8015,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
       {
         int ctr;
 
-#line 161
+#line 169
         for (ctr = 0; ctr < NOISE_HISTORY; ctr++) 
           sim_log_debug_clear(15U, "Insert", "%0.3hhi ", key[ctr]);
       }
@@ -8117,12 +8039,12 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   noise_hash->numElements++;
 }
 
-#line 237
+#line 245
   void arrangeKey(uint16_t node_id)
 {
   char *pKey = noiseData[node_id].key;
 
-#line 240
+#line 248
   memcpy(pKey, pKey + 1, NOISE_HISTORY - 1);
 }
 
@@ -8158,7 +8080,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   sim_log_debug_clear(23U, "HASH", "\n");
 }
 
-#line 184
+#line 192
   void sim_noise_dist(uint16_t node_id)
 {
   int i;
@@ -8169,7 +8091,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   char *freqKey = noiseData[node_id].freqKey;
   sim_noise_hash_t *noise_hash;
 
-#line 193
+#line 201
   noise_hash = (sim_noise_hash_t *)hashtable_search(pnoiseTable, key);
 
 
@@ -8185,7 +8107,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
     {
       float val;
 
-#line 207
+#line 215
       sim_log_debug(17U, "Noise_output", "Noise is found to be %i\n", noise_hash->elements[i]);
       bin = noise_hash->elements[i] - NOISE_MIN_QUANTIZE;
 
@@ -8207,7 +8129,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
     {
       int j;
 
-#line 227
+#line 235
       FreqKeyNum = noise_hash->numElements;
       memcpy((void *)freqKey, (void *)key, NOISE_HISTORY);
       sim_log_debug(18U, "HashZeroDebug", "Setting most frequent key (%i): ", (int )FreqKeyNum);
@@ -8218,16 +8140,16 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
     }
 }
 
-#line 89
+#line 97
   void sim_noise_trace_add(uint16_t node_id, char noiseVal)
-#line 89
+#line 97
 {
 
   if (noiseData[node_id].noiseTraceIndex == 
   noiseData[node_id].noiseTraceLen) {
       char *data = (char *)malloc(sizeof(char ) * noiseData[node_id].noiseTraceLen * 2);
 
-#line 94
+#line 102
       memcpy(data, noiseData[node_id].noiseTrace, noiseData[node_id].noiseTraceLen);
       free(noiseData[node_id].noiseTrace);
       noiseData[node_id].noiseTraceLen *= 2;
@@ -8238,17 +8160,17 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   sim_log_debug(12U, "Insert", "Adding noise value %i for %i of %i\n", (int )noiseData[node_id].noiseTraceIndex, (int )node_id, (int )noiseVal);
 }
 
-#line 115
+#line 123
   char search_noise_from_bin_num(int i)
 {
   char noise;
 
-#line 118
+#line 126
   noise = NOISE_MIN + (i - 1) * NOISE_QUANTIZE_INTERVAL;
   return noise;
 }
 
-#line 280
+#line 288
   char sim_noise_gen(uint16_t node_id)
 {
   int i;
@@ -8260,7 +8182,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   double ranNum = RandomUniform();
   sim_noise_hash_t *noise_hash;
 
-#line 290
+#line 298
   noise_hash = (sim_noise_hash_t *)hashtable_search(pnoiseTable, pKey);
 
   if (noise_hash == (void *)0) {
@@ -8314,7 +8236,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
             }
         }
       else {
-#line 342
+#line 350
         if (noise_hash->dist[i - 1] < ranNum && 
         ranNum <= noise_hash->dist[i]) {
             noiseIndex = i;
@@ -8323,7 +8245,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
           }
         }
     }
-#line 349
+#line 357
   sim_log_debug(39U, "HASH", "OUT:for i=%d\n", i);
 
   noise = NOISE_MIN_QUANTIZE + i;
@@ -8331,7 +8253,7 @@ static void sim_log_debug_clear(uint16_t id, char *string, const char *format, .
   return noise;
 }
 
-# 103 "/opt/tinyos-2.1.1/tos/lib/tossim/randomlib.c"
+# 103 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/randomlib.c"
 static double RandomUniform(void )
 {
   double uni;
@@ -8378,9 +8300,9 @@ static double RandomUniform(void )
   return uni;
 }
 
-# 356 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_noise.c"
+# 364 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_noise.c"
   char sim_noise_generate(uint16_t node_id, uint32_t cur_t)
-#line 356
+#line 364
 {
   uint32_t i;
   uint32_t prev_t;
@@ -8406,7 +8328,7 @@ static double RandomUniform(void )
     delta_t = cur_t - (NOISE_HISTORY - 1);
     }
   else {
-#line 380
+#line 388
     delta_t = cur_t - prev_t;
     }
   sim_log_debug_clear(42U, "HASH", "delta_t = %d\n", delta_t);
@@ -8415,7 +8337,7 @@ static double RandomUniform(void )
     noise = noiseData[node_id].lastNoiseVal;
     }
   else 
-#line 386
+#line 394
     {
       noiseG = (char *)malloc(sizeof(char ) * delta_t);
 
@@ -8437,21 +8359,21 @@ static double RandomUniform(void )
   return noise;
 }
 
-# 253 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_log.c"
+# 261 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_log.c"
 static void sim_log_error(uint16_t id, char *string, const char *format, ...)
-#line 253
+#line 261
 {
   va_list args;
   int i;
 
-#line 256
+#line 264
   if (outputs[id].files == (void *)0) {
       fillInOutput(id, string);
     }
   for (i = 0; i < outputs[id].num; i++) {
       FILE *file = outputs[id].files[i];
 
-#line 261
+#line 269
       __builtin_va_start(args, format);
       fprintf(file, "ERROR (%i): ", (int )sim_node());
       vfprintf(file, format, args);
@@ -8459,103 +8381,103 @@ static void sim_log_error(uint16_t id, char *string, const char *format, ...)
     }
 }
 
-# 46 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_packet.c"
+# 54 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_packet.c"
   void sim_packet_set_source(sim_packet_t *msg, uint16_t src)
-#line 46
+#line 54
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 48
+#line 56
   __nesc_hton_uint16(hdr->src.nxdata, src);
 }
 
   uint16_t sim_packet_source(sim_packet_t *msg)
-#line 51
+#line 59
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 53
+#line 61
   return __nesc_ntoh_uint16(hdr->src.nxdata);
 }
 
   void sim_packet_set_destination(sim_packet_t *msg, uint16_t dest)
-#line 56
+#line 64
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 58
+#line 66
   __nesc_hton_uint16(hdr->dest.nxdata, dest);
 }
 
   uint16_t sim_packet_destination(sim_packet_t *msg)
-#line 61
+#line 69
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 63
+#line 71
   return __nesc_ntoh_uint16(hdr->dest.nxdata);
 }
 
   void sim_packet_set_length(sim_packet_t *msg, uint8_t length)
-#line 66
+#line 74
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 68
+#line 76
   __nesc_hton_uint8(hdr->length.nxdata, length);
 }
 
-#line 70
+#line 78
   uint16_t sim_packet_length(sim_packet_t *msg)
-#line 70
+#line 78
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 72
+#line 80
   return __nesc_ntoh_uint8(hdr->length.nxdata);
 }
 
   void sim_packet_set_type(sim_packet_t *msg, uint8_t type)
-#line 75
+#line 83
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 77
+#line 85
   __nesc_hton_uint8(hdr->type.nxdata, type);
 }
 
   uint8_t sim_packet_type(sim_packet_t *msg)
-#line 80
+#line 88
 {
   tossim_header_t *hdr = getHeader((message_t *)msg);
 
-#line 82
+#line 90
   return __nesc_ntoh_uint8(hdr->type.nxdata);
 }
 
   uint8_t *sim_packet_data(sim_packet_t *p)
-#line 85
+#line 93
 {
   message_t *msg = (message_t *)p;
 
-#line 87
+#line 95
   return (uint8_t *)& msg->data;
 }
 
-#line 89
+#line 97
   void sim_packet_set_strength(sim_packet_t *p, uint16_t str)
-#line 89
+#line 97
 {
   message_t *msg = (message_t *)p;
   tossim_metadata_t *md = (tossim_metadata_t *)& msg->metadata;
 
-#line 92
+#line 100
   __nesc_hton_int8(md->strength.nxdata, str);
 }
 
-#line 94
+#line 102
   void sim_packet_deliver(int node, sim_packet_t *msg, sim_time_t t)
-#line 94
+#line 102
 {
   if (t < sim_time()) {
       t = sim_time();
@@ -8564,19 +8486,19 @@ static void sim_log_error(uint16_t id, char *string, const char *format, ...)
   active_message_deliver(node, (message_t *)msg, t);
 }
 
-# 246 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 254 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
   void active_message_deliver(int node, message_t *msg, sim_time_t t)
-#line 246
+#line 254
 {
   sim_event_t *evt = TossimActiveMessageC$allocate_deliver_event(node, msg, t);
 
-#line 248
+#line 256
   sim_queue_insert(evt);
 }
 
-#line 101
+#line 109
 static void TossimActiveMessageC$Model$receive(message_t *msg)
-#line 101
+#line 109
 {
   uint8_t len;
   void *payload;
@@ -8595,19 +8517,19 @@ static void TossimActiveMessageC$Model$receive(message_t *msg)
     }
 }
 
-#line 132
+#line 140
 static am_addr_t TossimActiveMessageC$AMPacket$destination(message_t *amsg)
-#line 132
+#line 140
 {
   tossim_header_t *header = TossimActiveMessageC$getHeader(amsg);
 
-#line 134
+#line 142
   return __nesc_ntoh_uint16(header->dest.nxdata);
 }
 
-# 53 "/opt/tinyos-2.1.1/tos/lib/tossim/ActiveMessageAddressC.nc"
-static am_addr_t ActiveMessageAddressC$amAddress(void )
-#line 53
+# 76 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/ActiveMessageAddressC.nc"
+static am_addr_t ActiveMessageAddressC$ActiveMessageAddress$amAddress(void )
+#line 76
 {
   if (!ActiveMessageAddressC$set[sim_node()]) {
       ActiveMessageAddressC$addr[sim_node()] = TOS_NODE_ID;
@@ -8616,22 +8538,22 @@ static am_addr_t ActiveMessageAddressC$amAddress(void )
   return ActiveMessageAddressC$addr[sim_node()];
 }
 
-# 157 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 165 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static am_id_t TossimActiveMessageC$AMPacket$type(message_t *amsg)
-#line 157
+#line 165
 {
   tossim_header_t *header = TossimActiveMessageC$getHeader(amsg);
 
-#line 159
+#line 167
   return __nesc_ntoh_uint8(header->type.nxdata);
 }
 
-# 125 "/opt/tinyos-2.1.1/tos/system/LedsP.nc"
+# 136 "/home/sensornet6/local/src/tinyos-2.x/tos/system/LedsP.nc"
 static void LedsP$Leds$set(uint8_t val)
-#line 125
+#line 136
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 126
+#line 137
     {
       if (val & LEDS_LED0) {
           LedsP$Leds$led0On();
@@ -8652,37 +8574,37 @@ static void LedsP$Leds$set(uint8_t val)
           LedsP$Leds$led2Off();
         }
     }
-#line 145
+#line 156
     __nesc_atomic_end(__nesc_atomic); }
 }
 
-# 65 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimActiveMessageC.nc"
+# 73 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimActiveMessageC.nc"
 static error_t TossimActiveMessageC$AMSend$send(am_id_t id, am_addr_t addr, 
 message_t *amsg, 
 uint8_t len)
-#line 67
+#line 75
 {
   error_t err;
   tossim_header_t *header = TossimActiveMessageC$getHeader(amsg);
 
-#line 70
+#line 78
   sim_log_debug(124U, "AM", "AM: Sending packet (id=%hhu, len=%hhu) to %hu\n", id, len, addr);
   __nesc_hton_uint8(header->type.nxdata, id);
   __nesc_hton_uint16(header->dest.nxdata, addr);
   __nesc_hton_uint16(header->src.nxdata, TossimActiveMessageC$AMPacket$address());
   __nesc_hton_uint8(header->length.nxdata, len);
-  err = TossimActiveMessageC$Model$send((int )addr, amsg, len + sizeof(tossim_header_t ));
+  err = TossimActiveMessageC$Model$send((int )addr, amsg, len + sizeof(tossim_header_t ) + sizeof(tossim_footer_t ));
   return err;
 }
 
-# 266 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+# 274 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static double CpmModelC$packetNoise(CpmModelC$receive_message_t *msg)
-#line 266
+#line 274
 {
   double noise = CpmModelC$noise_hash_generation();
   CpmModelC$receive_message_t *list = CpmModelC$outstandingReceptionHead[sim_node()];
 
-#line 269
+#line 277
   noise = pow(10.0, noise / 10.0);
   while (list != (void *)0) {
       if (list != msg) {
@@ -8694,9 +8616,9 @@ static double CpmModelC$packetNoise(CpmModelC$receive_message_t *msg)
   return noise;
 }
 
-#line 118
+#line 126
 static double CpmModelC$noise_hash_generation(void )
-#line 118
+#line 126
 {
   double CT = CpmModelC$timeInMs();
   uint32_t quotient = (sim_time_t )(CT * 10) / 10;
@@ -8704,42 +8626,42 @@ static double CpmModelC$noise_hash_generation(void )
   double noise_val;
   uint16_t node_id = sim_node();
 
-  sim_log_debug(146U, "CpmModelC", "IN: noise_hash_generation()\n");
+  sim_log_debug(142U, "CpmModelC", "IN: noise_hash_generation()\n");
   if (5 <= remain && remain < 10) {
       noise_val = (double )sim_noise_generate(node_id, quotient + 1);
     }
   else {
       noise_val = (double )sim_noise_generate(node_id, quotient);
     }
-  sim_log_debug(147U, "CpmModelC,Tal", "%s: OUT: noise_hash_generation(): %lf\n", sim_time_string(), noise_val);
+  sim_log_debug(143U, "CpmModelC,Tal", "%s: OUT: noise_hash_generation(): %lf\n", sim_time_string(), noise_val);
 
   return noise_val;
 }
 
-#line 240
+#line 248
 static bool CpmModelC$shouldReceive(double SNR)
-#line 240
+#line 248
 {
   double prr = CpmModelC$prr_estimate_from_snr(SNR);
   double coin = RandomUniform();
 
-#line 243
+#line 251
   if (prr >= 0 && prr <= 1) {
       if (coin < prr) {
         prr = 1.0;
         }
       else {
-#line 247
+#line 255
         prr = 0.0;
         }
     }
-#line 249
+#line 257
   return prr;
 }
 
-# 299 "/opt/tinyos-2.1.1/tos/lib/tossim/TossimPacketModelC.nc"
+# 307 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/TossimPacketModelC.nc"
 static bool TossimPacketModelC$GainRadioModel$shouldAck(message_t *msg)
-#line 299
+#line 307
 {
   if (TossimPacketModelC$running[sim_node()] && !TossimPacketModelC$transmitting[sim_node()]) {
       return TossimPacketModelC$Packet$shouldAck(msg);
@@ -8749,9 +8671,9 @@ static bool TossimPacketModelC$GainRadioModel$shouldAck(message_t *msg)
     }
 }
 
-# 208 "/opt/tinyos-2.1.1/tos/lib/tossim/CpmModelC.nc"
+# 216 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/CpmModelC.nc"
 static void CpmModelC$sim_gain_schedule_ack(int source, sim_time_t t, CpmModelC$receive_message_t *r)
-#line 208
+#line 216
 {
   sim_event_t *ackEvent = (sim_event_t *)malloc(sizeof(sim_event_t ));
 
@@ -8766,111 +8688,111 @@ static void CpmModelC$sim_gain_schedule_ack(int source, sim_time_t t, CpmModelC$
   sim_queue_insert(ackEvent);
 }
 
-# 102 "/opt/tinyos-2.1.1/tos/lib/tossim/sim_packet.c"
+# 110 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sim_packet.c"
   uint8_t sim_packet_max_length(sim_packet_t *msg)
-#line 102
+#line 110
 {
   return 28;
 }
 
   sim_packet_t *sim_packet_allocate()
-#line 106
+#line 114
 {
   return (sim_packet_t *)malloc(sizeof(message_t ));
 }
 
   void sim_packet_free(sim_packet_t *p)
-#line 110
+#line 118
 {
   printf("sim_packet.c: Freeing packet %p\n", p);
   free(p);
 }
 
-# 48 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_packet.c"
+# 56 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_packet.c"
   void sim_serial_packet_set_destination(sim_serial_packet_t *msg, uint16_t dest)
-#line 48
+#line 56
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 50
+#line 58
   __nesc_hton_uint16(hdr->dest.nxdata, dest);
 }
 
     uint16_t sim_serial_packet_destination(sim_serial_packet_t *msg)
-#line 53
+#line 61
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 55
+#line 63
   return __nesc_ntoh_uint16(hdr->dest.nxdata);
 }
 
   void sim_serial_packet_set_source(sim_serial_packet_t *msg, uint16_t src)
-#line 58
+#line 66
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 60
+#line 68
   __nesc_hton_uint16(hdr->src.nxdata, src);
 }
 
     uint16_t sim_serial_packet_source(sim_serial_packet_t *msg)
-#line 63
+#line 71
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 65
+#line 73
   return __nesc_ntoh_uint16(hdr->src.nxdata);
 }
 
   void sim_serial_packet_set_length(sim_serial_packet_t *msg, uint8_t length)
-#line 68
+#line 76
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 70
+#line 78
   __nesc_hton_uint8(hdr->length.nxdata, length);
 }
 
-#line 72
+#line 80
   uint16_t sim_serial_packet_length(sim_serial_packet_t *msg)
-#line 72
+#line 80
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 74
+#line 82
   return __nesc_ntoh_uint8(hdr->length.nxdata);
 }
 
   void sim_serial_packet_set_type(sim_serial_packet_t *msg, uint8_t type)
-#line 77
+#line 85
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 79
+#line 87
   __nesc_hton_uint8(hdr->type.nxdata, type);
 }
 
   uint8_t sim_serial_packet_type(sim_serial_packet_t *msg)
-#line 82
+#line 90
 {
   serial_header_t *hdr = getSerialHeader((message_t *)msg);
 
-#line 84
+#line 92
   return __nesc_ntoh_uint8(hdr->type.nxdata);
 }
 
   uint8_t *sim_serial_packet_data(sim_serial_packet_t *p)
-#line 87
+#line 95
 {
   message_t *msg = (message_t *)p;
 
-#line 89
+#line 97
   return (uint8_t *)& msg->data;
 }
 
   void sim_serial_packet_deliver(int node, sim_serial_packet_t *msg, sim_time_t t)
-#line 92
+#line 100
 {
   if (t < sim_time()) {
       t = sim_time();
@@ -8879,55 +8801,55 @@ static void CpmModelC$sim_gain_schedule_ack(int source, sim_time_t t, CpmModelC$
   serial_active_message_deliver(node, (message_t *)msg, t);
 }
 
-# 285 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
+# 293 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim/SerialActiveMessageC.nc"
   void serial_active_message_deliver(int node, message_t *msg, sim_time_t t)
-#line 285
+#line 293
 {
   sim_event_t *evt = SerialActiveMessageC$allocate_serial_deliver_event(node, msg, t);
 
-#line 287
+#line 295
   sim_queue_insert(evt);
 }
 
-#line 192
+#line 196
 static am_id_t SerialActiveMessageC$AMPacket$type(message_t *amsg)
-#line 192
+#line 196
 {
   serial_header_t *header = SerialActiveMessageC$getHeader(amsg);
 
-#line 194
+#line 198
   return __nesc_ntoh_uint8(header->type.nxdata);
 }
 
-# 100 "/opt/tinyos-2.1.1/tos/lib/tossim/sf/sim_serial_packet.c"
+# 108 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/sf/sim_serial_packet.c"
   uint8_t sim_serial_packet_max_length(sim_serial_packet_t *msg)
-#line 100
+#line 108
 {
   return 28;
 }
 
   sim_serial_packet_t *sim_serial_packet_allocate()
-#line 104
+#line 112
 {
   return (sim_serial_packet_t *)malloc(sizeof(message_t ));
 }
 
   void sim_serial_packet_free(sim_serial_packet_t *p)
-#line 108
+#line 116
 {
   printf("sim_serial_packet.c: Freeing packet %p\n", p);
   free(p);
 }
 
-# 43 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMainP.nc"
+# 51 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMainP.nc"
   int sim_main_start_mote(void )
-#line 43
+#line 51
 {
   char timeBuf[128];
 
-#line 45
+#line 53
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 45
+#line 53
     {
 
 
@@ -8951,7 +8873,7 @@ static am_id_t SerialActiveMessageC$AMPacket$type(message_t *amsg)
       SimMainP$SoftwareInit$init();
       while (SimMainP$Scheduler$runNextTask()) ;
     }
-#line 67
+#line 75
     __nesc_atomic_end(__nesc_atomic); }
 
 
@@ -8968,12 +8890,12 @@ static am_id_t SerialActiveMessageC$AMPacket$type(message_t *amsg)
   return 0;
 }
 
-# 172 "/opt/tinyos-2.1.1/tos/lib/tossim/SimSchedulerBasicP.nc"
+# 180 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimSchedulerBasicP.nc"
 static bool SimSchedulerBasicP$Scheduler$runNextTask(void )
 {
   uint8_t nextTask;
 
-#line 175
+#line 183
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
     {
       nextTask = SimSchedulerBasicP$popTask();
@@ -8982,29 +8904,29 @@ static bool SimSchedulerBasicP$Scheduler$runNextTask(void )
           sim_log_debug(116U, "Scheduler", "Told to run next task, but no task to run.\n");
           {
             unsigned char __nesc_temp = 
-#line 181
+#line 189
             FALSE;
 
             {
-#line 181
+#line 189
               __nesc_atomic_end(__nesc_atomic); 
-#line 181
+#line 189
               return __nesc_temp;
             }
           }
         }
     }
-#line 185
+#line 193
     __nesc_atomic_end(__nesc_atomic); }
-#line 184
+#line 192
   sim_log_debug(117U, "Scheduler", "Running task %hhu.\n", nextTask);
   SimSchedulerBasicP$TaskBasic$runTask(nextTask);
   return TRUE;
 }
 
-#line 69
+#line 77
 static void SimSchedulerBasicP$sim_scheduler_submit_event(void )
-#line 69
+#line 77
 {
   if (SimSchedulerBasicP$sim_scheduler_event_pending[sim_node()] == FALSE) {
       SimSchedulerBasicP$sim_scheduler_event[sim_node()].time = sim_time() + SimSchedulerBasicP$sim_config_task_latency();
@@ -9013,18 +8935,18 @@ static void SimSchedulerBasicP$sim_scheduler_submit_event(void )
     }
 }
 
-#line 197
+#line 205
 static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 {
   error_t result;
 
-#line 200
+#line 208
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 200
+#line 208
     {
       result = SimSchedulerBasicP$pushTask(id) ? SUCCESS : EBUSY;
     }
-#line 202
+#line 210
     __nesc_atomic_end(__nesc_atomic); }
   if (result == SUCCESS) {
       sim_log_debug(118U, "Scheduler", "Posting task %hhu.\n", id);
@@ -9036,14 +8958,14 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
   return result;
 }
 
-# 82 "/opt/tinyos-2.1.1/tos/lib/tossim/SimMoteP.nc"
+# 90 "/home/sensornet6/local/src/tinyos-2.x/tos/lib/tossim/SimMoteP.nc"
   long long int sim_mote_euid(int mote)
-#line 82
+#line 90
 {
   long long int result;
   int tmp = sim_node();
 
-#line 85
+#line 93
   sim_set_node(mote);
   result = SimMoteP$SimMote$getEuid();
   sim_set_node(tmp);
@@ -9051,23 +8973,23 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 }
 
   void sim_mote_set_euid(int mote, long long int id)
-#line 91
+#line 99
 {
   int tmp = sim_node();
 
-#line 93
+#line 101
   sim_set_node(mote);
   SimMoteP$SimMote$setEuid(id);
   sim_set_node(tmp);
 }
 
   long long int sim_mote_start_time(int mote)
-#line 98
+#line 106
 {
   long long int result;
   int tmp = sim_node();
 
-#line 101
+#line 109
   sim_set_node(mote);
   result = SimMoteP$SimMote$getStartTime();
   sim_set_node(tmp);
@@ -9075,12 +8997,12 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 }
 
   int sim_mote_get_variable_info(int mote, char *name, void **ptr, size_t *len)
-#line 107
+#line 115
 {
   int result;
   int tmpID = sim_node();
 
-#line 110
+#line 118
   sim_set_node(mote);
   result = SimMoteP$SimMote$getVariableInfo(name, ptr, len);
   sim_log_debug(121U, "SimMoteP", "Fetched %s of %i to be %p with len %i (result %i)\n", name, mote, *ptr, *len, result);
@@ -9089,11 +9011,11 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 }
 
   void sim_mote_set_start_time(int mote, long long int t)
-#line 117
+#line 125
 {
   int tmpID = sim_node();
 
-#line 119
+#line 127
   sim_set_node(mote);
   SimMoteP$startTime[sim_node()] = t;
   sim_log_debug(122U, "SimMoteP", "Setting start time to %llu\n", SimMoteP$startTime[sim_node()]);
@@ -9111,19 +9033,19 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 
 
   void sim_mote_turn_on(int mote)
-#line 135
+#line 143
 {
   int tmp = sim_node();
 
-#line 137
+#line 145
   sim_set_node(mote);
   SimMoteP$SimMote$turnOn();
   sim_set_node(tmp);
 }
 
-#line 64
+#line 72
 static void SimMoteP$SimMote$turnOn(void )
-#line 64
+#line 72
 {
   if (!SimMoteP$isOn[sim_node()]) {
       if (SimMoteP$bootEvent[sim_node()] != (void *)0) {
@@ -9137,13 +9059,13 @@ static void SimMoteP$SimMote$turnOn(void )
     }
 }
 
-#line 142
+#line 150
   void sim_mote_turn_off(int mote)
-#line 142
+#line 150
 {
   int tmp = sim_node();
 
-#line 144
+#line 152
   sim_set_node(mote);
   SimMoteP$SimMote$turnOff();
   sim_set_node(tmp);
@@ -9159,11 +9081,11 @@ static void SimMoteP$SimMote$turnOn(void )
 
 
   void sim_mote_enqueue_boot_event(int mote)
-#line 158
+#line 166
 {
   int tmp = sim_node();
 
-#line 160
+#line 168
   sim_set_node(mote);
 
   if (SimMoteP$bootEvent[sim_node()] != (void *)0) {
@@ -9443,26 +9365,6 @@ static int __nesc_nido_resolve(int __nesc_mote,
     return 0;
   }
 
-  /* Module SerialActiveMessageC */
-  if (!strcmp(varname, "SerialActiveMessageC$buffer"))
-  {
-    *addr = (uintptr_t)&SerialActiveMessageC$buffer[__nesc_mote];
-    *size = sizeof(SerialActiveMessageC$buffer[__nesc_mote]);
-    return 0;
-  }
-  if (!strcmp(varname, "SerialActiveMessageC$bufferPointer"))
-  {
-    *addr = (uintptr_t)&SerialActiveMessageC$bufferPointer[__nesc_mote];
-    *size = sizeof(SerialActiveMessageC$bufferPointer[__nesc_mote]);
-    return 0;
-  }
-  if (!strcmp(varname, "SerialActiveMessageC$sendMsgPtr"))
-  {
-    *addr = (uintptr_t)&SerialActiveMessageC$sendMsgPtr[__nesc_mote];
-    *size = sizeof(SerialActiveMessageC$sendMsgPtr[__nesc_mote]);
-    return 0;
-  }
-
   /* Module TossimPacketModelC */
   if (!strcmp(varname, "TossimPacketModelC$initialized"))
   {
@@ -9580,6 +9482,26 @@ static int __nesc_nido_resolve(int __nesc_mote,
   {
     *addr = (uintptr_t)&ActiveMessageAddressC$addr[__nesc_mote];
     *size = sizeof(ActiveMessageAddressC$addr[__nesc_mote]);
+    return 0;
+  }
+
+  /* Module SerialActiveMessageC */
+  if (!strcmp(varname, "SerialActiveMessageC$buffer"))
+  {
+    *addr = (uintptr_t)&SerialActiveMessageC$buffer[__nesc_mote];
+    *size = sizeof(SerialActiveMessageC$buffer[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "SerialActiveMessageC$bufferPointer"))
+  {
+    *addr = (uintptr_t)&SerialActiveMessageC$bufferPointer[__nesc_mote];
+    *size = sizeof(SerialActiveMessageC$bufferPointer[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "SerialActiveMessageC$sendMsgPtr"))
+  {
+    *addr = (uintptr_t)&SerialActiveMessageC$sendMsgPtr[__nesc_mote];
+    *size = sizeof(SerialActiveMessageC$sendMsgPtr[__nesc_mote]);
     return 0;
   }
 
@@ -9747,11 +9669,6 @@ static void __nesc_nido_initialise(int __nesc_mote)
   memset((void *)&TossimActiveMessageC$buffer[__nesc_mote], 0, sizeof TossimActiveMessageC$buffer[__nesc_mote]);
   TossimActiveMessageC$bufferPointer[__nesc_mote] = &TossimActiveMessageC$buffer[__nesc_mote];
 
-  /* Module SerialActiveMessageC */
-  memset((void *)&SerialActiveMessageC$buffer[__nesc_mote], 0, sizeof SerialActiveMessageC$buffer[__nesc_mote]);
-  SerialActiveMessageC$bufferPointer[__nesc_mote] = &SerialActiveMessageC$buffer[__nesc_mote];
-  SerialActiveMessageC$sendMsgPtr[__nesc_mote] = (void *)0;
-
   /* Module TossimPacketModelC */
   TossimPacketModelC$initialized[__nesc_mote] = FALSE;
   TossimPacketModelC$running[__nesc_mote] = FALSE;
@@ -9776,5 +9693,10 @@ static void __nesc_nido_initialise(int __nesc_mote)
   /* Module ActiveMessageAddressC */
   ActiveMessageAddressC$set[__nesc_mote] = FALSE;
   memset((void *)&ActiveMessageAddressC$addr[__nesc_mote], 0, sizeof ActiveMessageAddressC$addr[__nesc_mote]);
+
+  /* Module SerialActiveMessageC */
+  memset((void *)&SerialActiveMessageC$buffer[__nesc_mote], 0, sizeof SerialActiveMessageC$buffer[__nesc_mote]);
+  SerialActiveMessageC$bufferPointer[__nesc_mote] = &SerialActiveMessageC$buffer[__nesc_mote];
+  SerialActiveMessageC$sendMsgPtr[__nesc_mote] = (void *)0;
 
 }

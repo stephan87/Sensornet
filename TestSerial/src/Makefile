@@ -5,7 +5,7 @@ DEFAULT_LOCAL_GROUP = 0x06
 
 
 CFLAGS += -I$(TOSDIR)/lib/T2Hack
-CFLAGS += -DCC2420_DEF_RFPOWER=1
+CFLAGS += -DCC2420_DEF_RFPOWER=5
 
 
 TestSerial.class: $(wildcard *.java) TestSerialMsg.java

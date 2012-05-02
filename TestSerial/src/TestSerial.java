@@ -51,8 +51,8 @@ public class TestSerial implements MessageListener {
     
     try {
       while (true) {
-	System.out.println("Sending packet " + counter + "receiver Node "+(10+counter));
-	payload.set_receiver(10+counter);
+	System.out.println("Sending packet " + counter + "receiver Node "+(counter+1));
+	payload.set_receiver(counter+1);
 	payload.set_sender(99);
 	payload.set_seqNum(counter+1);
 	payload.set_ledNum(0);
@@ -94,7 +94,8 @@ public class TestSerial implements MessageListener {
     }
     
     PhoenixSource phoenix;
-    
+    //source = "sf@137.226.59.149:2002"; // nardasssha
+    source = "sf@137.226.59.146:2002"; // dantoine
     if (source == null) {
       phoenix = BuildSource.makePhoenix(PrintStreamMessenger.err);
     }
@@ -105,6 +106,7 @@ public class TestSerial implements MessageListener {
     MoteIF mif = new MoteIF(phoenix);
     TestSerial serial = new TestSerial(mif);
     serial.sendPackets();
+    System.out.println("end ..");
   }
 
 
