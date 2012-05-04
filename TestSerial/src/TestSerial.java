@@ -51,14 +51,15 @@ public class TestSerial implements MessageListener {
     
     try {
       while (true) {
-	System.out.println("Sending packet " + counter + "receiver Node "+(counter+1));
-	payload.set_receiver(counter+1);
+	System.out.println("Sending packet " + counter + " to "+((counter%3) + 1));
+	payload.set_receiver((counter%3) + 1);
 	payload.set_sender(99);
 	payload.set_seqNum(counter+1);
-	payload.set_ledNum(0);
+	payload.set_ledNum(counter+1);
 	moteIF.send(0, payload);
 	counter++;
-	try {Thread.sleep(15000);}
+	
+	try {Thread.sleep(7000);}
 	catch (InterruptedException exception) {}
       }
     }
@@ -70,9 +71,10 @@ public class TestSerial implements MessageListener {
 
   public void messageReceived(int to, Message message) {
     TestSerialMsg msg = (TestSerialMsg)message;
-    System.out.println("Received packet from: " + msg.get_sender());
+    System.out.println("Received packet from: " + msg.get_sender()+" to="+to);
     System.out.println("seqNum: " + msg.get_seqNum());
     System.out.println("ledNum: " + msg.get_ledNum());
+    System.out.println("receiver: " + msg.get_receiver());
   }
   
   private static void usage() {
@@ -94,7 +96,8 @@ public class TestSerial implements MessageListener {
     }
     
     PhoenixSource phoenix;
-    //source = "sf@137.226.59.149:2002"; // nardasssha
+    //source = "sf@localhost:9002"; // localhost
+    //source = "sf@137.226.59.149:2004"; // nardasssha
     source = "sf@137.226.59.146:2002"; // dantoine
     if (source == null) {
       phoenix = BuildSource.makePhoenix(PrintStreamMessenger.err);
